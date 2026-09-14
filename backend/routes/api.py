@@ -17,4 +17,3 @@ def dispatch(root,path,payload):
     if path=='/api/v1/decision':return services.decision(root,payload)
     if path=='/api/v1/assessment':return services.assessment(root,payload)
     raise KeyError('Unknown endpoint')
-

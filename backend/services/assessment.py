@@ -69,4 +69,3 @@ def assessment(root,payload):
             'automatic_model_to_pack_transfer':False,
             'display_notice':'上传 BMS 质量、NASA 电芯推理、示例电池包决策是不同证据域，必须分别展示。',
             'limitations':NOTICES}
-

@@ -19,4 +19,3 @@ def model_case(payload):
 def positive_number(value,name):
     if type(value) not in (int,float) or not math.isfinite(value) or value<=0:raise ValueError(name+' must be positive and finite')
     return value
-

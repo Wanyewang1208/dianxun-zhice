@@ -13,4 +13,3 @@ def load_env(root=ROOT):
                 k,v=line.split('=',1)
                 if k.strip() in {'DIANXUN_PORT','DIANXUN_ALLOWED_ORIGIN'}:
                     os.environ.setdefault(k.strip(),v.strip().strip('"').strip("'"))
-
