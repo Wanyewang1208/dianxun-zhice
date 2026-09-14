@@ -1,0 +1,48 @@
+# JavaScript dependencies and generated output
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Local configuration / secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# OS, editor and logs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Intentionally keep source, lockfiles, configs and reviewed demo data tracked.
+# Local temporary files, caches and private key material
+.cache/
+.cache-*/
+.tmp/
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
