@@ -31,4 +31,3 @@ def rul(root,case):
     prediction=float(obj['model'].predict(pd.DataFrame([features])[obj['features']])[0])
     return {**common,'status':'available','predicted_rul_cycles':prediction,'method':'V0.2 leave-one-cell-out random forest',
             'features':features,'train_ids':obj['train_ids'],'capacity_history_rows':len(history)}
-

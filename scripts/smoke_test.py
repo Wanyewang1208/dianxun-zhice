@@ -24,4 +24,3 @@ def main():
           'carbon_kgCO2e':d['carbon']['summary']['total_kgCO2e']},ensure_ascii=False))
 
 if __name__=='__main__':main()
-
