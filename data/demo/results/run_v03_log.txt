@@ -1,0 +1,107 @@
+Running: -m unittest discover -s tests -v
+test_eol_censoring (test_core.BatteryTests.test_eol_censoring) ... ok
+test_fixed_window_is_causal (test_core.BatteryTests.test_fixed_window_is_causal) ... ok
+test_no_target_predictors (test_core.BatteryTests.test_no_target_predictors) ... ok
+test_rul_causal_trend (test_core.BatteryTests.test_rul_causal_trend) ... ok
+test_short_window_rejected (test_core.BatteryTests.test_short_window_rejected) ... ok
+test_split_rejects_overlap (test_core.BatteryTests.test_split_rejects_overlap) ... ok
+test_arithmetic (test_core.CarbonTests.test_arithmetic) ... ok
+test_bad_units (test_core.CarbonTests.test_bad_units) ... ok
+test_demo_activity_remains_labelled_with_official_factor (test_core.CarbonTests.test_demo_activity_remains_labelled_with_official_factor) ... ok
+test_demo_requires_optin (test_core.CarbonTests.test_demo_requires_optin) ... ok
+test_duplicate_factor (test_core.CarbonTests.test_duplicate_factor) ... ok
+test_incomplete_scope_is_visible (test_core.CarbonTests.test_incomplete_scope_is_visible) ... ok
+test_missing_factor (test_core.CarbonTests.test_missing_factor) ... ok
+test_missing_factor_value (test_core.CarbonTests.test_missing_factor_value) ... ok
+test_nan_quantity_is_not_zero (test_core.CarbonTests.test_nan_quantity_is_not_zero) ... ok
+test_negative_quantity (test_core.CarbonTests.test_negative_quantity) ... ok
+test_bad_weight_cannot_bypass_gate (test_integration_v03.IntegrationTests.test_bad_weight_cannot_bypass_gate) ... ok
+test_http_explain_additivity (test_integration_v03.IntegrationTests.test_http_explain_additivity) ... ok
+test_http_health (test_integration_v03.IntegrationTests.test_http_health) ... ok
+test_http_malformed_flag_rejected (test_integration_v03.IntegrationTests.test_http_malformed_flag_rejected) ... ok
+test_http_report_keeps_evidence_separate (test_integration_v03.IntegrationTests.test_http_report_keeps_evidence_separate) ... ok
+test_low_rul_disables_energy_claim (test_integration_v03.IntegrationTests.test_low_rul_disables_energy_claim) ... ok
+test_missing_unit_blocks_life_routes (test_integration_v03.IntegrationTests.test_missing_unit_blocks_life_routes) ... ok
+test_no_nan_in_report_json (test_integration_v03.IntegrationTests.test_no_nan_in_report_json) ... ok
+test_unknown_battery_rejected (test_integration_v03.IntegrationTests.test_unknown_battery_rejected) ... ok
+test_whole_pack_and_material_value_not_double_counted (test_integration_v03.IntegrationTests.test_whole_pack_and_material_value_not_double_counted) ... ok
+test_current_sign_normalization_and_reimport (test_v02.BMSTests.test_current_sign_normalization_and_reimport) ... ok
+test_duplicate_keys_all_quarantined (test_v02.BMSTests.test_duplicate_keys_all_quarantined) ... ok
+test_empty_is_not_ready (test_v02.BMSTests.test_empty_is_not_ready) ... ok
+test_gap_warns (test_v02.BMSTests.test_gap_warns) ... ok
+test_good_fixture (test_v02.BMSTests.test_good_fixture) ... ok
+test_inverted_extrema (test_v02.BMSTests.test_inverted_extrema) ... ok
+test_missing_numeric_text (test_v02.BMSTests.test_missing_numeric_text) ... ok
+test_naive_time_rejected (test_v02.BMSTests.test_naive_time_rejected) ... ok
+test_sign_mismatch_warning (test_v02.BMSTests.test_sign_mismatch_warning) ... ok
+test_soc_out_of_range (test_v02.BMSTests.test_soc_out_of_range) ... ok
+test_wrong_unit_rejected (test_v02.BMSTests.test_wrong_unit_rejected) ... ok
+test_censored_only_not_used_as_known_life (test_v02.RULV02Tests.test_censored_only_not_used_as_known_life) ... ok
+test_fold_rejects_overlap (test_v02.RULV02Tests.test_fold_rejects_overlap) ... ok
+test_prefix_ignores_future (test_v02.RULV02Tests.test_prefix_ignores_future) ... ok
+test_prior_finite_flat_capacity (test_v02.RULV02Tests.test_prior_finite_flat_capacity) ... ok
+test_short_prefix (test_v02.RULV02Tests.test_short_prefix) ... ok
+test_critical_holds_even_recycle (test_v03.DecisionTests.test_critical_holds_even_recycle) ... ok
+test_discounting (test_v03.DecisionTests.test_discounting) ... ok
+test_inspection_expired (test_v03.DecisionTests.test_inspection_expired) ... ok
+test_missing_repair_evidence_blocks_repair (test_v03.DecisionTests.test_missing_repair_evidence_blocks_repair) ... ok
+test_pareto_directions (test_v03.DecisionTests.test_pareto_directions) ... ok
+test_real_input_not_auto_approved (test_v03.DecisionTests.test_real_input_not_auto_approved) ... ok
+test_resource_mass_balance (test_v03.DecisionTests.test_resource_mass_balance) ... ok
+test_resource_mass_value (test_v03.DecisionTests.test_resource_mass_value) ... ok
+test_string_false_not_boolean (test_v03.DecisionTests.test_string_false_not_boolean) ... ok
+test_unknown_critical_holds_all (test_v03.DecisionTests.test_unknown_critical_holds_all) ... ok
+test_weight_validation (test_v03.DecisionTests.test_weight_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 53 tests in 0.740s
+
+OK
+Running: -m src.verify_results
+83 acceptance checks passed
+Running: -m src.verify_v02
+59 V0.2 checks passed
+Running: -m src.explain_soh
+              feature  mean_abs_shap_pp  mean_shap_pp
+voltage_slope_v_per_s          5.502724      0.147193
+       voltage_600s_v          1.535099     -0.384377
+                cycle          1.088833      0.554816
+       current_mean_a          0.334990      0.334990
+       voltage_mean_v          0.081999     -0.028892
+   temperature_rise_c          0.067064      0.066759
+       voltage_300s_v          0.065004      0.043059
+        voltage_60s_v          0.046497     -0.023168
+       voltage_120s_v          0.036426      0.015037
+   temperature_mean_c          0.023140     -0.021473
+        current_std_a          0.002372      0.001147
+ambient_temperature_c          0.000000      0.000000
+Max SHAP additivity error: 6.866455e-05
+Running: -m src.decision
+          scenario_id        route_id  eligible  weighted_score  pareto_optimal
+    DEMO_ALL_EVIDENCE    continue_use      True        0.487340            True
+    DEMO_ALL_EVIDENCE repair_then_use      True        0.557843            True
+    DEMO_ALL_EVIDENCE     second_life      True        0.494016           False
+    DEMO_ALL_EVIDENCE         recycle      True        0.393304            True
+DEMO_MISSING_EVIDENCE    continue_use     False             NaN           False
+DEMO_MISSING_EVIDENCE repair_then_use     False             NaN           False
+DEMO_MISSING_EVIDENCE     second_life     False             NaN           False
+DEMO_MISSING_EVIDENCE         recycle     False             NaN           False
+   DEMO_CRITICAL_HOLD    continue_use     False             NaN           False
+   DEMO_CRITICAL_HOLD repair_then_use     False             NaN           False
+   DEMO_CRITICAL_HOLD     second_life     False             NaN           False
+   DEMO_CRITICAL_HOLD         recycle     False             NaN           False
+  DEMO_REPAIR_PENDING    continue_use      True        0.487340            True
+  DEMO_REPAIR_PENDING repair_then_use     False             NaN           False
+  DEMO_REPAIR_PENDING     second_life      True        0.494016            True
+  DEMO_REPAIR_PENDING         recycle      True        0.393304            True
+         DEMO_LOW_RUL    continue_use     False             NaN           False
+         DEMO_LOW_RUL repair_then_use     False             NaN           False
+         DEMO_LOW_RUL     second_life     False             NaN           False
+         DEMO_LOW_RUL         recycle      True        0.393304            True
+Running: -m src.integration --action report --request integration/example_report_request.json --output results/integration/example_report.json
+Saved JSON result: results\integration\example_report.json
+Running: -m src.verify_v03
+39 V0.3 acceptance checks passed
+Running: -m src.report_v03
+V0.3 report and figures saved
+V0.3 complete. report.html and integration/ are ready.

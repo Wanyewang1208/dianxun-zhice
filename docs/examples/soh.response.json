@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "code": "OK",
+  "message": "ok",
+  "data": {
+    "status": "available",
+    "battery_id": "B0018",
+    "cycle": 66,
+    "predicted_soh_pct": 77.39439392089844,
+    "measured_soh_pct": 76.58116201846707,
+    "model": "V0.1 XGBoost",
+    "unit": "%",
+    "evidence_kind": "public_experimental_cell",
+    "validation_status": "public_dataset_only",
+    "scope": "NASA experimental discharge at 600 seconds; no validated whole-vehicle transfer"
+  },
+  "error": null,
+  "request_id": "ecca6fdb7eb3459fb59e5fc413a7e527",
+  "schema_version": "1.0",
+  "warnings": [
+    "比赛 Demo / 原型；尚未完成真实车辆验证，不能替代正式检测报告。",
+    "SOH/RUL 为公开 NASA 电芯数据验证；RUL 依赖实测容量和工况，不能解释为剩余天数。",
+    "Demo / Prototype Parameters：退役决策权重、安全阈值、价格与路径参数均未经行业验证。",
+    "SHAP 解释模型预测贡献，不证明物理衰减因果；公开电芯结果不自动用于电池包决策。",
+    "碳因子受年份、地区和系统边界影响，调用方声明的来源不等于独立核验。"
+  ]
+}

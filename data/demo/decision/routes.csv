@@ -1,0 +1,5 @@
+route_id,route_name,service_kwh,process_kwh,transport_t_km,loss_kwh,upfront_cost_cny,residual_sale_cny,revenue_mode,recovery_fraction,technical_score,parameter_status
+continue_use,继续使用,6000,5,40,600,0,500,whole_pack,0,90,illustrative
+repair_then_use,检修后使用,9000,80,100,900,800,1200,whole_pack,0,85,illustrative
+second_life,梯次利用,8000,200,120,800,500,800,whole_pack,0,70,illustrative
+recycle,再生利用,0,100,200,0,300,0,materials,1,95,illustrative

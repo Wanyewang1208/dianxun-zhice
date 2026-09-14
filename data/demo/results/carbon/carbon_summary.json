@@ -1,0 +1,21 @@
+{
+  "total_kgCO2e": 5560.654,
+  "by_stage_kgCO2e": {
+    "manufacturing": 3600.0,
+    "use": 1733.1,
+    "maintenance_transport": 27.554000000000002,
+    "end_of_life": 200.0
+  },
+  "included_stages": [
+    "end_of_life",
+    "maintenance_transport",
+    "manufacturing",
+    "use"
+  ],
+  "missing_stages": [],
+  "scope_complete": true,
+  "contains_illustrative_factors": true,
+  "contains_illustrative_activities": true,
+  "interpretation": "Illustrative scenario; not verified product footprint",
+  "allocation": "Cut-off at end-of-life; no avoided-burden or recycling credits; electricity attribution follows activity description and declared functional unit"
+}

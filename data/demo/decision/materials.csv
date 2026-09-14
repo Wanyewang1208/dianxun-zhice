@@ -1,0 +1,4 @@
+material_id,material_name,mass_fraction,recovery_yield,price_cny_per_kg,parameter_status,notes
+Cu,铜,0.05,0.9,50,illustrative,演示元素质量份额和回收率及价格；无实际BOM或市场报价依据
+Al,铝,0.1,0.85,15,illustrative,演示元素质量份额；未列出的包体质量不计价值
+Li,锂元素,0.005,0.8,800,illustrative,元素口径非碳酸锂当量；价格仅用于展示计算不能作市场估值

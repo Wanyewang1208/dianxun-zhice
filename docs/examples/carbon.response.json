@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "code": "OK",
+  "message": "ok",
+  "data": {
+    "status": "calculated",
+    "summary": {
+      "total_kgCO2e": 5560.654,
+      "by_stage_kgCO2e": {
+        "manufacturing": 3600.0,
+        "use": 1733.1,
+        "maintenance_transport": 27.554000000000002,
+        "end_of_life": 200.0
+      },
+      "included_stages": [
+        "end_of_life",
+        "maintenance_transport",
+        "manufacturing",
+        "use"
+      ],
+      "missing_stages": [],
+      "scope_complete": true,
+      "contains_illustrative_factors": true,
+      "contains_illustrative_activities": true,
+      "interpretation": "Illustrative scenario; not verified product footprint",
+      "allocation": "Cut-off at end-of-life; no avoided-burden or recycling credits; electricity attribution follows activity description and declared functional unit"
+    },
+    "details": [
+      {
+        "activity_id": "manufacture_pack",
+        "stage": "manufacturing",
+        "quantity": 60.0,
+        "activity_unit": "kWh_capacity",
+        "factor_id": "DEMO_PACK_MANUFACTURE",
+        "description": "制造一套60kWh电池包",
+        "data_status": "illustrative",
+        "derivation": "假设额定能量60kWh；制造因子包含材料和制造能源；不再重复计入制造用电",
+        "factor_value": 60.0,
+        "factor_status": "illustrative",
+        "emissions_kgCO2e": 3600.0,
+        "factor_source": "",
+        "factor_year": "未指定"
+      },
+      {
+        "activity_id": "use_battery_losses",
+        "stage": "use",
+        "quantity": 3000.0,
+        "activity_unit": "kWh",
+        "factor_id": "CN_ELECTRICITY_CFP_2024",
+        "description": "电池全使用期损耗电量",
+        "data_status": "illustrative",
+        "derivation": "假设输入30000kWh输出27000kWh；损耗3000kWh；只归集电池损耗不归集全部牵引能耗",
+        "factor_value": 0.5777,
+        "factor_status": "official",
+        "emissions_kgCO2e": 1733.1,
+        "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+        "factor_year": "2024"
+      },
+      {
+        "activity_id": "maintenance_electricity",
+        "stage": "maintenance_transport",
+        "quantity": 20.0,
+        "activity_unit": "kWh",
+        "factor_id": "CN_ELECTRICITY_CFP_2024",
+        "description": "维护检测用电",
+        "data_status": "illustrative",
+        "derivation": "假设生命周期维护检测合计20kWh；未发生配件更换的演示情景",
+        "factor_value": 0.5777,
+        "factor_status": "official",
+        "emissions_kgCO2e": 11.554,
+        "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+        "factor_year": "2024"
+      },
+      {
+        "activity_id": "transport_pack",
+        "stage": "maintenance_transport",
+        "quantity": 200.0,
+        "activity_unit": "t_km",
+        "factor_id": "DEMO_ROAD_FREIGHT",
+        "description": "电池运输",
+        "data_status": "illustrative",
+        "derivation": "假设电池400kg即0.4t运输500km；0.4乘500等于200t_km",
+        "factor_value": 0.08,
+        "factor_status": "illustrative",
+        "emissions_kgCO2e": 16.0,
+        "factor_source": "",
+        "factor_year": "未指定"
+      },
+      {
+        "activity_id": "end_of_life_processing",
+        "stage": "end_of_life",
+        "quantity": 400.0,
+        "activity_unit": "kg_battery",
+        "factor_id": "DEMO_EOL_PROCESS",
+        "description": "退役处理",
+        "data_status": "illustrative",
+        "derivation": "假设400kg电池全部进入同一处理路径；不计回收替代收益",
+        "factor_value": 0.5,
+        "factor_status": "illustrative",
+        "emissions_kgCO2e": 200.0,
+        "factor_source": "",
+        "factor_year": "未指定"
+      }
+    ],
+    "factor_provenance": "caller_declared_not_independently_verified"
+  },
+  "error": null,
+  "request_id": "e4ff43a9d8df4465b77a9a4859eed73f",
+  "schema_version": "1.0",
+  "warnings": [
+    "比赛 Demo / 原型；尚未完成真实车辆验证，不能替代正式检测报告。",
+    "SOH/RUL 为公开 NASA 电芯数据验证；RUL 依赖实测容量和工况，不能解释为剩余天数。",
+    "Demo / Prototype Parameters：退役决策权重、安全阈值、价格与路径参数均未经行业验证。",
+    "SHAP 解释模型预测贡献，不证明物理衰减因果；公开电芯结果不自动用于电池包决策。",
+    "碳因子受年份、地区和系统边界影响，调用方声明的来源不等于独立核验。"
+  ]
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "scenario_id": "DEMO_ALL_EVIDENCE",
+    "data_kind": "illustrative",
+    "assessed_at": "2026-09-14T12:00:00+08:00",
+    "inspection_at": "2026-09-14T10:00:00+08:00",
+    "health": {
+      "soh_pct": 85,
+      "rul_cycles": 300,
+      "rul_unit": "reference_discharge_cycles"
+    },
+    "safety": {
+      "critical_event": false,
+      "electrical_pass": true,
+      "thermal_pass": true,
+      "mechanical_pass": true,
+      "post_repair_pass": true,
+      "second_life_approved": true,
+      "recycler_approved": true,
+      "transport_approved": true
+    }
+  },
+  {
+    "scenario_id": "DEMO_MISSING_EVIDENCE",
+    "data_kind": "illustrative",
+    "assessed_at": "2026-09-14T12:00:00+08:00",
+    "inspection_at": "2026-09-14T10:00:00+08:00",
+    "health": {
+      "soh_pct": 85,
+      "rul_cycles": 300,
+      "rul_unit": "reference_discharge_cycles"
+    },
+    "safety": {
+      "critical_event": null,
+      "electrical_pass": null,
+      "thermal_pass": null,
+      "mechanical_pass": null,
+      "post_repair_pass": null,
+      "second_life_approved": null,
+      "recycler_approved": null,
+      "transport_approved": null
+    }
+  },
+  {
+    "scenario_id": "DEMO_CRITICAL_HOLD",
+    "data_kind": "illustrative",
+    "assessed_at": "2026-09-14T12:00:00+08:00",
+    "inspection_at": "2026-09-14T10:00:00+08:00",
+    "health": {
+      "soh_pct": 85,
+      "rul_cycles": 300,
+      "rul_unit": "reference_discharge_cycles"
+    },
+    "safety": {
+      "critical_event": true,
+      "electrical_pass": true,
+      "thermal_pass": true,
+      "mechanical_pass": true,
+      "post_repair_pass": true,
+      "second_life_approved": true,
+      "recycler_approved": true,
+      "transport_approved": true
+    }
+  },
+  {
+    "scenario_id": "DEMO_REPAIR_PENDING",
+    "data_kind": "illustrative",
+    "assessed_at": "2026-09-14T12:00:00+08:00",
+    "inspection_at": "2026-09-14T10:00:00+08:00",
+    "health": {
+      "soh_pct": 85,
+      "rul_cycles": 300,
+      "rul_unit": "reference_discharge_cycles"
+    },
+    "safety": {
+      "critical_event": false,
+      "electrical_pass": true,
+      "thermal_pass": true,
+      "mechanical_pass": true,
+      "post_repair_pass": null,
+      "second_life_approved": true,
+      "recycler_approved": true,
+      "transport_approved": true
+    }
+  },
+  {
+    "scenario_id": "DEMO_LOW_RUL",
+    "data_kind": "illustrative",
+    "assessed_at": "2026-09-14T12:00:00+08:00",
+    "inspection_at": "2026-09-14T10:00:00+08:00",
+    "health": {
+      "soh_pct": 85,
+      "rul_cycles": 20,
+      "rul_unit": "reference_discharge_cycles"
+    },
+    "safety": {
+      "critical_event": false,
+      "electrical_pass": true,
+      "thermal_pass": true,
+      "mechanical_pass": true,
+      "post_repair_pass": true,
+      "second_life_approved": true,
+      "recycler_approved": true,
+      "transport_approved": true
+    }
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "method": "Native exact XGBoost TreeSHAP; pred_contribs=True, approx_contribs=False",
+  "sample_count": 132,
+  "features": [
+    "cycle",
+    "voltage_60s_v",
+    "voltage_120s_v",
+    "voltage_300s_v",
+    "voltage_600s_v",
+    "voltage_mean_v",
+    "voltage_slope_v_per_s",
+    "current_mean_a",
+    "current_std_a",
+    "temperature_mean_c",
+    "temperature_rise_c",
+    "ambient_temperature_c"
+  ],
+  "max_additivity_error_pp": 6.866455078125e-05,
+  "model_sha256": "50d52215a1f82bd062de15c049f979270a120155585624169696528f8f76fe0d",
+  "reference": "https://xgboost.readthedocs.io/en/stable/python/python_api.html",
+  "causal_caution": "https://shap.readthedocs.io/en/latest/example_notebooks/overviews/Be%20careful%20when%20interpreting%20predictive%20models%20in%20search%20of%20causal%20insights.html",
+  "background": "Tree path cover from trained model; no held-out background fit or new training",
+  "limitations": "Correlated early voltage features share attribution; ambient condition nearly constant; zero attribution is not evidence of no physical temperature effect"
+}

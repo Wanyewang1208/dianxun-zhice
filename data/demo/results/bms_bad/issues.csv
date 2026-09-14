@@ -1,0 +1,10 @@
+﻿csv_row,severity,code,field,detail
+4,error,plausibility_range,SOC,Broad ingestion range exceeded; not a safety threshold
+5,error,timestamp_timezone_missing,timestamp,Explicit Z or UTC offset required
+6,error,extrema_inverted,cell_voltage_max,Maximum below minimum
+7,error,numeric_missing_or_invalid,pack_current,Finite numeric value required
+11,warning,current_status_mismatch,pack_current,Current sign and state disagree; normalized discharge positive
+2,error,duplicate_timestamp,timestamp,All conflicting duplicate records quarantined
+14,error,duplicate_timestamp,timestamp,All conflicting duplicate records quarantined
+0,warning,out_of_order_input,timestamp,SYNTHETIC_PACK_001 input not chronological; accepted output sorted
+13,warning,time_gap,timestamp,Gap exceeds 30 seconds; do not integrate across gap

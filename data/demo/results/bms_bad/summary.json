@@ -1,0 +1,20 @@
+{
+  "input_rows": 13,
+  "accepted_rows": 7,
+  "rejected_rows": 6,
+  "error_count": 6,
+  "warning_count": 3,
+  "warnings_need_review": true,
+  "schema_ready": false,
+  "synthetic_fixture_present": true,
+  "source_provenance": "Input data_origin declarations are not independent verification",
+  "output_current_convention": "discharge_positive",
+  "output_time": "UTC with explicit Z",
+  "model_inference_performed": false,
+  "scope": "Core telemetry + metadata only; full cell/probe/events tables not validated in V0.2",
+  "interpretation": "Data quality screening only; not a battery safety pass or vehicle SOH/RUL validation",
+  "input_sha256": {
+    "bad_telemetry.csv": "6530d62858e262c0cd0f998945c52900d3ae1929ab3f587b85cf7c55a0882b59",
+    "metadata.csv": "87e12337f3f458aeb47086fd2dd7985f72c8ad51bda3eecdcd82d2f4e18d3f74"
+  }
+}

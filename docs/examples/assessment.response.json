@@ -1,0 +1,1043 @@
+{
+  "success": true,
+  "code": "OK",
+  "message": "ok",
+  "data": {
+    "battery_id": "B0018",
+    "battery_id_scope": "NASA_public_cell_case",
+    "scenario_id": "DEMO_WEB_HANDOFF",
+    "data_quality": {
+      "status": "checked",
+      "summary": {
+        "input_rows": 12,
+        "accepted_rows": 12,
+        "rejected_rows": 0,
+        "error_count": 0,
+        "warning_count": 0,
+        "warnings_need_review": false,
+        "schema_ready": true,
+        "synthetic_fixture_present": true,
+        "source_provenance": "Input data_origin declarations are not independent verification",
+        "output_current_convention": "discharge_positive",
+        "output_time": "UTC with explicit Z",
+        "model_inference_performed": false,
+        "scope": "Core telemetry + metadata only; full cell/probe/events tables not validated in V0.2",
+        "interpretation": "Data quality screening only; not a battery safety pass or vehicle SOH/RUL validation"
+      },
+      "accepted": [
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:00:00.000000Z",
+          "pack_voltage": 320.0,
+          "pack_current": 10.0,
+          "SOC": 60.0,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.0,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 2
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:00:10.000000Z",
+          "pack_voltage": 319.9,
+          "pack_current": 10.0,
+          "SOC": 59.99,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.01,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 3
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:00:20.000000Z",
+          "pack_voltage": 319.8,
+          "pack_current": 10.0,
+          "SOC": 59.98,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.02,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 4
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:00:30.000000Z",
+          "pack_voltage": 319.7,
+          "pack_current": 10.0,
+          "SOC": 59.97,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.03,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 5
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:00:40.000000Z",
+          "pack_voltage": 319.6,
+          "pack_current": 10.0,
+          "SOC": 59.96,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.04,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 6
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:00:50.000000Z",
+          "pack_voltage": 319.5,
+          "pack_current": 10.0,
+          "SOC": 59.95,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.05,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 7
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:01:00.000000Z",
+          "pack_voltage": 319.4,
+          "pack_current": 10.0,
+          "SOC": 59.94,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.06,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 8
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:01:10.000000Z",
+          "pack_voltage": 319.3,
+          "pack_current": 10.0,
+          "SOC": 59.93,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.07,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 9
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:01:20.000000Z",
+          "pack_voltage": 319.2,
+          "pack_current": 10.0,
+          "SOC": 59.92,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.08,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 10
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:01:30.000000Z",
+          "pack_voltage": 319.1,
+          "pack_current": 10.0,
+          "SOC": 59.91,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.09,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 11
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:01:40.000000Z",
+          "pack_voltage": 319.0,
+          "pack_current": 10.0,
+          "SOC": 59.9,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.1,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 12
+        },
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "timestamp": "2025-12-31T16:01:50.000000Z",
+          "pack_voltage": 318.9,
+          "pack_current": 10.0,
+          "SOC": 59.89,
+          "cell_voltage_max": 3.4,
+          "cell_voltage_min": 3.3,
+          "temperature_max": 30.0,
+          "temperature_min": 25.0,
+          "charge_status": "discharging",
+          "mileage": 100.11,
+          "pack_current_raw": 10.0,
+          "source_csv_row": 13
+        }
+      ],
+      "rejected": [],
+      "issues": [],
+      "normalized_metadata": [
+        {
+          "battery_id": "SYNTHETIC_PACK_001",
+          "battery_chemistry": "LFP",
+          "rated_capacity_ah": 100,
+          "current_sign_convention": "discharge_positive",
+          "voltage_unit": "V",
+          "current_unit": "A",
+          "temperature_unit": "degC",
+          "soc_unit": "%",
+          "data_origin": "synthetic_fixture"
+        }
+      ]
+    },
+    "soh": {
+      "status": "available",
+      "battery_id": "B0018",
+      "cycle": 66,
+      "predicted_soh_pct": 77.39439392089844,
+      "measured_soh_pct": 76.58116201846707,
+      "model": "V0.1 XGBoost",
+      "unit": "%",
+      "evidence_kind": "public_experimental_cell",
+      "validation_status": "public_dataset_only",
+      "scope": "NASA experimental discharge at 600 seconds; no validated whole-vehicle transfer"
+    },
+    "rul": {
+      "battery_id": "B0018",
+      "cycle": 66,
+      "unit": "reference_discharge_cycles",
+      "input_requirement": "At least 30 measured capacities in Ah through the current completed cycle",
+      "evidence_kind": "public_experimental_cell",
+      "validation_status": "exploratory_same_dataset_reuse",
+      "operating_condition_caution": "Not calendar life; depends on discharge conditions and measured capacities",
+      "status": "available",
+      "predicted_rul_cycles": 36.28555257448237,
+      "method": "V0.2 leave-one-cell-out random forest",
+      "features": {
+        "cycle": 66,
+        "current_capacity_ah": 1.5316232403693415,
+        "initial_capacity_ah": 1.8550045207910817,
+        "drop_from_initial_ah": 0.3233812804217402,
+        "local_slope_ah_per_cycle": -0.0034675963673567105,
+        "local_std_ah": 0.050098781509031,
+        "local_mean_ah": 1.6229555245639955
+      },
+      "train_ids": [
+        "B0005",
+        "B0006"
+      ],
+      "capacity_history_rows": 66
+    },
+    "explainability": {
+      "status": "available",
+      "method": "exact_native_TreeSHAP",
+      "schema_version": "0.3",
+      "battery_id": "B0018",
+      "cycle": 66,
+      "evidence_kind": "public_experimental_cell",
+      "split_role": "held_out",
+      "predicted_soh_pct": 77.39439392089844,
+      "measured_soh_pct": 76.58116201846707,
+      "base_value_soh_pct": 79.38919067382812,
+      "additivity_error_pp": 6.103515625e-05,
+      "contributions": [
+        {
+          "feature": "voltage_600s_v",
+          "feature_value": 3.700241311338589,
+          "shap_soh_pp": -1.4311637878417969,
+          "direction": "lowers_prediction"
+        },
+        {
+          "feature": "voltage_slope_v_per_s",
+          "feature_value": -0.0003922757051801,
+          "shap_soh_pp": -1.1965386867523193,
+          "direction": "lowers_prediction"
+        },
+        {
+          "feature": "current_mean_a",
+          "feature_value": -2.0075175474382045,
+          "shap_soh_pp": 0.3353137671947479,
+          "direction": "raises_prediction"
+        },
+        {
+          "feature": "cycle",
+          "feature_value": 66.0,
+          "shap_soh_pp": 0.23683692514896393,
+          "direction": "raises_prediction"
+        },
+        {
+          "feature": "voltage_mean_v",
+          "feature_value": 3.8001142032951623,
+          "shap_soh_pp": -0.10712897777557373,
+          "direction": "lowers_prediction"
+        },
+        {
+          "feature": "voltage_300s_v",
+          "feature_value": 3.806608864757945,
+          "shap_soh_pp": 0.06293056905269623,
+          "direction": "raises_prediction"
+        },
+        {
+          "feature": "temperature_rise_c",
+          "feature_value": 4.550789925672671,
+          "shap_soh_pp": 0.05890167877078056,
+          "direction": "raises_prediction"
+        },
+        {
+          "feature": "voltage_60s_v",
+          "feature_value": 3.9317979106802494,
+          "shap_soh_pp": 0.04374018311500549,
+          "direction": "raises_prediction"
+        },
+        {
+          "feature": "voltage_120s_v",
+          "feature_value": 3.8844392151512994,
+          "shap_soh_pp": 0.024062909185886383,
+          "direction": "raises_prediction"
+        },
+        {
+          "feature": "temperature_mean_c",
+          "feature_value": 25.969244753271614,
+          "shap_soh_pp": -0.022128846496343613,
+          "direction": "lowers_prediction"
+        },
+        {
+          "feature": "current_std_a",
+          "feature_value": 0.001250400619268,
+          "shap_soh_pp": 0.00031519916956312954,
+          "direction": "raises_prediction"
+        },
+        {
+          "feature": "ambient_temperature_c",
+          "feature_value": 24.0,
+          "shap_soh_pp": 0.0,
+          "direction": "zero"
+        }
+      ],
+      "interpretation": "Contributions explain this model prediction relative to its tree baseline, not physical degradation causes",
+      "scope": "NASA experimental discharge at 600 seconds; no validated whole-vehicle transfer"
+    },
+    "carbon": {
+      "status": "calculated",
+      "summary": {
+        "total_kgCO2e": 5560.654,
+        "by_stage_kgCO2e": {
+          "manufacturing": 3600.0,
+          "use": 1733.1,
+          "maintenance_transport": 27.554000000000002,
+          "end_of_life": 200.0
+        },
+        "included_stages": [
+          "end_of_life",
+          "maintenance_transport",
+          "manufacturing",
+          "use"
+        ],
+        "missing_stages": [],
+        "scope_complete": true,
+        "contains_illustrative_factors": true,
+        "contains_illustrative_activities": true,
+        "interpretation": "Illustrative scenario; not verified product footprint",
+        "allocation": "Cut-off at end-of-life; no avoided-burden or recycling credits; electricity attribution follows activity description and declared functional unit"
+      },
+      "details": [
+        {
+          "activity_id": "manufacture_pack",
+          "stage": "manufacturing",
+          "quantity": 60.0,
+          "activity_unit": "kWh_capacity",
+          "factor_id": "DEMO_PACK_MANUFACTURE",
+          "description": "制造一套60kWh电池包",
+          "data_status": "illustrative",
+          "derivation": "假设额定能量60kWh；制造因子包含材料和制造能源；不再重复计入制造用电",
+          "factor_value": 60.0,
+          "factor_status": "illustrative",
+          "emissions_kgCO2e": 3600.0,
+          "factor_source": "",
+          "factor_year": "未指定"
+        },
+        {
+          "activity_id": "use_battery_losses",
+          "stage": "use",
+          "quantity": 3000.0,
+          "activity_unit": "kWh",
+          "factor_id": "CN_ELECTRICITY_CFP_2024",
+          "description": "电池全使用期损耗电量",
+          "data_status": "illustrative",
+          "derivation": "假设输入30000kWh输出27000kWh；损耗3000kWh；只归集电池损耗不归集全部牵引能耗",
+          "factor_value": 0.5777,
+          "factor_status": "official",
+          "emissions_kgCO2e": 1733.1,
+          "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+          "factor_year": "2024"
+        },
+        {
+          "activity_id": "maintenance_electricity",
+          "stage": "maintenance_transport",
+          "quantity": 20.0,
+          "activity_unit": "kWh",
+          "factor_id": "CN_ELECTRICITY_CFP_2024",
+          "description": "维护检测用电",
+          "data_status": "illustrative",
+          "derivation": "假设生命周期维护检测合计20kWh；未发生配件更换的演示情景",
+          "factor_value": 0.5777,
+          "factor_status": "official",
+          "emissions_kgCO2e": 11.554,
+          "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+          "factor_year": "2024"
+        },
+        {
+          "activity_id": "transport_pack",
+          "stage": "maintenance_transport",
+          "quantity": 200.0,
+          "activity_unit": "t_km",
+          "factor_id": "DEMO_ROAD_FREIGHT",
+          "description": "电池运输",
+          "data_status": "illustrative",
+          "derivation": "假设电池400kg即0.4t运输500km；0.4乘500等于200t_km",
+          "factor_value": 0.08,
+          "factor_status": "illustrative",
+          "emissions_kgCO2e": 16.0,
+          "factor_source": "",
+          "factor_year": "未指定"
+        },
+        {
+          "activity_id": "end_of_life_processing",
+          "stage": "end_of_life",
+          "quantity": 400.0,
+          "activity_unit": "kg_battery",
+          "factor_id": "DEMO_EOL_PROCESS",
+          "description": "退役处理",
+          "data_status": "illustrative",
+          "derivation": "假设400kg电池全部进入同一处理路径；不计回收替代收益",
+          "factor_value": 0.5,
+          "factor_status": "illustrative",
+          "emissions_kgCO2e": 200.0,
+          "factor_source": "",
+          "factor_year": "未指定"
+        }
+      ],
+      "factor_provenance": "caller_declared_not_independently_verified"
+    },
+    "safety": {
+      "scope": "illustrative_policy_not_certification",
+      "gates": [
+        {
+          "route_id": "continue_use",
+          "eligible": true,
+          "reason_codes": []
+        },
+        {
+          "route_id": "repair_then_use",
+          "eligible": true,
+          "reason_codes": []
+        },
+        {
+          "route_id": "second_life",
+          "eligible": true,
+          "reason_codes": []
+        },
+        {
+          "route_id": "recycle",
+          "eligible": true,
+          "reason_codes": []
+        }
+      ]
+    },
+    "candidate_paths": [
+      {
+        "route_id": "continue_use",
+        "route_name": "继续使用",
+        "carbon_kgco2e": 903.7885,
+        "npv_cny": 1678.6452607156766,
+        "recovered_kg": 0.0,
+        "technical_score": 90.0,
+        "service_kwh": 6000.0,
+        "replacement_service_kwh": 4000.0,
+        "cashflows": [
+          {
+            "year": 0,
+            "cash_cny": -24.0
+          },
+          {
+            "year": 1,
+            "cash_cny": 506.6666666666667
+          },
+          {
+            "year": 2,
+            "cash_cny": 506.6666666666667
+          },
+          {
+            "year": 3,
+            "cash_cny": 506.6666666666667
+          },
+          {
+            "year": 3,
+            "cash_cny": 500
+          }
+        ],
+        "resources": {
+          "recovered_kg": 0.0,
+          "material_value_cny": 0.0,
+          "details": [
+            {
+              "material_id": "Cu",
+              "recovered_kg": 0.0,
+              "value_cny": 0.0
+            },
+            {
+              "material_id": "Al",
+              "recovered_kg": 0.0,
+              "value_cny": 0.0
+            },
+            {
+              "material_id": "Li",
+              "recovered_kg": 0.0,
+              "value_cny": 0.0
+            }
+          ]
+        },
+        "carbon_detail": [
+          {
+            "activity_id": "processing",
+            "stage": "maintenance_transport",
+            "quantity": 5.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 2.8885,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "transport",
+            "stage": "maintenance_transport",
+            "quantity": 40.0,
+            "activity_unit": "t_km",
+            "factor_id": "DEMO_ROAD_FREIGHT",
+            "data_status": "illustrative",
+            "factor_value": 0.08,
+            "factor_status": "illustrative",
+            "emissions_kgCO2e": 3.2,
+            "factor_source": "",
+            "factor_year": "未指定"
+          },
+          {
+            "activity_id": "battery_losses",
+            "stage": "use",
+            "quantity": 600.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 346.62,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "replacement_losses",
+            "stage": "use",
+            "quantity": 400.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 231.07999999999998,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "replacement_service",
+            "stage": "manufacturing",
+            "quantity": 4000.0,
+            "activity_unit": "kWh_service",
+            "factor_id": "DEMO_REPLACEMENT_SERVICE",
+            "data_status": "illustrative",
+            "factor_value": 0.08,
+            "factor_status": "illustrative",
+            "emissions_kgCO2e": 320.0,
+            "factor_source": "",
+            "factor_year": "未指定"
+          }
+        ],
+        "eligible": true,
+        "reason_codes": [],
+        "gate_scope": "illustrative_policy_not_regulatory_certification",
+        "illustrative_service_limit_kwh": 12240.0,
+        "utility_components": {
+          "carbon": 0.54810575,
+          "economic": 0.44524301738104516,
+          "resource": 0.0,
+          "technical": 0.9
+        },
+        "weighted_score": 0.48733950695241807,
+        "pareto_optimal": true
+      },
+      {
+        "route_id": "repair_then_use",
+        "route_name": "检修后使用",
+        "carbon_kgco2e": 711.9159999999999,
+        "npv_cny": 3070.982810885874,
+        "recovered_kg": 0.0,
+        "technical_score": 85.0,
+        "service_kwh": 9000.0,
+        "replacement_service_kwh": 1000.0,
+        "cashflows": [
+          {
+            "year": 0,
+            "cash_cny": -914.0
+          },
+          {
+            "year": 1,
+            "cash_cny": 1176.6666666666667
+          },
+          {
+            "year": 2,
+            "cash_cny": 1176.6666666666667
+          },
+          {
+            "year": 3,
+            "cash_cny": 1176.6666666666667
+          },
+          {
+            "year": 3,
+            "cash_cny": 1200
+          }
+        ],
+        "resources": {
+          "recovered_kg": 0.0,
+          "material_value_cny": 0.0,
+          "details": [
+            {
+              "material_id": "Cu",
+              "recovered_kg": 0.0,
+              "value_cny": 0.0
+            },
+            {
+              "material_id": "Al",
+              "recovered_kg": 0.0,
+              "value_cny": 0.0
+            },
+            {
+              "material_id": "Li",
+              "recovered_kg": 0.0,
+              "value_cny": 0.0
+            }
+          ]
+        },
+        "carbon_detail": [
+          {
+            "activity_id": "processing",
+            "stage": "maintenance_transport",
+            "quantity": 80.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 46.216,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "transport",
+            "stage": "maintenance_transport",
+            "quantity": 100.0,
+            "activity_unit": "t_km",
+            "factor_id": "DEMO_ROAD_FREIGHT",
+            "data_status": "illustrative",
+            "factor_value": 0.08,
+            "factor_status": "illustrative",
+            "emissions_kgCO2e": 8.0,
+            "factor_source": "",
+            "factor_year": "未指定"
+          },
+          {
+            "activity_id": "battery_losses",
+            "stage": "use",
+            "quantity": 900.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 519.93,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "replacement_losses",
+            "stage": "use",
+            "quantity": 100.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 57.769999999999996,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "replacement_service",
+            "stage": "manufacturing",
+            "quantity": 1000.0,
+            "activity_unit": "kWh_service",
+            "factor_id": "DEMO_REPLACEMENT_SERVICE",
+            "data_status": "illustrative",
+            "factor_value": 0.08,
+            "factor_status": "illustrative",
+            "emissions_kgCO2e": 80.0,
+            "factor_source": "",
+            "factor_year": "未指定"
+          }
+        ],
+        "eligible": true,
+        "reason_codes": [],
+        "gate_scope": "illustrative_policy_not_regulatory_certification",
+        "illustrative_service_limit_kwh": 12240.0,
+        "utility_components": {
+          "carbon": 0.644042,
+          "economic": 0.538065520725725,
+          "resource": 0.0,
+          "technical": 0.85
+        },
+        "weighted_score": 0.5578430082902901,
+        "pareto_optimal": true
+      },
+      {
+        "route_id": "second_life",
+        "route_name": "梯次利用",
+        "carbon_kgco2e": 862.8399999999999,
+        "npv_cny": 2371.898253992447,
+        "recovered_kg": 0.0,
+        "technical_score": 70.0,
+        "service_kwh": 8000.0,
+        "replacement_service_kwh": 2000.0,
+        "cashflows": [
+          {
+            "year": 0,
+            "cash_cny": -720.0
+          },
+          {
+            "year": 1,
+            "cash_cny": 953.3333333333334
+          },
+          {
+            "year": 2,
+            "cash_cny": 953.3333333333334
+          },
+          {
+            "year": 3,
+            "cash_cny": 953.3333333333334
+          },
+          {
+            "year": 3,
+            "cash_cny": 800
+          }
+        ],
+        "resources": {
+          "recovered_kg": 0.0,
+          "material_value_cny": 0.0,
+          "details": [
+            {
+              "material_id": "Cu",
+              "recovered_kg": 0.0,
+              "value_cny": 0.0
+            },
+            {
+              "material_id": "Al",
+              "recovered_kg": 0.0,
+              "value_cny": 0.0
+            },
+            {
+              "material_id": "Li",
+              "recovered_kg": 0.0,
+              "value_cny": 0.0
+            }
+          ]
+        },
+        "carbon_detail": [
+          {
+            "activity_id": "processing",
+            "stage": "maintenance_transport",
+            "quantity": 200.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 115.53999999999999,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "transport",
+            "stage": "maintenance_transport",
+            "quantity": 120.0,
+            "activity_unit": "t_km",
+            "factor_id": "DEMO_ROAD_FREIGHT",
+            "data_status": "illustrative",
+            "factor_value": 0.08,
+            "factor_status": "illustrative",
+            "emissions_kgCO2e": 9.6,
+            "factor_source": "",
+            "factor_year": "未指定"
+          },
+          {
+            "activity_id": "battery_losses",
+            "stage": "use",
+            "quantity": 800.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 462.15999999999997,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "replacement_losses",
+            "stage": "use",
+            "quantity": 200.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 115.53999999999999,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "replacement_service",
+            "stage": "manufacturing",
+            "quantity": 2000.0,
+            "activity_unit": "kWh_service",
+            "factor_id": "DEMO_REPLACEMENT_SERVICE",
+            "data_status": "illustrative",
+            "factor_value": 0.08,
+            "factor_status": "illustrative",
+            "emissions_kgCO2e": 160.0,
+            "factor_source": "",
+            "factor_year": "未指定"
+          }
+        ],
+        "eligible": true,
+        "reason_codes": [],
+        "gate_scope": "illustrative_policy_not_regulatory_certification",
+        "illustrative_service_limit_kwh": 12240.0,
+        "utility_components": {
+          "carbon": 0.5685800000000001,
+          "economic": 0.4914598835994965,
+          "resource": 0.0,
+          "technical": 0.7
+        },
+        "weighted_score": 0.49401595343979865,
+        "pareto_optimal": false
+      },
+      {
+        "route_id": "recycle",
+        "route_name": "再生利用",
+        "carbon_kgco2e": 1451.47,
+        "npv_cny": 62.41917729343436,
+        "recovered_kg": 53.6,
+        "technical_score": 95.0,
+        "service_kwh": 0.0,
+        "replacement_service_kwh": 10000.0,
+        "cashflows": [
+          {
+            "year": 0,
+            "cash_cny": -480.0
+          },
+          {
+            "year": 1,
+            "cash_cny": -833.3333333333334
+          },
+          {
+            "year": 2,
+            "cash_cny": -833.3333333333334
+          },
+          {
+            "year": 3,
+            "cash_cny": -833.3333333333334
+          },
+          {
+            "year": 0,
+            "cash_cny": 2690.0
+          }
+        ],
+        "resources": {
+          "recovered_kg": 53.6,
+          "material_value_cny": 2690.0,
+          "details": [
+            {
+              "material_id": "Cu",
+              "recovered_kg": 18.0,
+              "value_cny": 900.0
+            },
+            {
+              "material_id": "Al",
+              "recovered_kg": 34.0,
+              "value_cny": 510.0
+            },
+            {
+              "material_id": "Li",
+              "recovered_kg": 1.6,
+              "value_cny": 1280.0
+            }
+          ]
+        },
+        "carbon_detail": [
+          {
+            "activity_id": "processing",
+            "stage": "end_of_life",
+            "quantity": 100.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 57.769999999999996,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "transport",
+            "stage": "maintenance_transport",
+            "quantity": 200.0,
+            "activity_unit": "t_km",
+            "factor_id": "DEMO_ROAD_FREIGHT",
+            "data_status": "illustrative",
+            "factor_value": 0.08,
+            "factor_status": "illustrative",
+            "emissions_kgCO2e": 16.0,
+            "factor_source": "",
+            "factor_year": "未指定"
+          },
+          {
+            "activity_id": "battery_losses",
+            "stage": "use",
+            "quantity": 0.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 0.0,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "replacement_losses",
+            "stage": "use",
+            "quantity": 1000.0,
+            "activity_unit": "kWh",
+            "factor_id": "CN_ELECTRICITY_CFP_2024",
+            "data_status": "illustrative",
+            "factor_value": 0.5777,
+            "factor_status": "official",
+            "emissions_kgCO2e": 577.7,
+            "factor_source": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+            "factor_year": "2024"
+          },
+          {
+            "activity_id": "replacement_service",
+            "stage": "manufacturing",
+            "quantity": 10000.0,
+            "activity_unit": "kWh_service",
+            "factor_id": "DEMO_REPLACEMENT_SERVICE",
+            "data_status": "illustrative",
+            "factor_value": 0.08,
+            "factor_status": "illustrative",
+            "emissions_kgCO2e": 800.0,
+            "factor_source": "",
+            "factor_year": "未指定"
+          }
+        ],
+        "eligible": true,
+        "reason_codes": [],
+        "gate_scope": "illustrative_policy_not_regulatory_certification",
+        "illustrative_service_limit_kwh": 12240.0,
+        "utility_components": {
+          "carbon": 0.274265,
+          "economic": 0.3374946118195623,
+          "resource": 0.536,
+          "technical": 0.95
+        },
+        "weighted_score": 0.3933038447278249,
+        "pareto_optimal": true
+      }
+    ],
+    "recommendation": {
+      "status": "simulation_recommendation",
+      "route_id": "repair_then_use",
+      "parameter_status": "Demo / Prototype Parameters",
+      "weights": {
+        "carbon": 0.4,
+        "economic": 0.4,
+        "resource": 0.1,
+        "technical": 0.1
+      }
+    },
+    "decision_reason": [
+      "Only eligible Pareto routes ranked with declared preference weights"
+    ],
+    "automatic_model_to_pack_transfer": false,
+    "display_notice": "上传 BMS 质量、NASA 电芯推理、示例电池包决策是不同证据域，必须分别展示。",
+    "limitations": [
+      "比赛 Demo / 原型；尚未完成真实车辆验证，不能替代正式检测报告。",
+      "SOH/RUL 为公开 NASA 电芯数据验证；RUL 依赖实测容量和工况，不能解释为剩余天数。",
+      "Demo / Prototype Parameters：退役决策权重、安全阈值、价格与路径参数均未经行业验证。",
+      "SHAP 解释模型预测贡献，不证明物理衰减因果；公开电芯结果不自动用于电池包决策。",
+      "碳因子受年份、地区和系统边界影响，调用方声明的来源不等于独立核验。"
+    ]
+  },
+  "error": null,
+  "request_id": "e5e061028aa4412d97e08c1dd07bd395",
+  "schema_version": "1.0",
+  "warnings": [
+    "比赛 Demo / 原型；尚未完成真实车辆验证，不能替代正式检测报告。",
+    "SOH/RUL 为公开 NASA 电芯数据验证；RUL 依赖实测容量和工况，不能解释为剩余天数。",
+    "Demo / Prototype Parameters：退役决策权重、安全阈值、价格与路径参数均未经行业验证。",
+    "SHAP 解释模型预测贡献，不证明物理衰减因果；公开电芯结果不自动用于电池包决策。",
+    "碳因子受年份、地区和系统边界影响，调用方声明的来源不等于独立核验。"
+  ]
+}

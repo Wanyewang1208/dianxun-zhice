@@ -1,0 +1,80 @@
+{
+  "version": "0.2",
+  "status": "exploratory_same_dataset_reuse",
+  "reason": "All four cells were already examined in V0.1; not a new independent external test",
+  "EOL_capacity_ah": 1.4,
+  "EOL_source": "data/raw/README.txt",
+  "window": 30,
+  "observed_EOl_cells": [
+    "B0005",
+    "B0006",
+    "B0018"
+  ],
+  "features": [
+    "cycle",
+    "current_capacity_ah",
+    "initial_capacity_ah",
+    "drop_from_initial_ah",
+    "local_slope_ah_per_cycle",
+    "local_std_ah",
+    "local_mean_ah"
+  ],
+  "priors": {
+    "B0005": {
+      "rate_ah_per_cycle": 0.005404008014835507,
+      "training_ids": [
+        "B0006",
+        "B0018"
+      ],
+      "per_cell_rate": {
+        "B0006": 0.006163060020294868,
+        "B0018": 0.004644956009376146
+      },
+      "source": "Observed training cells only, whole pre-EOL capacity regression"
+    },
+    "B0006": {
+      "rate_ah_per_cycle": 0.004347240846475406,
+      "training_ids": [
+        "B0005",
+        "B0018"
+      ],
+      "per_cell_rate": {
+        "B0005": 0.004049525683574665,
+        "B0018": 0.004644956009376146
+      },
+      "source": "Observed training cells only, whole pre-EOL capacity regression"
+    },
+    "B0007": {
+      "rate_ah_per_cycle": 0.004644956009376146,
+      "training_ids": [
+        "B0005",
+        "B0006",
+        "B0018"
+      ],
+      "per_cell_rate": {
+        "B0005": 0.004049525683574665,
+        "B0006": 0.006163060020294868,
+        "B0018": 0.004644956009376146
+      },
+      "source": "Observed training cells only, whole pre-EOL capacity regression"
+    },
+    "B0018": {
+      "rate_ah_per_cycle": 0.005106292851934766,
+      "training_ids": [
+        "B0005",
+        "B0006"
+      ],
+      "per_cell_rate": {
+        "B0005": 0.004049525683574665,
+        "B0006": 0.006163060020294868
+      },
+      "source": "Observed training cells only, whole pre-EOL capacity regression"
+    }
+  },
+  "parameters": "Fixed before first V0.2 scores; RF 300 trees, depth4, leaf8, seed42; blend 50/50",
+  "censoring": "B0007 kept for forecasts only; excluded from supervised training and MAE/RMSE/R2",
+  "common_evaluation": "Cycles>=30 and strictly before first observed EOL; identical prefixes across models",
+  "input_assumption": "Measured capacity at current and previous cycles; not BMS-only or end-to-end SOH/RUL",
+  "uncertainty": "No calibrated intervals; only three event-observed cells; repeated prefixes correlated",
+  "model_artifacts": "One training-only model per held-out cell; not a production deployment model"
+}

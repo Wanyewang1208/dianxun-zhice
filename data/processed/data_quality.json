@@ -1,0 +1,36 @@
+{
+  "cycle_rows": 636,
+  "timeseries_rows": 185721,
+  "eligible_rows": 636,
+  "excluded_cycles": 0,
+  "cleaning_issue_entries": 0,
+  "operations": [
+    {
+      "battery_id": "B0005",
+      "charge": 170,
+      "discharge": 168,
+      "impedance": 278
+    },
+    {
+      "battery_id": "B0006",
+      "charge": 170,
+      "discharge": 168,
+      "impedance": 278
+    },
+    {
+      "battery_id": "B0007",
+      "charge": 170,
+      "discharge": 168,
+      "impedance": 278
+    },
+    {
+      "battery_id": "B0018",
+      "charge": 134,
+      "impedance": 53,
+      "discharge": 132
+    }
+  ],
+  "timestamp_timezone": "unspecified in NASA source; not converted to UTC",
+  "cycle_definition": "1-based discharge operation index within each battery, not equivalent-full-cycle count",
+  "early_window": "t <= 600 s only; grid 60..600 s; last-value hold <=30 s at endpoint"
+}

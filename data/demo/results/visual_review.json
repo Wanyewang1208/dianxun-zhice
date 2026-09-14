@@ -1,0 +1,14 @@
+{
+  "status": "reviewed",
+  "figures_reviewed": [
+    "degradation_curves.png",
+    "soh_true_vs_predicted.png",
+    "soh_parity.png",
+    "lobo_mae.png",
+    "rul_baseline.png",
+    "carbon_example.png"
+  ],
+  "method": "Visual inspection of exported PNGs; labels, axes, legends and values checked",
+  "findings": "All six figure layouts readable; poor RUL results retained without cropping or clipping predictions",
+  "report_links": "All relative image and document links resolve within package"
+}
