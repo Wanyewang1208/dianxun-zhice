@@ -1,271 +1,279 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "V1 assessment request",
-  "type": "object",
-  "required": [
-    "model_case",
-    "scenario"
-  ],
-  "additionalProperties": false,
-  "properties": {
-    "model_case": {
+  "title": "Legacy public-cell or manual assessment request",
+  "oneOf": [
+    {
+      "title": "V1 assessment request",
       "type": "object",
       "required": [
-        "battery_id",
-        "cycle"
+        "model_case",
+        "scenario"
       ],
       "additionalProperties": false,
       "properties": {
-        "battery_id": {
-          "enum": [
-            "B0005",
-            "B0006",
-            "B0007",
-            "B0018"
-          ]
-        },
-        "cycle": {
-          "type": "integer",
-          "minimum": 1
-        }
-      }
-    },
-    "scenario": {
-      "type": "object",
-      "required": [
-        "scenario_id",
-        "data_kind"
-      ],
-      "properties": {
-        "scenario_id": {
-          "type": "string",
-          "minLength": 1
-        },
-        "data_kind": {
-          "type": "string",
-          "description": "Only illustrative may produce a simulation recommendation"
-        },
-        "assessed_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "inspection_at": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "health": {
+        "model_case": {
           "type": "object",
+          "required": [
+            "battery_id",
+            "cycle"
+          ],
+          "additionalProperties": false,
           "properties": {
-            "soh_pct": {
-              "type": [
-                "number",
-                "null"
-              ],
-              "minimum": 0,
-              "maximum": 120
+            "battery_id": {
+              "enum": [
+                "B0005",
+                "B0006",
+                "B0007",
+                "B0018"
+              ]
             },
-            "rul_cycles": {
-              "type": [
-                "number",
-                "null"
-              ],
+            "cycle": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "scenario": {
+          "type": "object",
+          "required": [
+            "scenario_id",
+            "data_kind"
+          ],
+          "properties": {
+            "scenario_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "data_kind": {
+              "type": "string",
+              "description": "Only illustrative may produce a simulation recommendation"
+            },
+            "assessed_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "inspection_at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "health": {
+              "type": "object",
+              "properties": {
+                "soh_pct": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 120
+                },
+                "rul_cycles": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "rul_unit": {
+                  "const": "reference_discharge_cycles"
+                }
+              }
+            },
+            "safety": {
+              "type": "object",
+              "properties": {
+                "critical_event": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "electrical_pass": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "thermal_pass": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "mechanical_pass": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "post_repair_pass": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "second_life_approved": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "recycler_approved": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "transport_approved": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "weights": {
+          "type": "object",
+          "required": [
+            "carbon",
+            "economic",
+            "resource",
+            "technical"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "carbon": {
+              "type": "number",
               "minimum": 0
             },
-            "rul_unit": {
-              "const": "reference_discharge_cycles"
+            "economic": {
+              "type": "number",
+              "minimum": 0
+            },
+            "resource": {
+              "type": "number",
+              "minimum": 0
+            },
+            "technical": {
+              "type": "number",
+              "minimum": 0
             }
-          }
+          },
+          "description": "At least one weight must be positive; normalized by server"
         },
-        "safety": {
+        "bms": {
           "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "telemetry_csv",
+            "metadata_csv"
+          ],
           "properties": {
-            "critical_event": {
-              "type": [
-                "boolean",
-                "null"
-              ]
+            "telemetry_csv": {
+              "type": "string"
             },
-            "electrical_pass": {
-              "type": [
-                "boolean",
-                "null"
-              ]
+            "metadata_csv": {
+              "type": "string"
             },
-            "thermal_pass": {
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "mechanical_pass": {
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "post_repair_pass": {
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "second_life_approved": {
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "recycler_approved": {
-              "type": [
-                "boolean",
-                "null"
-              ]
-            },
-            "transport_approved": {
-              "type": [
-                "boolean",
-                "null"
-              ]
+            "max_gap_s": {
+              "type": "number",
+              "exclusiveMinimum": 0
             }
           }
-        }
-      }
-    },
-    "weights": {
-      "type": "object",
-      "required": [
-        "carbon",
-        "economic",
-        "resource",
-        "technical"
-      ],
-      "additionalProperties": false,
-      "properties": {
+        },
         "carbon": {
-          "type": "number",
-          "minimum": 0
-        },
-        "economic": {
-          "type": "number",
-          "minimum": 0
-        },
-        "resource": {
-          "type": "number",
-          "minimum": 0
-        },
-        "technical": {
-          "type": "number",
-          "minimum": 0
-        }
-      },
-      "description": "At least one weight must be positive; normalized by server"
-    },
-    "bms": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "telemetry_csv",
-        "metadata_csv"
-      ],
-      "properties": {
-        "telemetry_csv": {
-          "type": "string"
-        },
-        "metadata_csv": {
-          "type": "string"
-        },
-        "max_gap_s": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "activities",
+            "factors"
+          ],
+          "properties": {
+            "activities": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "activity_id",
+                  "stage",
+                  "quantity",
+                  "activity_unit",
+                  "factor_id"
+                ],
+                "properties": {
+                  "activity_id": {
+                    "type": "string"
+                  },
+                  "stage": {
+                    "enum": [
+                      "manufacturing",
+                      "use",
+                      "maintenance_transport",
+                      "end_of_life"
+                    ]
+                  },
+                  "quantity": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "activity_unit": {
+                    "type": "string"
+                  },
+                  "factor_id": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "factors": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "required": [
+                  "factor_id",
+                  "value",
+                  "activity_unit",
+                  "output_unit",
+                  "status"
+                ],
+                "properties": {
+                  "factor_id": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "activity_unit": {
+                    "type": "string"
+                  },
+                  "output_unit": {
+                    "const": "kgCO2e"
+                  },
+                  "status": {
+                    "enum": [
+                      "official",
+                      "verified",
+                      "illustrative"
+                    ]
+                  }
+                }
+              }
+            },
+            "allow_demo": {
+              "type": "boolean",
+              "default": false
+            }
+          }
         }
       }
     },
-    "carbon": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "activities",
-        "factors"
-      ],
-      "properties": {
-        "activities": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "object",
-            "required": [
-              "activity_id",
-              "stage",
-              "quantity",
-              "activity_unit",
-              "factor_id"
-            ],
-            "properties": {
-              "activity_id": {
-                "type": "string"
-              },
-              "stage": {
-                "enum": [
-                  "manufacturing",
-                  "use",
-                  "maintenance_transport",
-                  "end_of_life"
-                ]
-              },
-              "quantity": {
-                "type": "number",
-                "minimum": 0
-              },
-              "activity_unit": {
-                "type": "string"
-              },
-              "factor_id": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "factors": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "type": "object",
-            "required": [
-              "factor_id",
-              "value",
-              "activity_unit",
-              "output_unit",
-              "status"
-            ],
-            "properties": {
-              "factor_id": {
-                "type": "string"
-              },
-              "value": {
-                "type": "number",
-                "minimum": 0
-              },
-              "activity_unit": {
-                "type": "string"
-              },
-              "output_unit": {
-                "const": "kgCO2e"
-              },
-              "status": {
-                "enum": [
-                  "official",
-                  "verified",
-                  "illustrative"
-                ]
-              }
-            }
-          }
-        },
-        "allow_demo": {
-          "type": "boolean",
-          "default": false
-        }
-      }
+    {
+      "$ref": "manual.request.schema.json"
     }
-  }
+  ]
 }

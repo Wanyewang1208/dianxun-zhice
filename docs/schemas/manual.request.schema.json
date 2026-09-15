@@ -1,0 +1,534 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "input_mode",
+    "data_kind",
+    "manual_input"
+  ],
+  "properties": {
+    "input_mode": {
+      "const": "manual"
+    },
+    "data_kind": {
+      "enum": [
+        "user_declared",
+        "demo"
+      ]
+    },
+    "battery_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "manual_input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rated_capacity_kwh"
+      ],
+      "properties": {
+        "battery_brand": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "vehicle_brand": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "vehicle_model": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "thermal_event_history": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "fault_code_present": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "battery_type": {
+          "enum": [
+            "LFP",
+            "NMC",
+            "Other",
+            null
+          ]
+        },
+        "primary_charging_method": {
+          "enum": [
+            "dc_fast",
+            "home_ac",
+            "public_ac",
+            null
+          ]
+        },
+        "rated_capacity_kwh": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "current_available_capacity_kwh": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "mileage_km": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "cycle_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "new_battery_reference_price": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "measured_soh": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 120
+        },
+        "max_cell_voltage_v": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "min_cell_voltage_v": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10
+        },
+        "cell_voltage_delta_mv": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "current_temperature_c": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -60,
+          "maximum": 150
+        },
+        "historical_max_temperature_c": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -60,
+          "maximum": 150
+        },
+        "internal_resistance_mohm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "fast_charge_ratio": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "average_daily_mileage_km": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "annual_mileage_km": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "usual_charge_upper_soc": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "usual_discharge_lower_soc": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "average_environment_temperature_c": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -60,
+          "maximum": 150
+        },
+        "pack_voltage": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 2000
+        },
+        "pack_current": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -10000,
+          "maximum": 10000
+        },
+        "charge_throughput_kwh": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "discharge_throughput_kwh": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "registration_year": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1886
+        }
+      }
+    },
+    "prototype_assumptions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reference_cycle_life": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "exclusiveMinimum": 0
+        },
+        "safety_factor": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "consistency_factor": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "bms": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "telemetry_csv",
+        "metadata_csv"
+      ],
+      "properties": {
+        "telemetry_csv": {
+          "type": "string"
+        },
+        "metadata_csv": {
+          "type": "string"
+        },
+        "max_gap_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "carbon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "activities",
+        "factors"
+      ],
+      "properties": {
+        "activities": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "activity_id",
+              "stage",
+              "quantity",
+              "activity_unit",
+              "factor_id"
+            ],
+            "properties": {
+              "activity_id": {
+                "type": "string"
+              },
+              "stage": {
+                "enum": [
+                  "manufacturing",
+                  "use",
+                  "maintenance_transport",
+                  "end_of_life"
+                ]
+              },
+              "quantity": {
+                "type": "number",
+                "minimum": 0
+              },
+              "activity_unit": {
+                "type": "string"
+              },
+              "factor_id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "factors": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "factor_id",
+              "value",
+              "activity_unit",
+              "output_unit",
+              "status"
+            ],
+            "properties": {
+              "factor_id": {
+                "type": "string"
+              },
+              "value": {
+                "type": "number",
+                "minimum": 0
+              },
+              "activity_unit": {
+                "type": "string"
+              },
+              "output_unit": {
+                "const": "kgCO2e"
+              },
+              "status": {
+                "enum": [
+                  "official",
+                  "verified",
+                  "illustrative"
+                ]
+              }
+            }
+          }
+        },
+        "allow_demo": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "decision_scenario": {
+      "type": "object",
+      "required": [
+        "scenario_id",
+        "data_kind"
+      ],
+      "properties": {
+        "scenario_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data_kind": {
+          "type": "string",
+          "description": "Only illustrative may produce a simulation recommendation"
+        },
+        "assessed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "inspection_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "health": {
+          "type": "object",
+          "properties": {
+            "soh_pct": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 120
+            },
+            "rul_cycles": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "rul_unit": {
+              "const": "reference_discharge_cycles"
+            }
+          }
+        },
+        "safety": {
+          "type": "object",
+          "properties": {
+            "critical_event": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "electrical_pass": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "thermal_pass": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "mechanical_pass": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "post_repair_pass": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "second_life_approved": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "recycler_approved": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "transport_approved": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "weights": {
+      "type": "object"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "anyOf": [
+          {
+            "required": [
+              "prototype_assumptions"
+            ]
+          },
+          {
+            "required": [
+              "decision_scenario"
+            ]
+          }
+        ]
+      },
+      "then": {
+        "properties": {
+          "data_kind": {
+            "const": "demo"
+          }
+        }
+      }
+    }
+  ],
+  "dependentRequired": {
+    "weights": [
+      "decision_scenario"
+    ]
+  },
+  "description": "Runtime also checks finite arithmetic, capacity ratio, year and paired field ordering."
+}

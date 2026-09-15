@@ -17,6 +17,8 @@
 
 ## V0.3 模块接入
 
+手动表单扩展：manual_metrics.py 提供容量比SOH和显式Demo寿命算术；residual_value.py 提供透明的原型指数/估价，权重在valuation_config.py。没有增加整车训练模型；缺少寿命/安全/一致性证据时输出null和缺项说明。详见docs/MANUAL_ASSESSMENT.md。
+
 # model：模型与推理
 
 无 Web API。`inference.py` 复用 `explain_soh.py`、`rul_v02.py`，backend service 调用这些函数。已有训练/实验辅助函数为复现保留，启动 API 不重新训练。
