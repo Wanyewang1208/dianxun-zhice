@@ -11,7 +11,7 @@ from carbon.calculator import calculate
 
 NOTICES=[
  '比赛 Demo / 原型；尚未完成真实车辆验证，不能替代正式检测报告。',
- 'SOH/RUL 为公开 NASA 电芯数据验证；RUL 依赖实测容量和工况，不能解释为剩余天数。',
+ 'SOH/RUL 预测模型为公开 NASA 电芯数据验证，手动容量比值另行标注；RUL 依赖实测容量和工况，不能解释为剩余天数。',
  'Demo / Prototype Parameters：退役决策权重、安全阈值、价格与路径参数均未经行业验证。',
  'SHAP 解释模型预测贡献，不证明物理衰减因果；公开电芯结果不自动用于电池包决策。',
  '碳因子受年份、地区和系统边界影响，调用方声明的来源不等于独立核验。'
@@ -31,7 +31,8 @@ def bms(payload):
         frames.append(frame)
     gap=positive_number(payload.get('max_gap_s',30),'max_gap_s')
     result=validate(*frames,max_gap_s=gap)
-    return {'status':'checked','summary':result['summary'],**{k:records(result[k]) for k in ['accepted','rejected','issues','normalized_metadata']}}
+    return {'status':'checked','summary':result['summary'],'detected_columns':list(frames[0].columns),
+            **{k:records(result[k]) for k in ['accepted','rejected','issues','normalized_metadata']}}
 
 def carbon(payload):
     object_fields(payload,{'activities','factors','allow_demo'},{'activities','factors'})
@@ -48,6 +49,9 @@ def decision(root,payload):
     return {**result,'parameter_status':'Demo / Prototype Parameters'}
 
 def assessment(root,payload):
+    if isinstance(payload,dict) and payload.get('input_mode')=='manual':
+        from backend.services.manual_assessment import run
+        return run(root,payload)
     object_fields(payload,{'model_case','scenario','weights','bms','carbon'},{'model_case','scenario'})
     case=model_case(payload['model_case'])
     quality=bms(payload['bms']) if 'bms' in payload else {'status':'not_provided','reason':'No BMS CSV supplied'}

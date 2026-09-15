@@ -1,0 +1,279 @@
+{
+  "success": true,
+  "code": "OK",
+  "message": "ok",
+  "data": {
+    "battery_id": null,
+    "battery_id_scope": "manual_or_matching_bms_identifier",
+    "input_mode": "manual",
+    "data_kind": "demo",
+    "input_snapshot": {
+      "annual_mileage_km": null,
+      "average_daily_mileage_km": null,
+      "average_environment_temperature_c": null,
+      "battery_brand": null,
+      "battery_type": null,
+      "cell_voltage_delta_mv": 18,
+      "charge_throughput_kwh": null,
+      "current_available_capacity_kwh": 49.44,
+      "current_temperature_c": null,
+      "cycle_count": 1126,
+      "discharge_throughput_kwh": null,
+      "fast_charge_ratio": null,
+      "fault_code_present": false,
+      "historical_max_temperature_c": null,
+      "internal_resistance_mohm": null,
+      "max_cell_voltage_v": null,
+      "measured_soh": null,
+      "mileage_km": null,
+      "min_cell_voltage_v": null,
+      "new_battery_reference_price": 50000,
+      "pack_current": null,
+      "pack_voltage": null,
+      "primary_charging_method": null,
+      "rated_capacity_kwh": 60,
+      "region": null,
+      "registration_year": null,
+      "thermal_event_history": false,
+      "usual_charge_upper_soc": null,
+      "usual_discharge_lower_soc": null,
+      "vehicle_brand": null,
+      "vehicle_model": null
+    },
+    "effective_condition": {
+      "cell_voltage_delta_mv": 18,
+      "charge_throughput_kwh": null,
+      "current_temperature_c": null,
+      "discharge_throughput_kwh": null,
+      "fault_code_present": false,
+      "historical_max_temperature_c": null,
+      "internal_resistance_mohm": null,
+      "max_cell_voltage_v": null,
+      "min_cell_voltage_v": null,
+      "pack_current": null,
+      "pack_voltage": null,
+      "thermal_event_history": false
+    },
+    "field_sources": {
+      "cell_voltage_delta_mv": "manual_input",
+      "charge_throughput_kwh": "missing",
+      "current_temperature_c": "missing",
+      "discharge_throughput_kwh": "missing",
+      "fault_code_present": "manual_input",
+      "historical_max_temperature_c": "missing",
+      "internal_resistance_mohm": "missing",
+      "max_cell_voltage_v": "missing",
+      "min_cell_voltage_v": "missing",
+      "pack_current": "missing",
+      "pack_voltage": "missing",
+      "thermal_event_history": "manual_input"
+    },
+    "prototype_assumptions": {
+      "reference_cycle_life": 2500,
+      "safety_factor": 0.9,
+      "consistency_factor": 0.91
+    },
+    "data_quality": {
+      "manual": "schema_valid_user_declared",
+      "bms": {
+        "status": "not_provided"
+      },
+      "bms_used_for_condition": false,
+      "notes": []
+    },
+    "soh": {
+      "status": "calculated",
+      "calculated_soh": 82.39999999999999,
+      "measured_soh": null,
+      "difference_pp": null,
+      "unit": "%",
+      "method": "current_available_capacity_kwh / rated_capacity_kwh * 100",
+      "evidence_kind": "user_declared_capacity_ratio",
+      "predicted_soh_pct": null,
+      "measurement_notice": "Compare capacities measured on the same usable-energy, temperature and discharge basis; professional SOH is retained separately",
+      "reason": null
+    },
+    "rul": {
+      "status": "prototype_assumption",
+      "predicted_rul_cycles": 1374,
+      "reference_cycle_life": 2500,
+      "unit": "assumed_equivalent_cycles",
+      "method": "max(0, explicitly_assumed_reference_cycle_life - cycle_count)",
+      "reason": "Demo arithmetic only, not NASA inference or a vehicle life prediction",
+      "operating_condition_caution": "No conversion to days or kilometres; cycle definition and conditions are not validated"
+    },
+    "explainability": {
+      "status": "not_available",
+      "reason": "Capacity ratio is arithmetic; NASA SHAP is not applicable to this vehicle form",
+      "formula": "current_available_capacity_kwh / rated_capacity_kwh * 100"
+    },
+    "carbon": {
+      "status": "not_provided",
+      "reason": "Explicit activities and factors required; mileage/region do not determine lifecycle footprint"
+    },
+    "safety": {
+      "status": "prototype_assumption",
+      "reason_codes": [
+        "explicit_demo_safety_factor_not_inspection"
+      ],
+      "certified": false
+    },
+    "residual_value": {
+      "status": "prototype_estimate",
+      "index": 76.978,
+      "index_bounds": {
+        "lower": 76.978,
+        "upper": 76.978,
+        "kind": "mathematical_bounds_for_missing_scores_not_confidence_interval"
+      },
+      "missing_components": [],
+      "component_scores": {
+        "health": 82.39999999999999,
+        "life": 54.96,
+        "safety": 90.0,
+        "consistency": 91.0
+      },
+      "weights": {
+        "health": 0.35,
+        "life": 0.3,
+        "safety": 0.2,
+        "consistency": 0.15
+      },
+      "weighted_contributions": {
+        "health": 28.839999999999996,
+        "life": 16.488,
+        "safety": 18.0,
+        "consistency": 13.65
+      },
+      "estimated_value_range_cny": {
+        "lower": 16319.637734400001,
+        "upper": 20770.448025600002,
+        "midpoint": 18545.04288,
+        "band_fraction": 0.12,
+        "unit": "CNY",
+        "kind": "heuristic_sensitivity_band_not_confidence_interval"
+      },
+      "new_battery_reference_price_cny": 50000,
+      "index_formula": "0.35*Health + 0.30*Life + 0.20*Safety + 0.15*Consistency",
+      "price_formula": "P_new * (Health/100) * (Life/100) * (Safety/100) * (Consistency/100)",
+      "parameter_status": "Prototype Weighting; life/safety/consistency factors explicitly declared Demo assumptions",
+      "value_basis": "current_vehicle_use_technical_reference_not_recycling_value",
+      "band_basis": "8% with matched schema-valid BMS, otherwise 12%; heuristic only, no calibrated price uncertainty",
+      "disclaimer": "Residual value is a technical prototype estimate and does not represent an official transaction, insurance, appraisal, or certification price."
+    },
+    "current_use_value": {
+      "lower": 16319.637734400001,
+      "upper": 20770.448025600002,
+      "midpoint": 18545.04288,
+      "band_fraction": 0.12,
+      "unit": "CNY",
+      "kind": "heuristic_sensitivity_band_not_confidence_interval"
+    },
+    "second_life_potential": {
+      "status": "not_available",
+      "level": null,
+      "reason": "No validated second-life qualification or valuation from manual inputs"
+    },
+    "candidate_paths": [
+      {
+        "route_id": "continue_use",
+        "eligible": false,
+        "weighted_score": null,
+        "reason_codes": [
+          "manual_data_no_validated_route_clearance"
+        ]
+      },
+      {
+        "route_id": "repair_then_use",
+        "eligible": false,
+        "weighted_score": null,
+        "reason_codes": [
+          "manual_data_no_validated_route_clearance"
+        ]
+      },
+      {
+        "route_id": "second_life",
+        "eligible": false,
+        "weighted_score": null,
+        "reason_codes": [
+          "manual_data_no_validated_route_clearance"
+        ]
+      },
+      {
+        "route_id": "recycle",
+        "eligible": false,
+        "weighted_score": null,
+        "reason_codes": [
+          "manual_data_no_validated_route_clearance"
+        ]
+      }
+    ],
+    "recommendation": {
+      "status": "hold_for_evidence_or_professional_review",
+      "route_id": null,
+      "parameter_status": "Demo / Prototype Parameters"
+    },
+    "decision_reason": [
+      "Manual records are insufficient for automatic whole-vehicle disposition"
+    ],
+    "automatic_model_to_pack_transfer": false,
+    "field_usage": {
+      "calculation": [
+        "rated_capacity_kwh",
+        "current_available_capacity_kwh"
+      ],
+      "separate_measurement": [
+        "measured_soh"
+      ],
+      "safety_screen": [
+        "fault_code_present",
+        "thermal_event_history",
+        "current_temperature_c",
+        "historical_max_temperature_c",
+        "cell_voltage_delta_mv"
+      ],
+      "demo_calculation": [
+        "cycle_count",
+        "new_battery_reference_price"
+      ],
+      "retained_only": [
+        "vehicle_brand",
+        "vehicle_model",
+        "registration_year",
+        "battery_brand",
+        "battery_type",
+        "mileage_km",
+        "region",
+        "internal_resistance_mohm",
+        "fast_charge_ratio",
+        "average_daily_mileage_km",
+        "annual_mileage_km",
+        "primary_charging_method",
+        "usual_charge_upper_soc",
+        "usual_discharge_lower_soc",
+        "average_environment_temperature_c",
+        "charge_throughput_kwh",
+        "discharge_throughput_kwh"
+      ]
+    },
+    "display_notice": "Capacity SOH uses user-declared energy; optional Demo RUL/value assumptions are not trained vehicle predictions. Blank outputs mean evidence is missing.",
+    "limitations": [
+      "比赛 Demo / 原型；尚未完成真实车辆验证，不能替代正式检测报告。",
+      "SOH/RUL 预测模型为公开 NASA 电芯数据验证，手动容量比值另行标注；RUL 依赖实测容量和工况，不能解释为剩余天数。",
+      "Demo / Prototype Parameters：退役决策权重、安全阈值、价格与路径参数均未经行业验证。",
+      "SHAP 解释模型预测贡献，不证明物理衰减因果；公开电芯结果不自动用于电池包决策。",
+      "碳因子受年份、地区和系统边界影响，调用方声明的来源不等于独立核验。",
+      "Residual value is a technical prototype estimate and does not represent an official transaction, insurance, appraisal, or certification price."
+    ]
+  },
+  "error": null,
+  "request_id": "a7b3609854e642f7b06eebf5c9683d04",
+  "schema_version": "1.0",
+  "warnings": [
+    "比赛 Demo / 原型；尚未完成真实车辆验证，不能替代正式检测报告。",
+    "SOH/RUL 预测模型为公开 NASA 电芯数据验证，手动容量比值另行标注；RUL 依赖实测容量和工况，不能解释为剩余天数。",
+    "Demo / Prototype Parameters：退役决策权重、安全阈值、价格与路径参数均未经行业验证。",
+    "SHAP 解释模型预测贡献，不证明物理衰减因果；公开电芯结果不自动用于电池包决策。",
+    "碳因子受年份、地区和系统边界影响，调用方声明的来源不等于独立核验。"
+  ]
+}

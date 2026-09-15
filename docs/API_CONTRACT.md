@@ -2,6 +2,8 @@
 
 Base URL：`http://127.0.0.1:8013`。仅本地 Demo。JSON 使用 UTF-8，数值必须有限，不允许 NaN/Infinity。请求体上限 2 MiB；CSV 每表上限 10000 行。未知顶层字段拒绝。无鉴权、无文件持久化。
 
+新增手动表单模式：同一 `/api/v1/assessment` 接受 `input_mode=manual`、`data_kind`、`manual_input`，不要求model_case或scenario。字段、单位、缺失证据、Demo估值和BMS优先级详见 [手动评估补充契约](MANUAL_ASSESSMENT.md)。下文原model_case请求继续兼容。
+
 ## 接口表与兼容映射
 
 | Method | URL | 用途 | V0.3 对应 |
