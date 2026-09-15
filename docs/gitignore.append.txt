@@ -1,0 +1,10 @@
+# Append these rules to the team's existing .gitignore; do not replace it.
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+backend/.env
+data/raw/
+data/uploads/
+*.log
+.DS_Store

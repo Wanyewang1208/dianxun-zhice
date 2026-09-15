@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.3",
+  "battery_id": "B0018",
+  "cycle": 66,
+  "evidence_kind": "public_experimental_cell",
+  "split_role": "held_out",
+  "predicted_soh_pct": 77.39439392089844,
+  "measured_soh_pct": 76.58116201846707,
+  "base_value_soh_pct": 79.38919067382812,
+  "additivity_error_pp": 6.103515625e-05,
+  "contributions": [
+    {
+      "feature": "voltage_600s_v",
+      "feature_value": 3.700241311338589,
+      "shap_soh_pp": -1.4311637878417969,
+      "direction": "lowers_prediction"
+    },
+    {
+      "feature": "voltage_slope_v_per_s",
+      "feature_value": -0.0003922757051801,
+      "shap_soh_pp": -1.1965386867523193,
+      "direction": "lowers_prediction"
+    },
+    {
+      "feature": "current_mean_a",
+      "feature_value": -2.0075175474382045,
+      "shap_soh_pp": 0.3353137671947479,
+      "direction": "raises_prediction"
+    },
+    {
+      "feature": "cycle",
+      "feature_value": 66.0,
+      "shap_soh_pp": 0.23683692514896393,
+      "direction": "raises_prediction"
+    },
+    {
+      "feature": "voltage_mean_v",
+      "feature_value": 3.8001142032951623,
+      "shap_soh_pp": -0.10712897777557373,
+      "direction": "lowers_prediction"
+    },
+    {
+      "feature": "voltage_300s_v",
+      "feature_value": 3.806608864757945,
+      "shap_soh_pp": 0.06293056905269623,
+      "direction": "raises_prediction"
+    },
+    {
+      "feature": "temperature_rise_c",
+      "feature_value": 4.550789925672671,
+      "shap_soh_pp": 0.05890167877078056,
+      "direction": "raises_prediction"
+    },
+    {
+      "feature": "voltage_60s_v",
+      "feature_value": 3.9317979106802494,
+      "shap_soh_pp": 0.04374018311500549,
+      "direction": "raises_prediction"
+    },
+    {
+      "feature": "voltage_120s_v",
+      "feature_value": 3.8844392151512994,
+      "shap_soh_pp": 0.024062909185886383,
+      "direction": "raises_prediction"
+    },
+    {
+      "feature": "temperature_mean_c",
+      "feature_value": 25.969244753271614,
+      "shap_soh_pp": -0.022128846496343613,
+      "direction": "lowers_prediction"
+    },
+    {
+      "feature": "current_std_a",
+      "feature_value": 0.001250400619268,
+      "shap_soh_pp": 0.00031519916956312954,
+      "direction": "raises_prediction"
+    },
+    {
+      "feature": "ambient_temperature_c",
+      "feature_value": 24.0,
+      "shap_soh_pp": 0.0,
+      "direction": "zero"
+    }
+  ],
+  "interpretation": "Contributions explain this model prediction relative to its tree baseline, not physical degradation causes",
+  "scope": "NASA experimental discharge at 600 seconds; no validated whole-vehicle transfer"
+}

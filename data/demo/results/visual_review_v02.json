@@ -1,0 +1,9 @@
+{
+  "new_figures_reviewed": [
+    "rul_v02_curves.png",
+    "rul_v02_mae.png"
+  ],
+  "result": "Readable axes, legends and values; censored cell marked; baseline and new errors retained",
+  "report_links": "All links in current and baseline report resolve",
+  "baseline_preserved": "Original DianXun_V0_1 tree checked against its manifest"
+}

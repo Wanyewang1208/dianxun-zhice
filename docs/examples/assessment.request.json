@@ -1,0 +1,145 @@
+{
+  "model_case": {
+    "battery_id": "B0018",
+    "cycle": 66
+  },
+  "scenario": {
+    "scenario_id": "DEMO_WEB_HANDOFF",
+    "data_kind": "illustrative",
+    "assessed_at": "2026-09-14T12:00:00+08:00",
+    "inspection_at": "2026-09-14T10:00:00+08:00",
+    "health": {
+      "soh_pct": 85,
+      "rul_cycles": 300,
+      "rul_unit": "reference_discharge_cycles"
+    },
+    "safety": {
+      "critical_event": false,
+      "electrical_pass": true,
+      "thermal_pass": true,
+      "mechanical_pass": true,
+      "post_repair_pass": true,
+      "second_life_approved": true,
+      "recycler_approved": true,
+      "transport_approved": true
+    }
+  },
+  "bms": {
+    "telemetry_csv": "battery_id,timestamp,pack_voltage,pack_current,SOC,cell_voltage_max,cell_voltage_min,temperature_max,temperature_min,charge_status,mileage\nSYNTHETIC_PACK_001,2026-01-01T00:00:00+08:00,320.0,10.0,60.0,3.4,3.3,30,25,discharging,100.0\nSYNTHETIC_PACK_001,2026-01-01T00:00:10+08:00,319.9,10.0,59.99,3.4,3.3,30,25,discharging,100.01\nSYNTHETIC_PACK_001,2026-01-01T00:00:20+08:00,319.8,10.0,59.98,3.4,3.3,30,25,discharging,100.02\nSYNTHETIC_PACK_001,2026-01-01T00:00:30+08:00,319.7,10.0,59.97,3.4,3.3,30,25,discharging,100.03\nSYNTHETIC_PACK_001,2026-01-01T00:00:40+08:00,319.6,10.0,59.96,3.4,3.3,30,25,discharging,100.04\nSYNTHETIC_PACK_001,2026-01-01T00:00:50+08:00,319.5,10.0,59.95,3.4,3.3,30,25,discharging,100.05\nSYNTHETIC_PACK_001,2026-01-01T00:01:00+08:00,319.4,10.0,59.94,3.4,3.3,30,25,discharging,100.06\nSYNTHETIC_PACK_001,2026-01-01T00:01:10+08:00,319.3,10.0,59.93,3.4,3.3,30,25,discharging,100.07\nSYNTHETIC_PACK_001,2026-01-01T00:01:20+08:00,319.2,10.0,59.92,3.4,3.3,30,25,discharging,100.08\nSYNTHETIC_PACK_001,2026-01-01T00:01:30+08:00,319.1,10.0,59.91,3.4,3.3,30,25,discharging,100.09\nSYNTHETIC_PACK_001,2026-01-01T00:01:40+08:00,319.0,10.0,59.9,3.4,3.3,30,25,discharging,100.1\nSYNTHETIC_PACK_001,2026-01-01T00:01:50+08:00,318.9,10.0,59.89,3.4,3.3,30,25,discharging,100.11\n",
+    "metadata_csv": "battery_id,battery_chemistry,rated_capacity_ah,current_sign_convention,voltage_unit,current_unit,temperature_unit,soc_unit,data_origin\nSYNTHETIC_PACK_001,LFP,100,discharge_positive,V,A,degC,%,synthetic_fixture\n",
+    "max_gap_s": 30
+  },
+  "carbon": {
+    "activities": [
+      {
+        "activity_id": "manufacture_pack",
+        "stage": "manufacturing",
+        "quantity": 60.0,
+        "activity_unit": "kWh_capacity",
+        "factor_id": "DEMO_PACK_MANUFACTURE",
+        "description": "制造一套60kWh电池包",
+        "data_status": "illustrative",
+        "derivation": "假设额定能量60kWh；制造因子包含材料和制造能源；不再重复计入制造用电"
+      },
+      {
+        "activity_id": "use_battery_losses",
+        "stage": "use",
+        "quantity": 3000.0,
+        "activity_unit": "kWh",
+        "factor_id": "CN_ELECTRICITY_CFP_2024",
+        "description": "电池全使用期损耗电量",
+        "data_status": "illustrative",
+        "derivation": "假设输入30000kWh输出27000kWh；损耗3000kWh；只归集电池损耗不归集全部牵引能耗"
+      },
+      {
+        "activity_id": "maintenance_electricity",
+        "stage": "maintenance_transport",
+        "quantity": 20.0,
+        "activity_unit": "kWh",
+        "factor_id": "CN_ELECTRICITY_CFP_2024",
+        "description": "维护检测用电",
+        "data_status": "illustrative",
+        "derivation": "假设生命周期维护检测合计20kWh；未发生配件更换的演示情景"
+      },
+      {
+        "activity_id": "transport_pack",
+        "stage": "maintenance_transport",
+        "quantity": 200.0,
+        "activity_unit": "t_km",
+        "factor_id": "DEMO_ROAD_FREIGHT",
+        "description": "电池运输",
+        "data_status": "illustrative",
+        "derivation": "假设电池400kg即0.4t运输500km；0.4乘500等于200t_km"
+      },
+      {
+        "activity_id": "end_of_life_processing",
+        "stage": "end_of_life",
+        "quantity": 400.0,
+        "activity_unit": "kg_battery",
+        "factor_id": "DEMO_EOL_PROCESS",
+        "description": "退役处理",
+        "data_status": "illustrative",
+        "derivation": "假设400kg电池全部进入同一处理路径；不计回收替代收益"
+      }
+    ],
+    "factors": [
+      {
+        "factor_id": "CN_ELECTRICITY_CFP_2024",
+        "name": "全国电力平均碳足迹因子",
+        "value": 0.5777,
+        "activity_unit": "kWh",
+        "output_unit": "kgCO2e",
+        "status": "official",
+        "geography": "中国全国",
+        "year": "2024",
+        "boundary": "电力生命周期碳足迹",
+        "source_url": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+        "notes": "历史年度因子；按项目年份和核算规则确认适用性；不是仅CO2排放因子",
+        "confidence_level": "source_declared_applicability_unverified"
+      },
+      {
+        "factor_id": "DEMO_PACK_MANUFACTURE",
+        "name": "电池包制造演示因子",
+        "value": 60.0,
+        "activity_unit": "kWh_capacity",
+        "output_unit": "kgCO2e",
+        "status": "illustrative",
+        "geography": "未指定",
+        "year": "未指定",
+        "boundary": "假设包含材料和制造能源至工厂门",
+        "source_url": "",
+        "notes": "人为设置的演示参数；无实证依据；正式核算须替换",
+        "confidence_level": "demo_unvalidated"
+      },
+      {
+        "factor_id": "DEMO_ROAD_FREIGHT",
+        "name": "道路货运演示因子",
+        "value": 0.08,
+        "activity_unit": "t_km",
+        "output_unit": "kgCO2e",
+        "status": "illustrative",
+        "geography": "未指定",
+        "year": "未指定",
+        "boundary": "假设货运过程生命周期排放",
+        "source_url": "",
+        "notes": "人为设置的演示参数；车型与装载率未验证",
+        "confidence_level": "demo_unvalidated"
+      },
+      {
+        "factor_id": "DEMO_EOL_PROCESS",
+        "name": "退役处理演示因子",
+        "value": 0.5,
+        "activity_unit": "kg_battery",
+        "output_unit": "kgCO2e",
+        "status": "illustrative",
+        "geography": "未指定",
+        "year": "未指定",
+        "boundary": "拆解回收处理排放；无回收替代收益",
+        "source_url": "",
+        "notes": "人为设置的演示参数；回收工艺未验证",
+        "confidence_level": "demo_unvalidated"
+      }
+    ],
+    "allow_demo": true
+  }
+}

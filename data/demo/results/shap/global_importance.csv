@@ -1,0 +1,13 @@
+﻿feature,mean_abs_shap_pp,mean_shap_pp
+voltage_slope_v_per_s,5.5027237,0.14719298
+voltage_600s_v,1.535099,-0.38437665
+cycle,1.0888333,0.5548164
+current_mean_a,0.33499014,0.33499014
+voltage_mean_v,0.08199862,-0.028891616
+temperature_rise_c,0.06706432,0.066758595
+voltage_300s_v,0.06500378,0.043058533
+voltage_60s_v,0.04649715,-0.023167895
+voltage_120s_v,0.0364264,0.015037403
+temperature_mean_c,0.023140267,-0.02147304
+current_std_a,0.002371672,0.0011468703
+ambient_temperature_c,0.0,0.0

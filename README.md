@@ -12,7 +12,7 @@
 - Green Decision：安全筛选与多指标去向决策。
 - Assessment Report：统一评估结果和报告。
 
-**当前完成范围：Overview 前端 Demo。** 已实现双场景切换、数字护照、技术预览及示例评估交互。其余正式子页与后端服务尚未实现。全部场景数据、曲线、因子及建议均为演示内容，不代表真实检测或验证结果。
+**当前完成范围：Overview 前端 Demo。** 已实现双场景切换、数字护照、技术预览及示例评估交互。其余正式子页尚未实现。当前分支增加 V0.3 后端原型、公开电芯模型及碳核算模块，现有前端尚未接入这些 API。全部场景数据、曲线、因子及建议均为演示内容，不代表真实检测或验证结果。
 
 ## 项目目录
 
@@ -25,10 +25,10 @@ DianXunZhiCe/
 │  ├─ tests/       # 模型计算与静态站点相关测试
 │  ├─ docs/        # 现有前端截图和视觉验收证据
 │  └─ package.json
-├─ backend/        # 后续接口服务；目前只有模块说明
-├─ model/          # 后续 SOH / RUL 模型；目前只有模块说明
-├─ carbon/         # 后续碳核算和因子模块；目前只有模块说明
-├─ data/           # 后续共享数据；目前只有模块说明
+├─ backend/        # V0.3 本地 API 与统一 assessment
+├─ model/          # 公开电芯 SOH/RUL 模型与真实 TreeSHAP
+├─ carbon/         # 独立生命周期碳核算与因子说明
+├─ data/           # 公开处理后数据、合成样例及 V0.1/V0.2 版本索引
 ├─ docs/           # 项目协作、接口和比赛材料说明
 ├─ README.md
 └─ .gitignore
@@ -115,3 +115,15 @@ git push -u origin main
 本次本地整理不创建 GitHub 仓库、不设置 origin、不提交或推送代码。未添加 LICENSE，待团队确定授权方式后再选择。
 
 更多内容见 [前端说明](frontend/README.md)、[文档导航](docs/README.md) 与 [迁移记录](docs/repository-setup.md)。
+
+## V0.3 后端原型接入
+
+在仓库根目录使用 Python 3.12：
+
+```powershell
+py -3.12 scripts/start_backend.py
+```
+
+服务启动后，在另一终端执行 `.venv\Scripts\python.exe scripts/smoke_test.py`。前端统一调用 `POST /api/v1/assessment`，见 [API 契约](docs/API_CONTRACT.md) 和 [联调说明](docs/integration_guide.md)。
+
+保留 frontend 全部代码、依赖及页面；前端仍使用原演示计算，实际接入由前端组员后续完成。NASA 电芯输出、BMS 质量检查和示例电池包方案必须分区展示。RUL 依赖历史实测容量，SHAP 非因果解释，权重和路径参数为 Demo，尚未完成真实车辆验证。

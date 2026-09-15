@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "code": "OK",
+  "message": "ok",
+  "data": {
+    "battery_id": "B0018",
+    "cycle": 66,
+    "unit": "reference_discharge_cycles",
+    "input_requirement": "At least 30 measured capacities in Ah through the current completed cycle",
+    "evidence_kind": "public_experimental_cell",
+    "validation_status": "exploratory_same_dataset_reuse",
+    "operating_condition_caution": "Not calendar life; depends on discharge conditions and measured capacities",
+    "status": "available",
+    "predicted_rul_cycles": 36.28555257448237,
+    "method": "V0.2 leave-one-cell-out random forest",
+    "features": {
+      "cycle": 66,
+      "current_capacity_ah": 1.5316232403693415,
+      "initial_capacity_ah": 1.8550045207910817,
+      "drop_from_initial_ah": 0.3233812804217402,
+      "local_slope_ah_per_cycle": -0.0034675963673567105,
+      "local_std_ah": 0.050098781509031,
+      "local_mean_ah": 1.6229555245639955
+    },
+    "train_ids": [
+      "B0005",
+      "B0006"
+    ],
+    "capacity_history_rows": 66
+  },
+  "error": null,
+  "request_id": "b7298f313775484f9923359f41226669",
+  "schema_version": "1.0",
+  "warnings": [
+    "比赛 Demo / 原型；尚未完成真实车辆验证，不能替代正式检测报告。",
+    "SOH/RUL 为公开 NASA 电芯数据验证；RUL 依赖实测容量和工况，不能解释为剩余天数。",
+    "Demo / Prototype Parameters：退役决策权重、安全阈值、价格与路径参数均未经行业验证。",
+    "SHAP 解释模型预测贡献，不证明物理衰减因果；公开电芯结果不自动用于电池包决策。",
+    "碳因子受年份、地区和系统边界影响，调用方声明的来源不等于独立核验。"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "model_case": {
+    "battery_id": "B0018",
+    "cycle": 66
+  },
+  "scenario": {
+    "scenario_id": "DEMO_WEB_HANDOFF",
+    "data_kind": "illustrative",
+    "assessed_at": "2026-09-14T12:00:00+08:00",
+    "inspection_at": "2026-09-14T10:00:00+08:00",
+    "health": {
+      "soh_pct": 85,
+      "rul_cycles": 300,
+      "rul_unit": "reference_discharge_cycles"
+    },
+    "safety": {
+      "critical_event": false,
+      "electrical_pass": true,
+      "thermal_pass": true,
+      "mechanical_pass": true,
+      "post_repair_pass": true,
+      "second_life_approved": true,
+      "recycler_approved": true,
+      "transport_approved": true
+    }
+  }
+}

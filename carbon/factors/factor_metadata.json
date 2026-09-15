@@ -1,0 +1,76 @@
+{
+  "verification": "Inherited V0.3 sources; no fresh source or applicability verification in this packaging task",
+  "confidence_semantics": "Qualitative provenance tags, not calibrated probabilities",
+  "factors": [
+    {
+      "factor_id": "CN_ELECTRICITY_CFP_2024",
+      "name": "全国电力平均碳足迹因子",
+      "value": 0.5777,
+      "activity_unit": "kWh",
+      "output_unit": "kgCO2e",
+      "status": "official",
+      "geography": "中国全国",
+      "year": "2024",
+      "boundary": "电力生命周期碳足迹",
+      "source_url": "https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml",
+      "notes": "历史年度因子；按项目年份和核算规则确认适用性；不是仅CO2排放因子",
+      "confidence_level": "source_declared_applicability_unverified"
+    },
+    {
+      "factor_id": "DEMO_PACK_MANUFACTURE",
+      "name": "电池包制造演示因子",
+      "value": 60.0,
+      "activity_unit": "kWh_capacity",
+      "output_unit": "kgCO2e",
+      "status": "illustrative",
+      "geography": "未指定",
+      "year": "未指定",
+      "boundary": "假设包含材料和制造能源至工厂门",
+      "source_url": "",
+      "notes": "人为设置的演示参数；无实证依据；正式核算须替换",
+      "confidence_level": "demo_unvalidated"
+    },
+    {
+      "factor_id": "DEMO_ROAD_FREIGHT",
+      "name": "道路货运演示因子",
+      "value": 0.08,
+      "activity_unit": "t_km",
+      "output_unit": "kgCO2e",
+      "status": "illustrative",
+      "geography": "未指定",
+      "year": "未指定",
+      "boundary": "假设货运过程生命周期排放",
+      "source_url": "",
+      "notes": "人为设置的演示参数；车型与装载率未验证",
+      "confidence_level": "demo_unvalidated"
+    },
+    {
+      "factor_id": "DEMO_EOL_PROCESS",
+      "name": "退役处理演示因子",
+      "value": 0.5,
+      "activity_unit": "kg_battery",
+      "output_unit": "kgCO2e",
+      "status": "illustrative",
+      "geography": "未指定",
+      "year": "未指定",
+      "boundary": "拆解回收处理排放；无回收替代收益",
+      "source_url": "",
+      "notes": "人为设置的演示参数；回收工艺未验证",
+      "confidence_level": "demo_unvalidated"
+    },
+    {
+      "factor_id": "SUPPLIER_PACK_CFP",
+      "name": "待供应商提供电池包制造因子",
+      "value": null,
+      "activity_unit": "kWh_capacity",
+      "output_unit": "kgCO2e",
+      "status": "pending",
+      "geography": "待填",
+      "year": "待填",
+      "boundary": "供应商报告明确边界",
+      "source_url": "",
+      "notes": "缺失值不等于0；填入核实值和来源后更新状态",
+      "confidence_level": "source_declared_applicability_unverified"
+    }
+  ]
+}

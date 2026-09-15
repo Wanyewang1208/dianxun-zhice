@@ -1,0 +1,4 @@
+factor_id,name,value,activity_unit,output_unit,status,geography,year,boundary,source_url,notes
+CN_ELECTRICITY_CFP_2024,全国电力平均碳足迹因子,0.5777,kWh,kgCO2e,official,中国全国,2024,电力生命周期碳足迹,https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml,沿用V0.1已核实的历史年度因子；实际适用性待审查
+DEMO_ROAD_FREIGHT,货运演示因子,0.08,t_km,kgCO2e,illustrative,未指定,未指定,货运过程,,人为演示参数
+DEMO_REPLACEMENT_SERVICE,替代储能设备制造分摊因子,0.08,kWh_service,kgCO2e,illustrative,未指定,未指定,替代设备制造排放分摊至交付服务电量；不含使用损耗,,人为演示参数；使用损耗另算；无真实设备制造清单

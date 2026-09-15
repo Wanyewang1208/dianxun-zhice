@@ -1,0 +1,12 @@
+{
+  "method": "Least squares line on last 30 observed capacity measurements at each prefix; extrapolate to 1.4 Ah",
+  "threshold_ah": 1.4,
+  "eol_definition": "First observed discharge capacity <= 1.4 Ah; first-passage event is absorbing",
+  "threshold_source": "data/raw/README.txt; NASA FY08Q4, 30 percent fade from 2 Ah",
+  "censoring": "No threshold crossing => true RUL missing, not last_cycle-current_cycle; omitted from MAE/RMSE/R2",
+  "abstention": "Fewer than 30 observations or nondegrading slope => prediction missing",
+  "input_assumption": "Measured diagnostic capacities through current cycle are available; not SOH model predictions",
+  "evaluation": "Rolling-origin prefixes within each cell; no global training, tuning, or future prefix data",
+  "uncertainty": "No calibrated interval; adjacent prefixes correlated; large extrapolation errors possible",
+  "output_units": "Discharge-operation cycles, not calendar days, km or equivalent full cycles"
+}

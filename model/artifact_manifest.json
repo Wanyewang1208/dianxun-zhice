@@ -1,0 +1,47 @@
+[
+  {
+    "path": "model/cycle_only_linear.joblib",
+    "sha256": "d31d69d3da7b6308b0be82c94c6648ad14afce3ce883bb59cb3064ffb025e0c7",
+    "original_V03_identical": true
+  },
+  {
+    "path": "model/linear_regression.joblib",
+    "sha256": "22b3597791f0afbb673dbf0b10213b68d01752b93f8dde2554bb6f9c25fea9b5",
+    "original_V03_identical": true
+  },
+  {
+    "path": "model/random_forest.joblib",
+    "sha256": "965bd12671645543a28dc2d3b570af169b9689563a5619b2b66c1aacbd076af1",
+    "original_V03_identical": true
+  },
+  {
+    "path": "model/train_mean.joblib",
+    "sha256": "eb5e34997de49d728a0a7a043200dadbfc3aaf0336f5bc9cab839f3ddfe978ad",
+    "original_V03_identical": true
+  },
+  {
+    "path": "model/xgboost.joblib",
+    "sha256": "50d52215a1f82bd062de15c049f979270a120155585624169696528f8f76fe0d",
+    "original_V03_identical": true
+  },
+  {
+    "path": "model/rul_v02/leave_out_B0005.joblib",
+    "sha256": "ae8c1fa2ca699fdcac673c76cda9952a97ff02bf609c3c17eb6662d61154368b",
+    "original_V03_identical": true
+  },
+  {
+    "path": "model/rul_v02/leave_out_B0006.joblib",
+    "sha256": "9b48c3dcbcd0b6dca4a329d63ba4e5117985a7127aa6d2c749d717891374b8a2",
+    "original_V03_identical": true
+  },
+  {
+    "path": "model/rul_v02/leave_out_B0007.joblib",
+    "sha256": "13a255dc241aec09fad8e5793bccb0cf43c97fd1d4ec0aa5c7c799dc1839d339",
+    "original_V03_identical": true
+  },
+  {
+    "path": "model/rul_v02/leave_out_B0018.joblib",
+    "sha256": "7186fd3b31f0f354c9940291e322565d2552904e66055ed74a63cf2eac94f9a8",
+    "original_V03_identical": true
+  }
+]

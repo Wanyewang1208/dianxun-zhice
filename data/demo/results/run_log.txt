@@ -1,0 +1,101 @@
+Running: -m unittest discover -s tests -v
+test_eol_censoring (test_core.BatteryTests.test_eol_censoring) ... ok
+test_fixed_window_is_causal (test_core.BatteryTests.test_fixed_window_is_causal) ... ok
+test_no_target_predictors (test_core.BatteryTests.test_no_target_predictors) ... ok
+test_rul_causal_trend (test_core.BatteryTests.test_rul_causal_trend) ... ok
+test_short_window_rejected (test_core.BatteryTests.test_short_window_rejected) ... ok
+test_split_rejects_overlap (test_core.BatteryTests.test_split_rejects_overlap) ... ok
+test_arithmetic (test_core.CarbonTests.test_arithmetic) ... ok
+test_bad_units (test_core.CarbonTests.test_bad_units) ... ok
+test_demo_activity_remains_labelled_with_official_factor (test_core.CarbonTests.test_demo_activity_remains_labelled_with_official_factor) ... ok
+test_demo_requires_optin (test_core.CarbonTests.test_demo_requires_optin) ... ok
+test_duplicate_factor (test_core.CarbonTests.test_duplicate_factor) ... ok
+test_incomplete_scope_is_visible (test_core.CarbonTests.test_incomplete_scope_is_visible) ... ok
+test_missing_factor (test_core.CarbonTests.test_missing_factor) ... ok
+test_missing_factor_value (test_core.CarbonTests.test_missing_factor_value) ... ok
+test_nan_quantity_is_not_zero (test_core.CarbonTests.test_nan_quantity_is_not_zero) ... ok
+test_negative_quantity (test_core.CarbonTests.test_negative_quantity) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.020s
+
+OK
+Running: -m src.prepare_data
+{
+  "cycle_rows": 636,
+  "timeseries_rows": 185721,
+  "eligible_rows": 636,
+  "excluded_cycles": 0,
+  "cleaning_issue_entries": 0,
+  "operations": [
+    {
+      "battery_id": "B0005",
+      "charge": 170,
+      "discharge": 168,
+      "impedance": 278
+    },
+    {
+      "battery_id": "B0006",
+      "charge": 170,
+      "discharge": 168,
+      "impedance": 278
+    },
+    {
+      "battery_id": "B0007",
+      "charge": 170,
+      "discharge": 168,
+      "impedance": 278
+    },
+    {
+      "battery_id": "B0018",
+      "charge": 134,
+      "impedance": 53,
+      "discharge": 132
+    }
+  ],
+  "timestamp_timezone": "unspecified in NASA source; not converted to UTC",
+  "cycle_definition": "1-based discharge operation index within each battery, not equivalent-full-cycle count",
+  "early_window": "t <= 600 s only; grid 60..600 s; last-value hold <=30 s at endpoint"
+}
+Running: -m src.train_soh
+        split test_battery             model   n   MAE_pp  RMSE_pp        R2
+fixed_holdout        B0018        train_mean 132 7.034388 7.861456 -0.038370
+fixed_holdout        B0018 cycle_only_linear 132 5.178011 5.518910  0.488256
+fixed_holdout        B0018 linear_regression 132 3.362132 3.805876  0.756637
+fixed_holdout        B0018     random_forest 132 2.345705 3.352018  0.811219
+fixed_holdout        B0018           xgboost 132 2.274712 2.763027  0.871733
+Running: -m src.rul
+battery_id  eligible_prefixes  predicted_prefixes  evaluated_prefixes  right_censored  MAE_cycles  RMSE_cycles          R2  coverage
+     B0005                 95                  95                  95           False  161.416833   474.232522 -298.064474       1.0
+     B0006                 79                  79                  79           False   16.575154    18.078872    0.371451       1.0
+     B0007                139                 139                   0            True         NaN          NaN         NaN       1.0
+     B0018                 67                  67                  67           False   31.074512    52.953685   -6.497574       1.0
+Running: -m src.carbon --allow-demo
+{
+  "total_kgCO2e": 5560.654,
+  "by_stage_kgCO2e": {
+    "manufacturing": 3600.0,
+    "use": 1733.1,
+    "maintenance_transport": 27.554000000000002,
+    "end_of_life": 200.0
+  },
+  "included_stages": [
+    "end_of_life",
+    "maintenance_transport",
+    "manufacturing",
+    "use"
+  ],
+  "missing_stages": [],
+  "scope_complete": true,
+  "contains_illustrative_factors": true,
+  "contains_illustrative_activities": true,
+  "interpretation": "Illustrative scenario; not verified product footprint",
+  "allocation": "Cut-off at end-of-life; no avoided-burden or recycling credits; electricity attribution follows activity description and declared functional unit"
+}
+Running: -m src.plots
+Saved six PNG figures and six editable SVG figures
+Running: -m src.verify_results
+83 acceptance checks passed
+Running: -m src.report
+Generated report.html
+All stages finished; inspect results/ and README.md

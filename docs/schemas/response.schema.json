@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V1 envelope",
+  "type": "object",
+  "required": [
+    "success",
+    "code",
+    "message",
+    "data",
+    "error",
+    "request_id",
+    "schema_version",
+    "warnings"
+  ],
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "code": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "error": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

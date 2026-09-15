@@ -1,0 +1,47 @@
+{
+  "unit_tests_passed": 71,
+  "original_tests": 53,
+  "new_api_tests": 18,
+  "v03_numerical_checks_passed": 39,
+  "standalone_extracted_packages": {
+    "full": {
+      "status": "PASS",
+      "checks": [
+        "health",
+        "BMS",
+        "SOH",
+        "RUL",
+        "real_SHAP",
+        "carbon",
+        "four_paths",
+        "evidence_separation"
+      ],
+      "soh_pct": 77.39439392089844,
+      "rul_cycles": 36.28555257448237,
+      "carbon_kgCO2e": 5560.654
+    },
+    "light": {
+      "status": "PASS",
+      "checks": [
+        "health",
+        "BMS",
+        "SOH",
+        "RUL",
+        "real_SHAP",
+        "carbon",
+        "four_paths",
+        "evidence_separation"
+      ],
+      "soh_pct": 77.39439392089844,
+      "rul_cycles": 36.28555257448237,
+      "carbon_kgCO2e": 5560.654
+    }
+  },
+  "historical_entries_verified": 61,
+  "model_files_byte_identical": 9,
+  "python": "3.12.14",
+  "dependency_environment": "Existing V0.3 pinned dependencies reused; no clean online installation claimed",
+  "frontend_modified": false,
+  "github_uploaded": false,
+  "large_raw_data_included": false
+}

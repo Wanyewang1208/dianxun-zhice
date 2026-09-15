@@ -1,0 +1,95 @@
+Running: -m unittest discover -s tests -v expected exit 0
+test_eol_censoring (test_core.BatteryTests.test_eol_censoring) ... ok
+test_fixed_window_is_causal (test_core.BatteryTests.test_fixed_window_is_causal) ... ok
+test_no_target_predictors (test_core.BatteryTests.test_no_target_predictors) ... ok
+test_rul_causal_trend (test_core.BatteryTests.test_rul_causal_trend) ... ok
+test_short_window_rejected (test_core.BatteryTests.test_short_window_rejected) ... ok
+test_split_rejects_overlap (test_core.BatteryTests.test_split_rejects_overlap) ... ok
+test_arithmetic (test_core.CarbonTests.test_arithmetic) ... ok
+test_bad_units (test_core.CarbonTests.test_bad_units) ... ok
+test_demo_activity_remains_labelled_with_official_factor (test_core.CarbonTests.test_demo_activity_remains_labelled_with_official_factor) ... ok
+test_demo_requires_optin (test_core.CarbonTests.test_demo_requires_optin) ... ok
+test_duplicate_factor (test_core.CarbonTests.test_duplicate_factor) ... ok
+test_incomplete_scope_is_visible (test_core.CarbonTests.test_incomplete_scope_is_visible) ... ok
+test_missing_factor (test_core.CarbonTests.test_missing_factor) ... ok
+test_missing_factor_value (test_core.CarbonTests.test_missing_factor_value) ... ok
+test_nan_quantity_is_not_zero (test_core.CarbonTests.test_nan_quantity_is_not_zero) ... ok
+test_negative_quantity (test_core.CarbonTests.test_negative_quantity) ... ok
+test_current_sign_normalization_and_reimport (test_v02.BMSTests.test_current_sign_normalization_and_reimport) ... ok
+test_duplicate_keys_all_quarantined (test_v02.BMSTests.test_duplicate_keys_all_quarantined) ... ok
+test_empty_is_not_ready (test_v02.BMSTests.test_empty_is_not_ready) ... ok
+test_gap_warns (test_v02.BMSTests.test_gap_warns) ... ok
+test_good_fixture (test_v02.BMSTests.test_good_fixture) ... ok
+test_inverted_extrema (test_v02.BMSTests.test_inverted_extrema) ... ok
+test_missing_numeric_text (test_v02.BMSTests.test_missing_numeric_text) ... ok
+test_naive_time_rejected (test_v02.BMSTests.test_naive_time_rejected) ... ok
+test_sign_mismatch_warning (test_v02.BMSTests.test_sign_mismatch_warning) ... ok
+test_soc_out_of_range (test_v02.BMSTests.test_soc_out_of_range) ... ok
+test_wrong_unit_rejected (test_v02.BMSTests.test_wrong_unit_rejected) ... ok
+test_censored_only_not_used_as_known_life (test_v02.RULV02Tests.test_censored_only_not_used_as_known_life) ... ok
+test_fold_rejects_overlap (test_v02.RULV02Tests.test_fold_rejects_overlap) ... ok
+test_prefix_ignores_future (test_v02.RULV02Tests.test_prefix_ignores_future) ... ok
+test_prior_finite_flat_capacity (test_v02.RULV02Tests.test_prior_finite_flat_capacity) ... ok
+test_short_prefix (test_v02.RULV02Tests.test_short_prefix) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.113s
+
+OK
+Running: -m src.verify_results expected exit 0
+83 acceptance checks passed
+Running: -m src.rul_v02 expected exit 0
+            model  MAE_cycles  RMSE_cycles          R2
+     blended_rate   12.247635    16.100913    0.511005
+random_forest_rul    7.772393     9.439842    0.836698
+    training_rate    9.157768    11.089626    0.758980
+        v01_trend   69.688833   181.755026 -101.396866
+Running: -m src.bms_fixtures expected exit 0
+Created synthetic-only fixtures: 12 clean rows; 13 rows with 6 intentionally invalid rows
+Running: -m src.bms_validate --telemetry bms/synthetic_fixtures/good_telemetry.csv --metadata bms/synthetic_fixtures/metadata.csv --output results/bms_good expected exit 0
+{
+  "input_rows": 12,
+  "accepted_rows": 12,
+  "rejected_rows": 0,
+  "error_count": 0,
+  "warning_count": 0,
+  "warnings_need_review": false,
+  "schema_ready": true,
+  "synthetic_fixture_present": true,
+  "source_provenance": "Input data_origin declarations are not independent verification",
+  "output_current_convention": "discharge_positive",
+  "output_time": "UTC with explicit Z",
+  "model_inference_performed": false,
+  "scope": "Core telemetry + metadata only; full cell/probe/events tables not validated in V0.2",
+  "interpretation": "Data quality screening only; not a battery safety pass or vehicle SOH/RUL validation",
+  "input_sha256": {
+    "good_telemetry.csv": "d0d735e7b1ce3c71c8c3e51f81af882ef4d4767437ada4f9c81868826021a09d",
+    "metadata.csv": "87e12337f3f458aeb47086fd2dd7985f72c8ad51bda3eecdcd82d2f4e18d3f74"
+  }
+}
+Running: -m src.bms_validate --telemetry bms/synthetic_fixtures/bad_telemetry.csv --metadata bms/synthetic_fixtures/metadata.csv --output results/bms_bad expected exit 2
+{
+  "input_rows": 13,
+  "accepted_rows": 7,
+  "rejected_rows": 6,
+  "error_count": 6,
+  "warning_count": 3,
+  "warnings_need_review": true,
+  "schema_ready": false,
+  "synthetic_fixture_present": true,
+  "source_provenance": "Input data_origin declarations are not independent verification",
+  "output_current_convention": "discharge_positive",
+  "output_time": "UTC with explicit Z",
+  "model_inference_performed": false,
+  "scope": "Core telemetry + metadata only; full cell/probe/events tables not validated in V0.2",
+  "interpretation": "Data quality screening only; not a battery safety pass or vehicle SOH/RUL validation",
+  "input_sha256": {
+    "bad_telemetry.csv": "6530d62858e262c0cd0f998945c52900d3ae1929ab3f587b85cf7c55a0882b59",
+    "metadata.csv": "87e12337f3f458aeb47086fd2dd7985f72c8ad51bda3eecdcd82d2f4e18d3f74"
+  }
+}
+Running: -m src.verify_v02 expected exit 0
+59 V0.2 checks passed
+Running: -m src.report_v02 expected exit 0
+Saved V0.2 report and two PNG/SVG figures
+V0.2 run completed; report.html contains current comparison and limitations

@@ -46,3 +46,7 @@ temp/
 *.pfx
 id_rsa
 id_ed25519
+
+# Local BMS uploads and raw dataset downloads
+data/raw/
+data/uploads/

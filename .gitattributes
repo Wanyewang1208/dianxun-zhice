@@ -1,0 +1,3 @@
+# Keep historical data byte-identical to the supplied SHA256 version manifest.
+data/** -text -whitespace
+*.joblib binary

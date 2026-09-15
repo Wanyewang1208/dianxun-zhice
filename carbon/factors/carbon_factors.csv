@@ -1,0 +1,6 @@
+﻿factor_id,name,value,activity_unit,output_unit,status,geography,year,boundary,source_url,notes
+CN_ELECTRICITY_CFP_2024,全国电力平均碳足迹因子,0.5777,kWh,kgCO2e,official,中国全国,2024,电力生命周期碳足迹,https://www.mee.gov.cn/ywdt/zbft/202510/t20251024_1130763.shtml,历史年度因子；按项目年份和核算规则确认适用性；不是仅CO2排放因子
+DEMO_PACK_MANUFACTURE,电池包制造演示因子,60,kWh_capacity,kgCO2e,illustrative,未指定,未指定,假设包含材料和制造能源至工厂门,,人为设置的演示参数；无实证依据；正式核算须替换
+DEMO_ROAD_FREIGHT,道路货运演示因子,0.08,t_km,kgCO2e,illustrative,未指定,未指定,假设货运过程生命周期排放,,人为设置的演示参数；车型与装载率未验证
+DEMO_EOL_PROCESS,退役处理演示因子,0.5,kg_battery,kgCO2e,illustrative,未指定,未指定,拆解回收处理排放；无回收替代收益,,人为设置的演示参数；回收工艺未验证
+SUPPLIER_PACK_CFP,待供应商提供电池包制造因子,,kWh_capacity,kgCO2e,pending,待填,待填,供应商报告明确边界,,缺失值不等于0；填入核实值和来源后更新状态

@@ -21,3 +21,20 @@
 - [工程迁移记录](repository-setup.md)
 
 原有前端文档与截图保留在 `frontend/` 内，避免破坏现有相对链接。
+
+
+---
+
+## V0.3 模块接入
+
+# 交接文档入口
+
+- [合并说明](../MERGE_GUIDE.md)：目录、依赖、启动、测试、未完成项。
+- [API 契约](API_CONTRACT.md)：字段、单位、错误码、兼容映射和证据边界。
+- [前端联调说明](integration_guide.md)：Base URL、fetch、CORS、CSV 上传。
+- [结构与复用映射](ARCHITECTURE.md)：V0.3 代码迁移位置。
+- [实际完整请求](examples/assessment.request.json) / [实际完整响应](examples/assessment.response.json)。
+- [测试摘要](TEST_RESULTS.md)：本次测试及解压验证记录。
+- [模型说明](../model/README.md) / [碳模块](../carbon/README.md) / [历史数据](../data/README.md)。
+
+本包不含 frontend，不覆盖团队根 README 或 .gitignore。所有预测/决策均为原型范围，尚未完成真实车辆验证。

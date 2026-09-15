@@ -1,0 +1,6 @@
+﻿activity_id,stage,quantity,activity_unit,factor_id,description,data_status,derivation
+manufacture_pack,manufacturing,60,kWh_capacity,DEMO_PACK_MANUFACTURE,制造一套60kWh电池包,illustrative,假设额定能量60kWh；制造因子包含材料和制造能源；不再重复计入制造用电
+use_battery_losses,use,3000,kWh,CN_ELECTRICITY_CFP_2024,电池全使用期损耗电量,illustrative,假设输入30000kWh输出27000kWh；损耗3000kWh；只归集电池损耗不归集全部牵引能耗
+maintenance_electricity,maintenance_transport,20,kWh,CN_ELECTRICITY_CFP_2024,维护检测用电,illustrative,假设生命周期维护检测合计20kWh；未发生配件更换的演示情景
+transport_pack,maintenance_transport,200,t_km,DEMO_ROAD_FREIGHT,电池运输,illustrative,假设电池400kg即0.4t运输500km；0.4乘500等于200t_km
+end_of_life_processing,end_of_life,400,kg_battery,DEMO_EOL_PROCESS,退役处理,illustrative,假设400kg电池全部进入同一处理路径；不计回收替代收益

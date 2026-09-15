@@ -1,0 +1,24 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"V0.3 report request",
+  "type":"object",
+  "required":["model_case","scenario"],
+  "additionalProperties":false,
+  "properties":{
+    "model_case":{"type":"object","required":["battery_id","cycle"],"additionalProperties":false,"properties":{"battery_id":{"enum":["B0005","B0006","B0007","B0018"]},"cycle":{"type":"integer","minimum":1,"maximum":168}}},
+    "scenario":{
+      "type":"object","required":["scenario_id","data_kind"],
+      "properties":{
+        "scenario_id":{"type":"string","minLength":1},
+        "data_kind":{"type":"string","description":"Only illustrative may produce a simulation recommendation"},
+        "assessed_at":{"type":"string","format":"date-time"},
+        "inspection_at":{"type":"string","format":"date-time"},
+        "health":{"type":"object","properties":{"soh_pct":{"type":["number","null"],"minimum":0,"maximum":120},"rul_cycles":{"type":["number","null"],"minimum":0},"rul_unit":{"const":"reference_discharge_cycles"}}},
+        "safety":{"type":"object","properties":{
+          "critical_event":{"type":["boolean","null"]},"electrical_pass":{"type":["boolean","null"]},"thermal_pass":{"type":["boolean","null"]},"mechanical_pass":{"type":["boolean","null"]},"post_repair_pass":{"type":["boolean","null"]},"second_life_approved":{"type":["boolean","null"]},"recycler_approved":{"type":["boolean","null"]},"transport_approved":{"type":["boolean","null"]}
+        }}
+      }
+    },
+    "weights":{"type":"object","required":["carbon","economic","resource","technical"],"additionalProperties":false,"properties":{"carbon":{"type":"number","minimum":0},"economic":{"type":"number","minimum":0},"resource":{"type":"number","minimum":0},"technical":{"type":"number","minimum":0}},"description":"At least one weight must be positive; normalized by server"}
+  }
+}

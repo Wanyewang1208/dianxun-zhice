@@ -1,0 +1,1 @@
+﻿battery_id,test_id,timestamp,measured_capacity_ah,rated_capacity_ah,ambient_temperature_c,charge_current_a,discharge_current_a,charge_cutoff_v,discharge_cutoff_v,test_protocol,instrument_id,quality_flag

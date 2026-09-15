@@ -1,0 +1,30 @@
+{
+  "version": "0.3",
+  "parameter_status": "illustrative_only",
+  "functional_unit": "模拟：处置一套400kg电池，并在未来3年提供总计10000kWh可比储能放电服务；不足部分由替代设备补足；不等同于牵引与电网储能服务天然可互换",
+  "pack_mass_kg": 400,
+  "rated_energy_kwh": 60,
+  "assumed_dod": 0.8,
+  "service_target_kwh": 10000,
+  "horizon_years": 3,
+  "discount_rate": 0.08,
+  "electricity_price_cny_per_kwh": 0.8,
+  "transport_price_cny_per_t_km": 0.5,
+  "service_margin_cny_per_kwh": 0.5,
+  "replacement_service_cost_cny_per_kwh": 0.25,
+  "replacement_loss_kwh_per_service_kwh": 0.1,
+  "policy": {
+    "inspection_valid_days": 30,
+    "continue_soh_min": 80,
+    "continue_rul_min": 50,
+    "second_life_soh_min": 65
+  },
+  "weights": {"carbon": 0.4, "economic": 0.4, "resource": 0.1, "technical": 0.1},
+  "utility_anchors": {"carbon": [0, 2000], "economic": [-5000, 10000], "resource": [0, 100], "technical": [0, 100]},
+  "weight_presets": {
+    "balanced": {"carbon": 0.4, "economic": 0.4, "resource": 0.1, "technical": 0.1},
+    "economic_priority": {"carbon": 0.15, "economic": 0.65, "resource": 0.1, "technical": 0.1},
+    "resource_priority": {"carbon": 0.15, "economic": 0.15, "resource": 0.6, "technical": 0.1}
+  },
+  "notes": "所有经济、材料、技术评分及政策阈值均为演示假设，非市场报价或标准要求。技术评分为外部输入，不是已训练技术适用性模型。"
+}

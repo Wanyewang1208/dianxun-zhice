@@ -1,0 +1,10 @@
+{
+  "reviewed_figures": [
+    "shap_global",
+    "shap_local",
+    "decision_pareto",
+    "technical_coverage"
+  ],
+  "result": "Axes, text, attribution units, scenario labels and status text visually checked; all report links resolve",
+  "V0_2_unchanged": true
+}

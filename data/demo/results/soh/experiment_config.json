@@ -1,0 +1,41 @@
+{
+  "train_ids": [
+    "B0005",
+    "B0006",
+    "B0007"
+  ],
+  "test_ids": [
+    "B0018"
+  ],
+  "train_rows": 504,
+  "test_rows": 132,
+  "seed": 42,
+  "features": [
+    "cycle",
+    "voltage_60s_v",
+    "voltage_120s_v",
+    "voltage_300s_v",
+    "voltage_600s_v",
+    "voltage_mean_v",
+    "voltage_slope_v_per_s",
+    "current_mean_a",
+    "current_std_a",
+    "temperature_mean_c",
+    "temperature_rise_c",
+    "ambient_temperature_c"
+  ],
+  "hyperparameter_selection": "Fixed in source before first model evaluation; no hyperparameter search or early stopping",
+  "target_definition": "SOH_pct = capacity_ah / 2.0 * 100; MAE/RMSE in percentage points",
+  "excluded_predictors": [
+    "capacity_ah",
+    "soh_pct",
+    "battery_id",
+    "discharge_duration_s",
+    "sample_count",
+    "full_discharge_Ah",
+    "future_cycles"
+  ],
+  "preprocessing": "Training-only median imputation; training-only scaling for linear regression",
+  "lobo_role": "Four-cell sensitivity analysis, not another independent confirmation of the fixed holdout",
+  "predictions": "Unclipped predictions are scored and saved"
+}
