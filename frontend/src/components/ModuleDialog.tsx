@@ -1,3 +1,5 @@
+import { useAssessment } from "../context/AssessmentContext";
+import LiveResults from "./LiveResults";
 import { useEffect, useRef } from "react";
 import { X, ArrowRight, Check, LoaderCircle } from "lucide-react";
 import type { BatteryScenario, ModuleId } from "../types/battery";
@@ -22,6 +24,7 @@ export default function ModuleDialog({
   onClose: () => void;
   progress: number;
 }) {
+  const { assessmentResult } = useAssessment();
   const dialog = useRef<HTMLDialogElement>(null);
   const { soh, rul } = getBatteryModel(data);
   useEffect(() => {
@@ -37,7 +40,7 @@ export default function ModuleDialog({
     <dialog
       ref={dialog}
       aria-labelledby="dialog-title"
-      className="module-dialog"
+      className={`module-dialog ${assessmentResult ? "live-dialog" : ""}`}
       onCancel={onClose}
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
@@ -53,7 +56,9 @@ export default function ModuleDialog({
       <p className="dialog-subtitle">
         {assessment ? "示例数据评估" : modules[module][1]}
       </p>
-      {assessment && progress < 5 ? (
+      {assessmentResult ? (
+        <LiveResults module={module} />
+      ) : assessment && progress < 5 ? (
         <div className="analysis-progress" role="status">
           <p>Analyzing battery data...</p>
           {analysisSteps.map((s, i) => (
@@ -112,21 +117,18 @@ export default function ModuleDialog({
             </p>
           )}
           <p className="scope-note">
-            本轮开放 Overview 与技术预览。
-            {assessment ? "完整分析页面" : `${name} 正式子页面`}尚未开发。
+            当前为本地 Demo 摘要。点击首页 Start Assessment
+            后，本模块将展示后端结果。
           </p>
           <button
             className="primary-button compact"
             onClick={() => {
               onClose();
-              document
-                .getElementById("technology")
-                ?.scrollIntoView({
-                  behavior: matchMedia("(prefers-reduced-motion: reduce)")
-                    .matches
-                    ? "instant"
-                    : "smooth",
-                });
+              document.getElementById("technology")?.scrollIntoView({
+                behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+                  ? "instant"
+                  : "smooth",
+              });
             }}
           >
             查看首页技术预览
@@ -134,7 +136,11 @@ export default function ModuleDialog({
           </button>
         </>
       )}
-      <p className="demo-note">情景模拟 · 不接入真实 BMS 或外部 AI 服务</p>
+      {!assessmentResult && (
+        <p className="demo-note">
+          DEMO DATA · 当前为本地情景模拟，开始评估后可查看后端结果。
+        </p>
+      )}
     </dialog>
   );
 }

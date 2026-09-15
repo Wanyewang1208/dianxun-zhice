@@ -1,3 +1,4 @@
+import { useAssessment } from "../../context/AssessmentContext";
 import { ArrowRight, LoaderCircle } from "lucide-react";
 import ScenarioSwitch from "./ScenarioSwitch";
 import type { ScenarioId } from "../../types/battery";
@@ -12,6 +13,7 @@ export default function OverviewHero({
   onAssess: () => void;
   busy: boolean;
 }) {
+  const { dataSource } = useAssessment();
   return (
     <section className="overview-hero">
       <p className="eyebrow">
@@ -29,11 +31,15 @@ export default function OverviewHero({
         <br className="desktop-break" />
         与最终去向都有据可依。
       </p>
-      <ScenarioSwitch value={scenario} onChange={onChange} disabled={busy} />
+      <ScenarioSwitch
+        value={scenario}
+        onChange={onChange}
+        disabled={busy || dataSource === "live"}
+      />
       <button className="primary-button" onClick={onAssess} disabled={busy}>
         {busy ? <LoaderCircle className="spin" size={19} /> : null}
         <span>
-          {busy ? "正在分析示例数据…" : "开始电池评估"}
+          {busy ? "正在等待后端评估…" : "开始电池评估"}
           <small>{busy ? "Analyzing battery data" : "Start Assessment"}</small>
         </span>
         {!busy && <ArrowRight size={22} />}

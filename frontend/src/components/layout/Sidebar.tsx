@@ -1,3 +1,4 @@
+import { useAssessment } from "../../context/AssessmentContext";
 import {
   Activity,
   ChartNoAxesCombined,
@@ -20,6 +21,7 @@ export default function Sidebar({
 }: {
   onModule: (id: ModuleId) => void;
 }) {
+  const { backendStatus } = useAssessment();
   return (
     <aside className="sidebar">
       <a className="brand" href="#overview" aria-label="电循智策首页">
@@ -35,7 +37,12 @@ export default function Sidebar({
           Overview
         </a>
         {items.map(({ id, name, Icon }) => (
-          <button className="nav-item" key={id} onClick={() => onModule(id)}>
+          <button
+            className="nav-item"
+            key={id}
+            aria-label={name}
+            onClick={() => onModule(id)}
+          >
             <Icon size={20} />
             <span>{name}</span>
           </button>
@@ -45,8 +52,18 @@ export default function Sidebar({
         <ChartNoAxesCombined size={18} />
         <span>Battery Intelligence Engine</span>
         <div>
-          <i className="status-dot" />
-          Online <span className="muted">· Demo v1.0</span>
+          <i
+            className="status-dot"
+            style={{
+              background: backendStatus === "online" ? undefined : "#999",
+            }}
+          />
+          {backendStatus === "online"
+            ? "Online"
+            : backendStatus === "checking"
+              ? "Checking…"
+              : "Offline"}{" "}
+          <span className="muted">· API v1</span>
         </div>
       </div>
     </aside>
