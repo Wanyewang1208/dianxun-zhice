@@ -1,0 +1,9 @@
+{
+  "input_mode": "manual",
+  "data_kind": "user_declared",
+  "manual_input": {
+    "rated_capacity_kwh": 60,
+    "current_available_capacity_kwh": 49.44,
+    "cycle_count": 1126
+  }
+}

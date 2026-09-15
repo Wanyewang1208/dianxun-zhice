@@ -104,5 +104,14 @@ class ApiTests(unittest.TestCase):
     def test_nonfinite_json(self):
         status,r=self.request('/api/v1/soh',{'battery_id':'B0018','cycle':float('nan')})
         self.assertEqual(status,400);self.assertEqual(r['error']['code'],'INVALID_REQUEST')
+    def test_manual_http(self):
+        body={'input_mode':'manual','data_kind':'user_declared','manual_input':{'rated_capacity_kwh':60,'current_available_capacity_kwh':49.44}}
+        status,r=self.request('/api/v1/assessment',body)
+        self.assertEqual(status,200);self.assertAlmostEqual(r['data']['soh']['calculated_soh'],82.4)
+        self.assertEqual(r['data']['rul']['status'],'not_available')
+    def test_manual_invalid_http(self):
+        body={'input_mode':'manual','data_kind':'user_declared','manual_input':{'rated_capacity_kwh':0}}
+        status,r=self.request('/api/v1/assessment',body)
+        self.assertEqual(status,400);self.assertEqual(r['error']['code'],'INVALID_REQUEST')
 
 if __name__=='__main__':unittest.main()

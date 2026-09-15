@@ -1,0 +1,18 @@
+{
+  "input_mode": "manual",
+  "data_kind": "demo",
+  "manual_input": {
+    "rated_capacity_kwh": 60,
+    "current_available_capacity_kwh": 49.44,
+    "cycle_count": 1126,
+    "new_battery_reference_price": 50000,
+    "cell_voltage_delta_mv": 18,
+    "fault_code_present": false,
+    "thermal_event_history": false
+  },
+  "prototype_assumptions": {
+    "reference_cycle_life": 2500,
+    "safety_factor": 0.9,
+    "consistency_factor": 0.91
+  }
+}

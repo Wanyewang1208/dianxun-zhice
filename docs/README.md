@@ -27,6 +27,8 @@
 
 ## V0.3 模块接入
 
+新增阶段：[手动录入与剩余价值后端契约](MANUAL_ASSESSMENT.md)，对应统一assessment的manual模式；frontend未修改。
+
 # 交接文档入口
 
 - [合并说明](../MERGE_GUIDE.md)：目录、依赖、启动、测试、未完成项。

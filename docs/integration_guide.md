@@ -2,6 +2,8 @@
 
 本包不创建、不修改 frontend。组员只需对接一次 assessment 请求，无需自行拼接算法结果。
 
+手动录入流程现有后端支持：见 [MANUAL_ASSESSMENT.md](MANUAL_ASSESSMENT.md) 和 examples/manual.request.json。该模式无需上传BMS，返回容量比SOH与分项证据状态；不要把真实车辆映射成NASA示例。
+
 1. 按根目录 MERGE_GUIDE 合并模块，用 Python 3.12 执行 `python scripts/start_backend.py`。
 2. 浏览器打开 `http://127.0.0.1:8013/api/v1/health`，确认 success 与 models_ready。
 3. Base URL 为 `http://127.0.0.1:8013/api/v1`。前端端口默认允许 `http://localhost:5173`；如为 3000，启动时指定 `--allowed-origin http://localhost:3000`。localhost 与 127.0.0.1 是不同 Origin，必须匹配实际地址。
