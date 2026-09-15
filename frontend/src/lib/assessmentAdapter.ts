@@ -1,4 +1,83 @@
 import type { AssessmentResponse } from "../types/api";
+import type { ManualResponse } from "../types/manual";
+// Normalize transport variants once. The original manual evidence remains intact.
+export function normalizeAssessment(
+  raw: AssessmentResponse | ManualResponse,
+): AssessmentResponse {
+  if (!("input_mode" in raw) || raw.input_mode !== "manual")
+    return raw as AssessmentResponse;
+  const m = raw as ManualResponse;
+  if (
+    !m.input_snapshot ||
+    !m.effective_condition ||
+    !m.field_sources ||
+    !m.prototype_assumptions ||
+    !m.soh ||
+    !m.rul ||
+    !m.residual_value ||
+    !Array.isArray(m.residual_value.missing_components) ||
+    !m.residual_value.component_scores ||
+    !Array.isArray(m.data_quality?.notes) ||
+    !Array.isArray(m.candidate_paths) ||
+    !Array.isArray(m.safety?.reason_codes)
+  )
+    throw new ApiError("incomplete", "手动评估返回不完整。");
+  for (const n of [
+    m.soh.calculated_soh,
+    m.rul.predicted_rul_cycles,
+    m.residual_value.index,
+  ])
+    if (n !== null && !Number.isFinite(n))
+      throw new ApiError("incomplete", "手动评估数值无效。");
+  const unavailable = {
+    status: "not_available" as const,
+    reason: "手动模式不使用 NASA 模型；详见手动计算结果。",
+  };
+  return {
+    manual: m,
+    battery_id: m.battery_id ?? "N/A",
+    battery_id_scope: m.battery_id_scope,
+    scenario_id: m.data_kind,
+    data_quality:
+      m.data_quality.bms.status === "checked"
+        ? m.data_quality.bms
+        : {
+            status: "not_provided",
+            reason: "No BMS supplied; manual schema validated",
+          },
+    soh: unavailable,
+    rul: {
+      status: "not_available",
+      battery_id: m.battery_id ?? "N/A",
+      cycle: Number(m.input_snapshot.cycle_count ?? 0),
+      predicted_rul_cycles: null,
+      unit: m.rul.unit,
+      reason: m.rul.reason,
+      operating_condition_caution: m.rul.reason,
+      validation_status: "manual",
+    },
+    explainability: m.explainability,
+    carbon: m.carbon,
+    safety: {
+      scope: m.safety.status,
+      gates: m.candidate_paths.map((p) => ({
+        route_id: p.route_id,
+        eligible: p.eligible,
+        reason_codes: p.reason_codes,
+      })),
+    },
+    candidate_paths: m.candidate_paths.map((p) => ({
+      ...p,
+      route_name: p.route_name ?? routeNames[p.route_id],
+      utility_components: p.utility_components ?? {},
+    })) as AssessmentResponse["candidate_paths"],
+    recommendation: { ...m.recommendation, weights: {} },
+    decision_reason: m.decision_reason,
+    automatic_model_to_pack_transfer: m.automatic_model_to_pack_transfer,
+    display_notice: m.display_notice,
+    limitations: m.limitations,
+  };
+}
 import { ApiError } from "./api";
 export const format = (n: unknown, d = 2) =>
   typeof n === "number" && Number.isFinite(n) ? n.toFixed(d) : "N/A";
@@ -125,8 +204,23 @@ export function assessmentAdapter(r: AssessmentResponse) {
   if (r.recommendation.route_id !== null && !selected)
     throw new ApiError("incomplete", "推荐路径与候选路径不一致。");
   return {
-    soh: r.soh.status === "available" ? r.soh.predicted_soh_pct : null,
-    rul: r.rul.status === "available" ? r.rul.predicted_rul_cycles : null,
+    manual: r.manual ?? null,
+    soh: r.manual
+      ? r.manual.soh.calculated_soh
+      : r.soh.status === "available"
+        ? r.soh.predicted_soh_pct
+        : null,
+    rul: r.manual
+      ? r.manual.rul.predicted_rul_cycles
+      : r.rul.status === "available"
+        ? r.rul.predicted_rul_cycles
+        : null,
+    healthLabel: r.manual ? "Capacity SOH · 手填容量比" : "SOH · NASA 模型预测",
+    lifeLabel: r.manual
+      ? r.manual.rul.status === "prototype_assumption"
+        ? "Demo 假设等效循环"
+        : "手动模式寿命证据不足"
+      : "RUL · 参考放电循环",
     carbon:
       r.carbon.status === "calculated"
         ? r.carbon.summary.total_kgCO2e / 1000

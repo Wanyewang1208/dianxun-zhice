@@ -109,3 +109,33 @@ try {
   globalThis.fetch = realFetch;
 }
 console.log(`${checks} integration checks passed`);
+
+for (const name of ["manual", "manual_demo"]) {
+  const wire = JSON.parse(
+    await readFile(`../docs/examples/${name}.response.json`, "utf8"),
+  ).data;
+  const normalized = api.normalizeAssessment(wire);
+  const view = api.assessmentAdapter(normalized);
+  assert.ok(Math.abs(view.soh - 82.4) < 1e-8);
+  assert.equal(view.manual.input_mode, "manual");
+  assert.deepEqual(view.contributions, []);
+  assert.equal(view.decision, "HOLD");
+  if (name === "manual") {
+    assert.equal(view.rul, null);
+    assert.equal(view.manual.residual_value.index, null);
+  } else {
+    assert.equal(view.rul, 1374);
+    assert.equal(view.manual.residual_value.index, 76.978);
+    assert.equal(view.lifeLabel, "Demo 假设等效循环");
+  }
+  wire.residual_value.status = "blocked";
+  wire.residual_value.index = null;
+  wire.residual_value.index_bounds = null;
+  wire.residual_value.estimated_value_range_cny = null;
+  assert.equal(
+    api.assessmentAdapter(api.normalizeAssessment(wire)).manual.residual_value
+      .index,
+    null,
+  );
+  console.log("PASS manual variant / blocked bounds", name);
+}

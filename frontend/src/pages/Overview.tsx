@@ -50,7 +50,7 @@ export default function Overview({
           value={view ? format(view.soh, 1) : soh}
           decimals={1}
           unit="%"
-          description="SOH · 电池健康状态"
+          description={view?.healthLabel ?? "SOH · 电池健康状态"}
           Icon={Activity}
         />
         <IntelligenceMetric
@@ -58,7 +58,7 @@ export default function Overview({
           label="Remaining Useful Life"
           value={view ? format(view.rul, 1) : rul}
           unit="cycles"
-          description="RUL · 预计剩余循环寿命"
+          description={view?.lifeLabel ?? "RUL · 预计剩余循环寿命"}
           Icon={Clock3}
           tone="cyan"
         />

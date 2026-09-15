@@ -64,3 +64,20 @@ npm run build
 2026-09-15 验证记录：9 项接口/Adapter 检查、现有模型检查、4 项 Sites 运行时测试、最终生产构建均通过。浏览器完整流程成功，五个模块共享同一个 request_id；异常合成 CSV 显示 0 accepted / 1 rejected；停止后端后出现离线提示，恢复后 Retry 成功。390px 页面及模块未出现横向溢出。全新浏览器会话无控制台 error/warn。打印按钮已触发，未生成或检查独立 PDF 文件。
 
 本轮通过 `feature/frontend-assessment-integration` 分支交付，PR 目标为 `dev`，不直接修改或推送 main。`.venv`、`node_modules`、`dist`、`.env` 由 `.gitignore` 排除。
+
+## PR #2 兼容性验证（2026-09-15）
+
+- 同步 dev `8de5c08a7f7365818fd8fcb0a31632fcde5a9f12`，安全 merge 提交 `9905f4b7ce3d69f4ffd060d89bca597783e15298`；无冲突，main 保持 `eb190cf`。
+- PR #2 仅提供后端手动模式。本轮保留现有页面，增加同一评估入口内的 Manual Input / Manual Demo 表单与结果适配；新旧响应在 assessmentAdapter 中统一处理，原始手动证据单独保留，不改写成 NASA 预测。
+- 手填字段包含品牌、类型、额定/当前容量、循环、里程、充电方式、快充比例、日均/年里程、环境温度、SOC 范围及条件记录。品牌/工况等记录不会被声称为已验证预测特征。
+- 新响应包括 input_snapshot、effective_condition、field_sources、prototype_assumptions、soh.calculated_soh/measured_soh/difference_pp、residual_value、current_use_value、second_life_potential。手动质量结构为 data_quality.manual/bms；安全状态不再使用原 NASA 分支 gates 结构。
+- Manual Input 的空值保持 null，默认不带 BMS 或假设。点击 Start Assessment 校验手填 schema；只有选择 CSV 才能单独 Validate BMS。切回团队 NASA 样例恢复原请求。
+- 浏览器实填品牌“联调测试电池”、LFP、60/49.44 kWh、1126循环、68420 km、home_ac、20%快充，报告完整回显，容量 SOH 82.4%。RUL/SHAP/碳缺证据时为 N/A；决策 HOLD；价值指数/价格缺证据时为 null。
+- Manual Demo 直接采用 docs/examples/manual_demo.request.json：显式2500循环寿命、0.9安全因子、0.91一致性因子。返回1374 assumed_equivalent_cycles、指数76.978、价格范围16319.6377344–20770.4480256 CNY。以上均为 Prototype Technical Estimation，不是整车模型结果或市场鉴价。
+- HTTP 实测：health 200；BMS 12 accepted；原 assessment SOH 77.39439392089844%；手填字段回显、原型估值、热事件阻断均符合契约；CORS匹配127.0.0.1:4173。热事件时 index_bounds 也可为 null，Adapter/报告已兼容。
+- 后端99项测试、手动HTTP smoke、原9项前端接口检查加2组手动/阻断兼容检查、原模型检查、4项Sites测试及生产构建通过。浏览器手动/原型估值/NASA报告均可打开，离线错误和Retry恢复有效。
+- 完整流程指各阶段有可追溯结果或明确的不可用状态，不代表每个分支都有寿命、SHAP、碳与价格数值。所有原型及未完成真实整车大规模验证说明保留。独立PDF文件仍未生成或核验。
+
+最终提交前已再次实际操作 Demo Dataset、Manual Input 与 Manual Demo：车辆品牌/型号、电池品牌/类型、容量、里程、循环、地区、快充、温度和新电池价格均可回显。计算 SOH 82.40% 与专业检测声明 80.00% 分开显示，差值 2.40 个百分点；普通手填不因填写价格就补造估值。桌面及 390px 窄屏页面/报告无横向溢出，打印入口调用无报错。最终生产构建、接口兼容与既有模型/Sites回归检查通过。
+
+本适配通过 feature/frontend-assessment-integration 提交交付，目标 PR 为 dev，不直接合入 main。打印入口检查不等于独立 PDF 文件的排版核验；尚未生成或核验独立 PDF。

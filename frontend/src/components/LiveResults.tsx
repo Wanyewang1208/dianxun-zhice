@@ -1,3 +1,4 @@
+import { ManualResults, ManualPassport } from "./ManualAssessment";
 import { useAssessment } from "../context/AssessmentContext";
 import { format, routeNames } from "../lib/assessmentAdapter";
 import type { ModuleId } from "../types/battery";
@@ -16,6 +17,7 @@ function Values({ items }: { items: [string, unknown][] }) {
 export function LivePassport() {
   const { assessmentResult, view } = useAssessment();
   if (!assessmentResult || !view) return null;
+  if (view.manual) return <ManualPassport />;
   const r = assessmentResult.data;
   return (
     <section className="passport surface" aria-label="电池数字护照">
@@ -102,7 +104,7 @@ export function LivePreviews({
               "life",
               "Remaining Life",
               `${format(view.rul, 1)} cycles`,
-              "参考放电循环 · 真实预测曲线未提供",
+              view.lifeLabel + " · 真实预测曲线未提供",
             ],
             [
               "carbon",
@@ -155,6 +157,7 @@ export default function LiveResults({
 }) {
   const a = useAssessment();
   if (!a.assessmentResult || !a.view) return null;
+  if (a.view.manual) return <ManualResults module={module} />;
   const r = a.assessmentResult.data,
     v = a.view;
   const report = module === "report" || module === "assessment";
@@ -511,6 +514,7 @@ export default function LiveResults({
           ))}
         </section>
       )}
+      {(report || module === 'decision') && <section><h3>Residual Value · Prototype Technical Estimation</h3><p>Not Available · 原 NASA 模式未返回剩余价值。仅在手动模式具备明确证据或显式 Demo 假设时显示，不将路径 NPV 当作电池估值。</p></section>}
       <section>
         <h3>Model / Demo Boundary</h3>
         {r.limitations.map((s, i) => (

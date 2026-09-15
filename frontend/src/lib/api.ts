@@ -41,13 +41,13 @@ export async function request<T>(
     } catch {
       throw new ApiError("incomplete", "返回数据格式异常，请检查后端版本。");
     }
-    if (!payload || typeof payload !== 'object')
-      throw new ApiError('incomplete', '后端返回不完整，未替换当前结果。');
+    if (!payload || typeof payload !== "object")
+      throw new ApiError("incomplete", "后端返回不完整，未替换当前结果。");
     if (!response.ok || !payload.success)
       throw new ApiError(
         response.status === 400 ? "invalid" : "failed",
         response.status === 400
-          ? "输入数据未通过检查，请核对 CSV 与元数据。"
+          ? "输入数据未通过检查，请核对手动字段、容量单位或 CSV 与元数据。"
           : "本次评估未能完成，请检查后端服务后重试。",
       );
     if (
@@ -55,7 +55,7 @@ export async function request<T>(
       payload.schema_version !== "1.0" ||
       !payload.data ||
       !Array.isArray(payload.warnings) ||
-      payload.warnings.some(w => typeof w !== "string") ||
+      payload.warnings.some((w) => typeof w !== "string") ||
       typeof payload.request_id !== "string"
     )
       throw new ApiError("incomplete", "后端返回不完整，未替换当前结果。");
@@ -80,8 +80,13 @@ export async function healthCheck() {
 }
 export const validateBMS = (body: BMSRequest) =>
   request<BMSValidationResponse>("bms/validate", body);
-export const runAssessment = (body: AssessmentRequest) =>
-  request<AssessmentResponse>("assessment", body);
+export const runAssessment = (
+  body: AssessmentRequest | import("../types/manual").ManualRequest,
+) =>
+  request<AssessmentResponse | import("../types/manual").ManualResponse>(
+    "assessment",
+    body,
+  );
 export const getSOH = (body: ModelCase) => request<SOHResult>("soh", body);
 export const getRUL = (body: ModelCase) => request<RULResult>("rul", body);
 export const getExplainability = (body: ModelCase) =>

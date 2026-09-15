@@ -2155,3 +2155,40 @@ sub {
     color: #222 !important;
   }
 }
+
+.manual-form {
+  margin: 24px 0;
+}
+.manual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.manual-grid label {
+  display: grid;
+  gap: 8px;
+  color: #adbbb5;
+  font-size: 12px;
+  min-width: 0;
+}
+.manual-grid input,
+.manual-grid select {
+  width: 100%;
+  min-width: 0;
+  background: #121c18;
+  color: #e4eee8;
+  border: 1px solid #3d5147;
+  border-radius: 8px;
+  padding: 10px;
+}
+@media (max-width: 900px) {
+  .manual-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 560px) {
+  .manual-grid {
+    grid-template-columns: 1fr;
+  }
+}

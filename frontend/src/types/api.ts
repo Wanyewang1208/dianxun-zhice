@@ -163,6 +163,7 @@ export interface RecommendationResult {
   weights: Record<string, number>;
 }
 export interface AssessmentResponse {
+  manual?: import("./manual").ManualResponse;
   battery_id: string;
   battery_id_scope: string;
   scenario_id: string;

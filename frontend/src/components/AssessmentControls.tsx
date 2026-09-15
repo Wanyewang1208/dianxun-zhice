@@ -1,3 +1,4 @@
+import { ManualForm } from "./ManualAssessment";
 import { useEffect, useState } from "react";
 import { useAssessment } from "../context/AssessmentContext";
 const steps = [
@@ -47,6 +48,18 @@ export default function AssessmentControls() {
       aria-label="评估数据与连接"
     >
       <div className="integration-actions">
+        <button
+          disabled={loading || a.validating}
+          onClick={() => a.useManual(false)}
+        >
+          Manual Input · 手动录入
+        </button>
+        <button
+          disabled={loading || a.validating}
+          onClick={() => a.useManual(true)}
+        >
+          Manual Demo · 原型估值样例
+        </button>
         <strong>
           {a.dataSource === "live" ? "LIVE ANALYSIS" : "DEMO DATA"}
         </strong>
@@ -84,8 +97,9 @@ export default function AssessmentControls() {
         </button>
       </div>
       <p>
-        模型：NASA B0018 / cycle 66；BMS
-        仅数据检查；碳与决策使用固定模拟电池包。上传文件不会转换为整车 SOH/RUL。
+        {a.manualRequest
+          ? "手动模式：容量比 SOH；寿命、SHAP、碳和价值缺少证据时保持 N/A。显式 Manual Demo 才使用假设。"
+          : "模型：NASA B0018 / cycle 66；BMS 仅数据检查；碳与决策使用固定模拟电池包。上传文件不会转换为整车 SOH/RUL。"}
       </p>
       <div className="integration-actions">
         {(["telemetry_csv", "metadata_csv"] as const).map((key) => (
@@ -100,16 +114,17 @@ export default function AssessmentControls() {
                 e.target.value = "";
               }}
             />
-            <small>{files[key]}</small>
+            <small>{a.request.bms?.[key] ? files[key] : "未选择 CSV"}</small>
           </label>
         ))}
         <button
-          disabled={loading || a.validating}
+          disabled={loading || a.validating || !a.request.bms}
           onClick={() => void a.validate()}
         >
           {a.validating ? "检查中…" : "Validate BMS"}
         </button>
       </div>
+      <ManualForm />
       {a.validation && (
         <p role="status">
           Data Quality:{" "}

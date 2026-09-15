@@ -7,6 +7,8 @@ import {
   type ReactNode,
 } from "react";
 import fixture from "../../../docs/examples/assessment.request.json?raw";
+import manualFixture from "../../../docs/examples/manual_demo.request.json?raw";
+import type { ManualRequest } from "../types/manual";
 import type {
   AssessmentRequest,
   AssessmentResponse,
@@ -15,7 +17,10 @@ import type {
 } from "../types/api";
 import type { ScenarioId } from "../types/battery";
 import * as api from "../lib/api";
-import { assessmentAdapter } from "../lib/assessmentAdapter";
+import {
+  assessmentAdapter,
+  normalizeAssessment,
+} from "../lib/assessmentAdapter";
 const sample = () => JSON.parse(fixture) as AssessmentRequest;
 function useAssessmentState() {
   const [assessmentResult, setResult] =
@@ -28,7 +33,9 @@ function useAssessmentState() {
   >("checking");
   const [currentScenario, setScenario] = useState<ScenarioId>("used");
   const [error, setError] = useState<string | null>(null);
-  const [request, setRequest] = useState<AssessmentRequest>(sample);
+  const [request, setRequest] = useState<AssessmentRequest | ManualRequest>(
+    sample,
+  );
   const [validation, setValidation] = useState<BMSValidationResponse | null>(
     null,
   );
@@ -73,7 +80,8 @@ function useAssessmentState() {
     setStatus("loading");
     setError(null);
     try {
-      const result = await api.runAssessment(request);
+      const response = await api.runAssessment(request);
+      const result = { ...response, data: normalizeAssessment(response.data) };
       assessmentAdapter(result.data);
       if (id !== generation.current) return;
       setResult(result);
@@ -83,7 +91,11 @@ function useAssessmentState() {
         setValidation(result.data.data_quality);
     } catch (e) {
       if (id !== generation.current) return;
-      setError(e instanceof api.ApiError ? e.message : "评估返回不完整，请检查后端版本后重试。");
+      setError(
+        e instanceof api.ApiError
+          ? e.message
+          : "评估返回不完整，请检查后端版本后重试。",
+      );
       setStatus("error");
       if (e instanceof api.ApiError && e.kind === "offline")
         setBackend("offline");
@@ -110,7 +122,11 @@ function useAssessmentState() {
       setBackend("online");
     } catch (e) {
       if (id === generation.current)
-        setError(e instanceof api.ApiError ? e.message : "数据检查返回不完整，请重试。");
+        setError(
+          e instanceof api.ApiError
+            ? e.message
+            : "数据检查返回不完整，请重试。",
+        );
     } finally {
       if (id === generation.current) {
         busy.current = false;
@@ -125,6 +141,27 @@ function useAssessmentState() {
     currentScenario,
     error,
     request,
+    manualRequest: "input_mode" in request ? request : null,
+    useManual: (demo = false) => {
+      resetAssessment();
+      setRequest(
+        demo
+          ? JSON.parse(manualFixture)
+          : {
+              input_mode: "manual",
+              data_kind: "user_declared",
+              manual_input: { rated_capacity_kwh: null },
+            },
+      );
+    },
+    setManualField: (key: string, value: string | number | boolean | null) => {
+      resetAssessment();
+      setRequest((r) =>
+        "input_mode" in r
+          ? { ...r, manual_input: { ...r.manual_input, [key]: value } }
+          : r,
+      );
+    },
     validation,
     validating,
     dataSource: assessmentResult ? ("live" as const) : ("demo" as const),
