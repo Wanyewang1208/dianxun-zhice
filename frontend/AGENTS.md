@@ -11,6 +11,7 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 ## Current approved scope (2026-09-13)
 - Visual baseline: first displayed design, Precision Passport. Preserve its sidebar/header, hero/passport composition, restrained graphite/mint/cyan palette and large rounded cards.
 - The third design only informs technical content, never a separate visual style.
-- This stage implements Overview ONLY. Stop after Overview; do not build the other five pages until requested.
+- As of 2026-09-15 the user requested backend integration. Preserve Overview and use the five existing module dialogs for shared API results and a printable report; do not redesign or add unrelated pages.
 - Scenario switching must update metrics, insights, recommendation and technical previews together.
-- All data is simulated; preserve explicit provenance and model limitations.
+- Preserve explicit provenance: local Demo, NASA experimental-cell inference, BMS quality checks, and simulated pack decisions are distinct evidence domains. LIVE denotes a backend response, not vehicle validation.
+- Approved bilingual scope: offer Chinese / English in the header, default Chinese, remember the selection locally, and translate navigation, forms, errors, results and printable reports. Preserve entered values, identifiers, API payloads, numerical results and evidence boundaries when switching.

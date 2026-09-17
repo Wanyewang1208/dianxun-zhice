@@ -127,3 +127,6 @@ py -3.12 scripts/start_backend.py
 服务启动后，在另一终端执行 `.venv\Scripts\python.exe scripts/smoke_test.py`。前端统一调用 `POST /api/v1/assessment`，见 [API 契约](docs/API_CONTRACT.md) 和 [联调说明](docs/integration_guide.md)。
 
 保留 frontend 全部代码、依赖及页面；前端仍使用原演示计算，实际接入由前端组员后续完成。NASA 电芯输出、BMS 质量检查和示例电池包方案必须分区展示。RUL 依赖历史实测容量，SHAP 非因果解释，权重和路径参数为 Demo，尚未完成真实车辆验证。
+# 前端与后端联调
+
+联调启动、固定样例操作、接口边界和验证命令见 [前端联调说明](docs/FRONTEND_INTEGRATION.md)。

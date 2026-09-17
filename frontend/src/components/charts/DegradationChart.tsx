@@ -1,3 +1,4 @@
+import { t } from "../../i18n";
 import {
   ResponsiveContainer,
   LineChart,
@@ -14,7 +15,7 @@ export default function DegradationChart({ data }: { data: BatteryScenario }) {
     <div
       className="mini-chart"
       role="img"
-      aria-label={`示例 SOH 曲线：当前 ${data.cycles} 次循环，预测 ${data.eolCycles} 次达到 ${data.threshold}% 参考线`}
+      aria-label={t(`示例 SOH 曲线：当前 ${data.cycles} 次循环，预测 ${data.eolCycles} 次达到 ${data.threshold}% 参考线`)}
     >
       <ResponsiveContainer width="100%" height="100%" minWidth={0}>
         <LineChart
@@ -50,10 +51,10 @@ export default function DegradationChart({ data }: { data: BatteryScenario }) {
               color: "#f4f7f6",
               fontSize: 12,
             }}
-            labelFormatter={(v) => `Cycle ${v}`}
+            labelFormatter={(v) => t(`Cycle ${v}`)}
             formatter={(v, name) => [
               `${Number(v).toFixed(1)}%`,
-              name === "historical" ? "Historical SOH" : "Predicted SOH",
+              t(name === "historical" ? "Historical SOH" : "Predicted SOH"),
             ]}
           />
           <Line

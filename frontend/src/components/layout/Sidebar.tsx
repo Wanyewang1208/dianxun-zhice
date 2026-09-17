@@ -1,3 +1,5 @@
+import { t } from "../../i18n";
+import { useAssessment } from "../../context/AssessmentContext";
 import {
   Activity,
   ChartNoAxesCombined,
@@ -20,33 +22,47 @@ export default function Sidebar({
 }: {
   onModule: (id: ModuleId) => void;
 }) {
+  const { backendStatus } = useAssessment();
   return (
     <aside className="sidebar">
-      <a className="brand" href="#overview" aria-label="电循智策首页">
+      <a className="brand" href="#overview" aria-label={t("电循智策首页")}>
         <Leaf size={37} strokeWidth={1.6} />
         <span>
-          <strong>电循智策</strong>
-          <small>DianXun ZhiCe</small>
+          <strong>{t("电循智策")}</strong>
+          <small>{t("Lifecycle Intelligence")}</small>
         </span>
       </a>
-      <nav aria-label="主导航">
+      <nav aria-label={t("主导航")}>
         <a className="nav-item selected" href="#overview" aria-current="page">
-          <House size={20} />
-          Overview
-        </a>
-        {items.map(({ id, name, Icon }) => (
-          <button className="nav-item" key={id} onClick={() => onModule(id)}>
+          <House size={20} />{t("Overview")}</a>
+        {t(items.map(({ id, name, Icon }) => (
+          <button
+            className="nav-item"
+            key={id}
+            aria-label={t(name)}
+            onClick={() => onModule(id)}
+          >
             <Icon size={20} />
-            <span>{name}</span>
+            <span>{t(name)}</span>
           </button>
-        ))}
+        )))}
       </nav>
       <div className="engine">
         <ChartNoAxesCombined size={18} />
-        <span>Battery Intelligence Engine</span>
+        <span>{t("Battery Intelligence Engine")}</span>
         <div>
-          <i className="status-dot" />
-          Online <span className="muted">· Demo v1.0</span>
+          <i
+            className="status-dot"
+            style={{
+              background: backendStatus === "online" ? undefined : "#999",
+            }}
+          />
+          {t(backendStatus === "online"
+            ? "Online"
+            : backendStatus === "checking"
+              ? "Checking…"
+              : "Offline")}{t(" ")}
+          <span className="muted">{t("· API v1")}</span>
         </div>
       </div>
     </aside>
