@@ -14,3 +14,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - As of 2026-09-15 the user requested backend integration. Preserve Overview and use the five existing module dialogs for shared API results and a printable report; do not redesign or add unrelated pages.
 - Scenario switching must update metrics, insights, recommendation and technical previews together.
 - Preserve explicit provenance: local Demo, NASA experimental-cell inference, BMS quality checks, and simulated pack decisions are distinct evidence domains. LIVE denotes a backend response, not vehicle validation.
+- Approved bilingual scope: offer Chinese / English in the header, default Chinese, remember the selection locally, and translate navigation, forms, errors, results and printable reports. Preserve entered values, identifiers, API payloads, numerical results and evidence boundaries when switching.

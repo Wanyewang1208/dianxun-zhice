@@ -1,3 +1,4 @@
+import { t } from "../i18n";
 import { useAssessment } from "../context/AssessmentContext";
 import { format, routeNames } from "../lib/assessmentAdapter";
 import type { ModuleId } from "../types/battery";
@@ -35,31 +36,25 @@ export function ManualForm() {
   if (!r) return null;
   return (
     <details className="manual-form" open>
-      <summary>
-        Manual Input ·{" "}
-        {r.data_kind === "demo"
+      <summary>{t("Manual Input ·")}{t(" ")}
+        {t(r.data_kind === "demo"
           ? "明确 Demo 假设"
-          : "用户声明，不自动填充未知值"}
+          : "用户声明，不自动填充未知值")}
       </summary>
-      <p>
-        品牌、类型、里程和使用工况用于记录与报告，未作为已验证整车预测模型输入。额定容量必填；其他空项发送
-        null。
-      </p>
-      {r.prototype_assumptions && (
-        <p className="source-notice">
-          Demo assumptions: reference cycle life{" "}
-          {r.prototype_assumptions.reference_cycle_life}; safety factor{" "}
-          {r.prototype_assumptions.safety_factor}; consistency factor{" "}
-          {r.prototype_assumptions.consistency_factor}。仅用于原型算术估值。
-        </p>
-      )}
+      <p>{t("品牌、类型、里程和使用工况用于记录与报告，未作为已验证整车预测模型输入。额定容量必填；其他空项发送 null。")}</p>
+      {t(r.prototype_assumptions && (
+        <p className="source-notice">{t("Demo assumptions: reference cycle life")}{t(" ")}
+          {t(r.prototype_assumptions.reference_cycle_life)}{t("; safety factor")}{t(" ")}
+          {t(r.prototype_assumptions.safety_factor)}{t("; consistency factor")}{t(" ")}
+          {t(r.prototype_assumptions.consistency_factor)}{t("。仅用于原型算术估值。")}</p>
+      ))}
       <div className="manual-grid">
-        {manualFields.map(([key, label, type]) => (
+        {t(manualFields.map(([key, label, type]) => (
           <label key={key}>
-            {label}
-            {type === "text" || type === "number" ? (
+            {t(label)}
+            {t(type === "text" || type === "number" ? (
               <input
-                aria-label={label}
+                aria-label={t(label)}
                 type={type}
                 step={key === "cycle_count" ? "1" : "any"}
                 value={String(r.manual_input[key] ?? "")}
@@ -77,7 +72,7 @@ export function ManualForm() {
               />
             ) : (
               <select
-                aria-label={label}
+                aria-label={t(label)}
                 value={String(r.manual_input[key] ?? "")}
                 disabled={a.assessmentStatus === "loading" || a.validating}
                 onChange={(e) =>
@@ -91,31 +86,31 @@ export function ManualForm() {
                   )
                 }
               >
-                <option value="">未知 / 未填写</option>
-                {(type === "boolean" ? ["true", "false"] : type.split(",")).map(
+                <option value="">{t("未知 / 未填写")}</option>
+                {t((type === "boolean" ? ["true", "false"] : type.split(",")).map(
                   (v) => (
                     <option key={v} value={v}>
-                      {v === "true" ? "是" : v === "false" ? "否" : v}
+                      {t(v === "true" ? "是" : v === "false" ? "否" : v)}
                     </option>
                   ),
-                )}
+                ))}
               </select>
-            )}
+            ))}
           </label>
-        ))}
+        )))}
       </div>
     </details>
   );
 }
-function Values({ items }: { items: [string, unknown][] }) {
+function Values({ items, raw = false }: { items: [string, unknown][]; raw?: boolean }) {
   return (
     <dl className="live-values">
-      {items.map(([k, v]) => (
+      {t(items.map(([k, v]) => (
         <div key={k}>
-          <dt>{k}</dt>
-          <dd>{v == null ? "N/A" : String(v)}</dd>
+          <dt>{t(k)}</dt>
+          <dd>{v == null ? t("N/A") : typeof v === "boolean" ? t(String(v)) : raw ? String(v) : t(String(v))}</dd>
         </div>
-      ))}
+      )))}
     </dl>
   );
 }
@@ -125,10 +120,11 @@ export function ManualPassport() {
   if (!m) return null;
   return (
     <section className="passport surface">
-      <h2>Battery Digital Passport</h2>
-      <p className="source-notice">LIVE · Manual {m.data_kind}</p>
-      <h3>{m.battery_id ?? "Battery ID · N/A"}</h3>
+      <h2>{t("Battery Digital Passport")}</h2>
+      <p className="source-notice">{t("LIVE · Manual ")}{t(m.data_kind)}</p>
+      <h3>{m.battery_id ?? t("Battery ID · N/A")}</h3>
       <Values
+        raw
         items={[
           ["Capacity SOH", `${format(view.soh, 1)} %`],
           ["Battery brand", m.input_snapshot.battery_brand],
@@ -143,10 +139,7 @@ export function ManualPassport() {
           ["Residual Value index", format(m.residual_value.index)],
         ]}
       />
-      <p>
-        Prototype Technical Estimation · 手填容量计算，不代表 NASA
-        推理或真实整车认证。
-      </p>
+      <p>{t("Prototype Technical Estimation · 手填容量计算，不代表 NASA 推理或真实整车认证。")}</p>
     </section>
   );
 }
@@ -159,26 +152,26 @@ export function ManualResults({ module }: { module: ModuleId | "assessment" }) {
   const v = m.residual_value;
   return (
     <div className={all ? "live-results assessment-report" : "live-results"}>
-      <p className="source-notice">
-        Data Source: Live Backend · Manual / {m.data_kind} · request{" "}
+      <p className="source-notice">{t("Data Source: Live Backend · Manual / ")}{t(m.data_kind)}{t(" · request")}{t(" ")}
         {a.assessmentResult.request_id}
       </p>
-      <p>{m.display_notice}</p>
-      {all && (
+      <p>{t(m.display_notice)}</p>
+      {t(all && (
         <section>
-          <h3>Vehicle & Battery / Usage</h3>
+          <h3>{t("Vehicle & Battery / Usage")}</h3>
           <Values
+            raw
             items={manualFields.map(([k, label]) => [
               label,
               m.input_snapshot[k],
             ])}
           />
-          <h3>Data Validation</h3>
+          <h3>{t("Data Validation")}</h3>
           <p>
-            {m.data_quality.manual} · BMS used:{" "}
-            {String(m.data_quality.bms_used_for_condition)}
+            {t(m.data_quality.manual)}{t(" · BMS used:")}{t(" ")}
+            {t(String(m.data_quality.bms_used_for_condition))}
           </p>
-          {m.data_quality.bms.status === "checked" ? (
+          {t(m.data_quality.bms.status === "checked" ? (
             <Values
               items={[
                 ["Accepted", m.data_quality.bms.summary.accepted_rows],
@@ -187,12 +180,12 @@ export function ManualResults({ module }: { module: ModuleId | "assessment" }) {
               ]}
             />
           ) : (
-            <p>BMS not provided · 手动输入无需 CSV</p>
-          )}
-          {m.data_quality.notes.map((n, i) => (
-            <p key={i}>{n}</p>
+            <p>{t("BMS not provided · 手动输入无需 CSV")}</p>
           ))}
-          <h4>Effective Condition / Field Sources</h4>
+          {t(m.data_quality.notes.map((n, i) => (
+            <p key={i}>{t(n)}</p>
+          )))}
+          <h4>{t("Effective Condition / Field Sources")}</h4>
           <Values
             items={Object.entries(m.effective_condition).map(([k, n]) => [
               k,
@@ -200,10 +193,10 @@ export function ManualResults({ module }: { module: ModuleId | "assessment" }) {
             ])}
           />
         </section>
-      )}
-      {show("health") && (
+      ))}
+      {t(show("health") && (
         <section>
-          <h3>Battery Health · Capacity Ratio</h3>
+          <h3>{t("Battery Health · Capacity Ratio")}</h3>
           <Values
             items={[
               ["Calculated SOH (%)", format(m.soh.calculated_soh)],
@@ -216,14 +209,14 @@ export function ManualResults({ module }: { module: ModuleId | "assessment" }) {
               ],
             ]}
           />
-          <p>SOH = Qcurrent / Qinitial × 100%</p>
-          <p>{m.soh.measurement_notice}</p>
-          <p>{m.soh.reason}</p>
+          <p>{t("SOH = Qcurrent / Qinitial × 100%")}</p>
+          <p>{t(m.soh.measurement_notice)}</p>
+          <p>{t(m.soh.reason)}</p>
         </section>
-      )}
-      {show("life") && (
+      ))}
+      {t(show("life") && (
         <section>
-          <h3>Remaining Life</h3>
+          <h3>{t("Remaining Life")}</h3>
           <Values
             items={[
               ["Status", m.rul.status],
@@ -232,24 +225,24 @@ export function ManualResults({ module }: { module: ModuleId | "assessment" }) {
               ["Method", m.rul.method],
             ]}
           />
-          <p>{m.rul.reason}</p>
-          <p>Confidence / Calendar life / Prediction curve: N/A</p>
+          <p>{t(m.rul.reason)}</p>
+          <p>{t("Confidence / Calendar life / Prediction curve: N/A")}</p>
         </section>
-      )}
-      {(show("health") || module === "life") && (
+      ))}
+      {t((show("health") || module === "life") && (
         <section>
-          <h3>Explainability</h3>
+          <h3>{t("Explainability")}</h3>
           <p>
-            {m.explainability.status} · {m.explainability.reason}
+            {t(m.explainability.status)}{t(" · ")}{t(m.explainability.reason)}
           </p>
-          <p>How is this calculated? {m.soh.method}</p>
+          <p>{t("How is this calculated? ")}{t(m.soh.method)}</p>
         </section>
-      )}
-      {show("carbon") && (
+      ))}
+      {t(show("carbon") && (
         <section>
-          <h3>Carbon Passport</h3>
-          <p>C = Σ(Activity Data × Emission Factor)</p>
-          {m.carbon.status === "calculated" ? (
+          <h3>{t("Carbon Passport")}</h3>
+          <p>{t("C = Σ(Activity Data × Emission Factor)")}</p>
+          {t(m.carbon.status === "calculated" ? (
             <>
               <Values
                 items={[
@@ -257,48 +250,48 @@ export function ManualResults({ module }: { module: ModuleId | "assessment" }) {
                   ...Object.entries(m.carbon.summary.by_stage_kgCO2e),
                 ]}
               />
-              <p>{m.carbon.summary.interpretation}</p>
-              <p>{m.carbon.summary.allocation}</p>
-              <p>{m.carbon.factor_provenance}</p>
-              {m.carbon.details.map((d) => (
+              <p>{t(m.carbon.summary.interpretation)}</p>
+              <p>{t(m.carbon.summary.allocation)}</p>
+              <p>{t(m.carbon.factor_provenance)}</p>
+              {t(m.carbon.details.map((d) => (
                 <p key={d.activity_id}>
-                  {d.activity_id}: {d.quantity} {d.activity_unit} ×{" "}
-                  {d.factor_value} = {format(d.emissions_kgCO2e)} kgCO₂e ·{" "}
-                  {d.factor_status} · {d.factor_year} ·{" "}
-                  {d.factor_source || "Source unavailable"}
+                  {t(d.activity_id)}{t(": ")}{t(d.quantity)} {t(d.activity_unit)}{t(" ×")}{t(" ")}
+                  {t(d.factor_value)}{t(" = ")}{t(format(d.emissions_kgCO2e))}{t(" kgCO₂e ·")}{t(" ")}
+                  {t(d.factor_status)}{t(" · ")}{t(d.factor_year)}{t(" ·")}{t(" ")}
+                  {t(d.factor_source || "Source unavailable")}
                 </p>
-              ))}
+              )))}
             </>
           ) : (
-            <p>Not Available · {m.carbon.reason}</p>
-          )}
-        </section>
-      )}
-      {show("decision") && (
-        <section>
-          <h3>Safety / Green Decision</h3>
-          <p>
-            {m.safety.status} · Certified: {String(m.safety.certified)}
-          </p>
-          {m.safety.reason_codes.map((s) => (
-            <p key={s}>{s}</p>
+            <p>{t("Not Available · ")}{t(m.carbon.reason)}</p>
           ))}
+        </section>
+      ))}
+      {t(show("decision") && (
+        <section>
+          <h3>{t("Safety / Green Decision")}</h3>
+          <p>
+            {t(m.safety.status)}{t(" · Certified: ")}{t(String(m.safety.certified))}
+          </p>
+          {t(m.safety.reason_codes.map((s) => (
+            <p key={s}>{t(s)}</p>
+          )))}
           <Values
             items={m.candidate_paths.map((p) => [
               routeNames[p.route_id] ?? p.route_id,
               `${p.eligible ? "Prototype eligible" : "HOLD"} · score ${p.weighted_score === null ? "N/A" : format(p.weighted_score * 100)} · ${p.reason_codes.join(", ")}`,
             ])}
           />
-          <h4>{a.view?.decision}</h4>
-          {m.decision_reason.map((s, i) => (
-            <p key={i}>{s}</p>
-          ))}
-          <p>{m.recommendation.parameter_status}</p>
+          <h4>{t(a.view?.decision)}</h4>
+          {t(m.decision_reason.map((s, i) => (
+            <p key={i}>{t(s)}</p>
+          )))}
+          <p>{t(m.recommendation.parameter_status)}</p>
         </section>
-      )}
-      {(show("decision") || all) && (
+      ))}
+      {t((show("decision") || all) && (
         <section>
-          <h3>Residual Value · Prototype Technical Estimation</h3>
+          <h3>{t("Residual Value · Prototype Technical Estimation")}</h3>
           <Values
             items={[
               ["Status", v.status],
@@ -312,49 +305,39 @@ export function ManualResults({ module }: { module: ModuleId | "assessment" }) {
               ["Missing components", v.missing_components.join(", ") || "None"],
             ]}
           />
-          <p>{v.index_formula}</p>
-          <p>{v.price_formula}</p>
+          <p>{t(v.index_formula)}</p>
+          <p>{t(v.price_formula)}</p>
           <Values
             items={Object.entries(v.component_scores).map(([k, n]) => [
               `${k} / 100`,
               format(n),
             ])}
           />
-          <p>
-            未知分项数学边界：{format(v.index_bounds?.lower)} –{" "}
-            {format(v.index_bounds?.upper)}；不是完整价值指数或价格置信区间。
-          </p>
-          <p>{v.parameter_status}</p>
-          <p>{v.band_basis}</p>
-          <p>{v.disclaimer}</p>
-          <h4>Explicit Demo Assumptions</h4>
+          <p>{t("未知分项数学边界：")}{t(format(v.index_bounds?.lower))}{t(" –")}{t(" ")}
+            {t(format(v.index_bounds?.upper))}{t("；不是完整价值指数或价格置信区间。")}</p>
+          <p>{t(v.parameter_status)}</p>
+          <p>{t(v.band_basis)}</p>
+          <p>{t(v.disclaimer)}</p>
+          <h4>{t("Explicit Demo Assumptions")}</h4>
           <Values items={Object.entries(m.prototype_assumptions)} />
-          <p>
-            Second-life potential: {m.second_life_potential.level ?? "N/A"} ·{" "}
-            {m.second_life_potential.reason}
+          <p>{t("Second-life potential: ")}{t(m.second_life_potential.level ?? "N/A")}{t(" ·")}{t(" ")}
+            {t(m.second_life_potential.reason)}
           </p>
         </section>
-      )}
+      ))}
       <section>
-        <h3>Model / Demo Boundary</h3>
-        <p>
-          BMS 上传主要用于数据质量检查。NASA SOH/RUL/SHAP
-          仅用于公开实验电芯模式；手动模式不套用这些模型。Carbon
-          需明确场景活动与因子，Green Decision
-          为原型决策逻辑，尚未完成真实整车大规模验证。
-        </p>
-        {m.limitations.map((s, i) => (
-          <p key={i}>{s}</p>
-        ))}
+        <h3>{t("Model / Demo Boundary")}</h3>
+        <p>{t("BMS 上传主要用于数据质量检查。NASA SOH/RUL/SHAP 仅用于公开实验电芯模式；手动模式不套用这些模型。Carbon 需明确场景活动与因子，Green Decision 为原型决策逻辑，尚未完成真实整车大规模验证。")}</p>
+        {t(m.limitations.map((s, i) => (
+          <p key={i}>{t(s)}</p>
+        )))}
       </section>
-      {all && (
+      {t(all && (
         <button
           className="primary-button compact print-button"
           onClick={() => window.print()}
-        >
-          Export PDF / 打印报告
-        </button>
-      )}
+        >{t("Export PDF / 打印报告")}</button>
+      ))}
     </div>
   );
 }

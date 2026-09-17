@@ -1,3 +1,4 @@
+import { t } from "../i18n";
 import { useAssessment } from "../context/AssessmentContext";
 import { format } from "../lib/assessmentAdapter";
 import {
@@ -41,9 +42,9 @@ export default function Overview({
           onAssess={onAssess}
           busy={busy}
         />
-        {view ? <LivePassport /> : <BatteryPassport data={data} />}
+        {t(view ? <LivePassport /> : <BatteryPassport data={data} />)}
       </div>
-      <section className="metrics-grid" aria-label="四项核心评估指标">
+      <section className="metrics-grid" aria-label={t("四项核心评估指标")}>
         <IntelligenceMetric
           index={0}
           label="State of Health"
@@ -87,26 +88,25 @@ export default function Overview({
         />
       </section>
       <LifecycleFlow />
-      {view ? (
+      {t(view ? (
         <LiveDecisionSummary onDecision={() => onModule("decision")} />
       ) : (
         <DianXunIntelligence
           data={data}
           onDecision={() => onModule("decision")}
         />
-      )}
-      {view ? (
+      ))}
+      {t(view ? (
         <LivePreviews onModule={onModule} />
       ) : (
         <TechnologyPreview data={data} onModule={onModule} />
-      )}
+      ))}
       <InnovationStory />
       <footer className="page-footer">
-        <span>
-          电循智策 <span className="muted">/ DianXun ZhiCe</span>
+        <span>{t("电循智策")}
         </span>
-        <span>新能源汽车动力电池全生命周期智能评估与绿色决策平台</span>
-        <span>DEMO v1.0</span>
+        <span>{t("新能源汽车动力电池全生命周期智能评估与绿色决策平台")}</span>
+        <span>{t("DEMO v1.0")}</span>
       </footer>
     </>
   );

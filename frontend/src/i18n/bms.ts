@@ -1,0 +1,23 @@
+/** Exact messages emitted by backend/v03/bms_validate.py. Field IDs remain traceable. */
+export const bmsMessages: [string, string][] = [
+  ['error','错误'], ['warning','警告'],
+  ['Required column absent','缺少必需遥测列'],
+  ['Required metadata absent','缺少必需元数据列'],
+  ['No telemetry rows','没有遥测记录'], ['No metadata rows','没有元数据记录'],
+  ['ID required','必须填写标识'], ['duplicate battery_id','battery_id 重复'],
+  ['unknown current sign convention','电流正负号约定未知'],
+  ['invalid rated capacity','额定容量无效'], ['battery chemistry unknown','电池化学体系未知'],
+  ['data origin not declared','未声明数据来源'],
+  ['No matching metadata','没有匹配的元数据'],
+  ['Invalid metadata for this cell/pack','此电芯或电池包的元数据无效'],
+  ['Explicit Z or UTC offset required','必须明确 Z 或 UTC 时区偏移'],
+  ['Cannot parse timestamp','无法解析时间戳'],
+  ['Finite numeric value required','必须是有限数值'],
+  ['Broad ingestion range exceeded; not a safety threshold','超出宽泛的数据接入范围；此范围不是安全阈值'],
+  ['Maximum below minimum','最大值小于最小值'], ['Unknown enum','未知枚举值'],
+  ['Segment classification unavailable','无法判定片段类型'],
+  ['Current sign and state disagree; normalized discharge positive','电流正负号与状态不一致；已统一为放电电流为正'],
+  ['Optional analysis unavailable','可选分析不可用'],
+  ['All conflicting duplicate records quarantined','所有冲突的重复记录均已隔离'],
+  ['Strongly recommended','强烈建议提供此字段'],
+];

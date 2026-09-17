@@ -1,3 +1,4 @@
+import { t } from "../../i18n";
 import type { LucideIcon } from "lucide-react";
 import CountUp from "../CountUp";
 export default function IntelligenceMetric({
@@ -22,18 +23,18 @@ export default function IntelligenceMetric({
   return (
     <article className={`intelligence-metric surface reveal metric-${index}`}>
       <div className="metric-top">
-        <span>{label}</span>
+        <span>{t(label)}</span>
         <Icon className={tone} size={27} strokeWidth={1.5} />
       </div>
       <div className={`metric-value ${typeof value === "string" ? tone : ""}`}>
-        {typeof value === "number" ? (
+        {t(typeof value === "number" ? (
           <CountUp value={value} decimals={decimals} />
         ) : (
           value
-        )}
-        <small>{unit}</small>
+        ))}
+        <small>{t(unit)}</small>
       </div>
-      <p>{description}</p>
+      <p>{t(description)}</p>
     </article>
   );
 }

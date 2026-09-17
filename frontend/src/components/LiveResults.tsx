@@ -1,16 +1,17 @@
+import { t } from "../i18n";
 import { ManualResults, ManualPassport } from "./ManualAssessment";
 import { useAssessment } from "../context/AssessmentContext";
 import { format, routeNames } from "../lib/assessmentAdapter";
 import type { ModuleId } from "../types/battery";
-function Values({ items }: { items: [string, unknown][] }) {
+function Values({ items, raw = false }: { items: [string, unknown][]; raw?: boolean }) {
   return (
     <dl className="live-values">
-      {items.map(([name, value]) => (
+      {t(items.map(([name, value]) => (
         <div key={name}>
-          <dt>{name}</dt>
-          <dd>{value == null ? "N/A" : String(value)}</dd>
+          <dt>{t(name)}</dt>
+          <dd>{value == null ? t("N/A") : raw ? String(value) : t(String(value))}</dd>
         </div>
-      ))}
+      )))}
     </dl>
   );
 }
@@ -20,36 +21,36 @@ export function LivePassport() {
   if (view.manual) return <ManualPassport />;
   const r = assessmentResult.data;
   return (
-    <section className="passport surface" aria-label="电池数字护照">
+    <section className="passport surface" aria-label={t("电池数字护照")}>
       <div className="passport-heading">
-        <h2>Battery Digital Passport</h2>
-        <span className="mint">LIVE</span>
+        <h2>{t("Battery Digital Passport")}</h2>
+        <span className="mint">{t("LIVE")}</span>
       </div>
       <div className="passport-id">
-        <span className="micro-label">NASA EXPERIMENTAL CELL</span>
+        <span className="micro-label">{t("NASA EXPERIMENTAL CELL")}</span>
         <strong>{r.battery_id}</strong>
       </div>
       <div className="passport-body">
         <div className="passport-readings">
           <div>
-            <span>State of Health</span>
+            <span>{t("State of Health")}</span>
             <strong className="mint">
-              {format(view.soh, 1)}
-              <small>%</small>
+              {t(format(view.soh, 1))}
+              <small>{t("%")}</small>
             </strong>
           </div>
           <div>
-            <span>Remaining Useful Life</span>
+            <span>{t("Remaining Useful Life")}</span>
             <strong className="cyan">
-              {format(view.rul, 1)}
-              <small> reference cycles</small>
+              {t(format(view.rul, 1))}
+              <small>{t(" reference cycles")}</small>
             </strong>
           </div>
           <div>
-            <span>Scenario Carbon · {r.scenario_id}</span>
+            <span>{t("Scenario Carbon · ")}{t(r.scenario_id)}</span>
             <strong>
-              {format(view.carbon)}
-              <small> tCO₂e</small>
+              {t(format(view.carbon))}
+              <small>{t(" tCO₂e")}</small>
             </strong>
           </div>
         </div>
@@ -58,9 +59,9 @@ export function LivePassport() {
             src="/assets/battery-pack.png"
             width="1024"
             height="1024"
-            alt="概念渲染，非被测电池实物"
+            alt={t("概念渲染，非被测电池实物")}
           />
-          <figcaption>CONCEPT VISUAL · 非实物</figcaption>
+          <figcaption>{t("CONCEPT VISUAL · 非实物")}</figcaption>
         </figure>
       </div>
       <Values
@@ -71,9 +72,7 @@ export function LivePassport() {
           ["Vehicle safety", "UNKNOWN"],
         ]}
       />
-      <p className="demo-note">
-        公开实验电芯 · 未验证整车迁移。碳足迹属于另一模拟场景。
-      </p>
+      <p className="demo-note">{t("公开实验电芯 · 未验证整车迁移。碳足迹属于另一模拟场景。")}</p>
     </section>
   );
 }
@@ -87,12 +86,11 @@ export function LivePreviews({
   return (
     <section id="technology" className="technology">
       <div className="section-heading">
-        <h2>
-          Technology Preview <span>让结论可复核</span>
+        <h2>{t("Technology Preview ")}<span>{t("让结论可复核")}</span>
         </h2>
       </div>
       <div className="technology-grid">
-        {(
+        {t((
           [
             [
               "health",
@@ -115,14 +113,14 @@ export function LivePreviews({
           ] as const
         ).map(([id, title, value, note]) => (
           <article className="technology-card surface" key={id}>
-            <h3>{title}</h3>
+            <h3>{t(title)}</h3>
             <div className="preview-result">
-              <strong className="mint">{value}</strong>
+              <strong className="mint">{t(value)}</strong>
             </div>
-            <p>{note}</p>
-            <button onClick={() => onModule(id)}>查看结果 →</button>
+            <p>{t(note)}</p>
+            <button onClick={() => onModule(id)}>{t("查看结果 →")}</button>
           </article>
-        ))}
+        )))}
       </div>
     </section>
   );
@@ -136,17 +134,17 @@ export function LiveDecisionSummary({
   if (!view || !assessmentResult) return null;
   return (
     <section className="surface live-summary">
-      <p className="eyebrow">DIANXUN INTELLIGENCE / SIMULATION</p>
-      <h2>{view.decision}</h2>
-      <p>Backend recommendation · {format(view.score, 1)} / 100</p>
-      <p>{assessmentResult.data.recommendation.parameter_status}</p>
+      <p className="eyebrow">{t("DIANXUN INTELLIGENCE / SIMULATION")}</p>
+      <h2>{t(view.decision)}</h2>
+      <p>{t("Backend recommendation · ")}{t(format(view.score, 1))}{t(" / 100")}</p>
+      <p>{t(assessmentResult.data.recommendation.parameter_status)}</p>
       <details>
-        <summary>Why this decision?</summary>
-        {assessmentResult.data.decision_reason.map((reason, i) => (
-          <p key={i}>{reason}</p>
-        ))}
+        <summary>{t("Why this decision?")}</summary>
+        {t(assessmentResult.data.decision_reason.map((reason, i) => (
+          <p key={i}>{t(reason)}</p>
+        )))}
       </details>
-      <button onClick={onDecision}>查看安全门槛与四条候选路径 →</button>
+      <button onClick={onDecision}>{t("查看安全门槛与四条候选路径 →")}</button>
     </section>
   );
 }
@@ -164,30 +162,28 @@ export default function LiveResults({
   const show = (m: ModuleId) => report || module === m;
   return (
     <div className={report ? "live-results assessment-report" : "live-results"}>
-      <p className="source-notice">
-        Data Source: Live Backend · 公开电芯模型 / 模拟情景 · request{" "}
+      <p className="source-notice">{t("Data Source: Live Backend · 公开电芯模型 / 模拟情景 · request")}{t(" ")}
         {a.assessmentResult.request_id}
       </p>
-      <p>{r.display_notice}</p>
-      {report && (
+      <p>{t(r.display_notice)}</p>
+      {t(report && (
         <section>
-          <h3>Vehicle & Battery Information</h3>
+          <h3>{t("Vehicle & Battery Information")}</h3>
           <Values
             items={[
               ["Vehicle", "N/A"],
-              ["NASA cell", r.battery_id],
               ["Identity scope", r.battery_id_scope],
-              ["Decision scenario", r.scenario_id],
               ["Vehicle transfer", String(r.automatic_model_to_pack_transfer)],
               ["Request schema", a.assessmentResult.schema_version],
             ]}
           />
+          <Values raw items={[["NASA cell", r.battery_id], ["Decision scenario", r.scenario_id]]} />
         </section>
-      )}
-      {report && (
+      ))}
+      {t(report && (
         <section>
-          <h3>Data Quality · BMS</h3>
-          {r.data_quality.status === "checked" ? (
+          <h3>{t("Data Quality · BMS")}</h3>
+          {t(r.data_quality.status === "checked" ? (
             <>
               <Values
                 items={[
@@ -202,22 +198,21 @@ export default function LiveResults({
                   ],
                 ]}
               />
-              <p>{r.data_quality.summary.interpretation}</p>
-              <p>{r.data_quality.summary.source_provenance}</p>
-              {r.data_quality.issues.map((issue, i) => (
-                <p key={i}>
-                  Row {issue.csv_row}: {issue.field} · {issue.detail}
+              <p>{t(r.data_quality.summary.interpretation)}</p>
+              <p>{t(r.data_quality.summary.source_provenance)}</p>
+              {t(r.data_quality.issues.map((issue, i) => (
+                <p key={i}>{t("Row ")}{t(issue.csv_row)}{t(": ")}{t(issue.field)}{t(" · ")}{t(issue.detail)}
                 </p>
-              ))}
+              )))}
             </>
           ) : (
-            <p>{r.data_quality.reason}</p>
-          )}
+            <p>{t(r.data_quality.reason)}</p>
+          ))}
         </section>
-      )}
-      {show("health") && (
+      ))}
+      {t(show("health") && (
         <section>
-          <h3>Battery Health</h3>
+          <h3>{t("Battery Health")}</h3>
           <Values
             items={[
               ["Predicted SOH", `${format(v.soh)} %`],
@@ -233,7 +228,7 @@ export default function LiveResults({
               ["Cell consistency", "N/A"],
             ]}
           />
-          <p className="dialog-model">SOH = Qcurrent / Qinitial × 100%</p>
+          <p className="dialog-model">{t("SOH = Qcurrent / Qinitial × 100%")}</p>
           <Values
             items={[
               [
@@ -252,16 +247,13 @@ export default function LiveResults({
               ],
             ]}
           />
-          <p>
-            容量比值由 RUL 输入派生，参考初始容量与 SOH
-            模型基准不同，不能替代上方 SOH 预测。
-          </p>
-          {r.soh.status === "available" && <p>{r.soh.scope}</p>}
+          <p>{t("容量比值由 RUL 输入派生，参考初始容量与 SOH 模型基准不同，不能替代上方 SOH 预测。")}</p>
+          {t(r.soh.status === "available" && <p>{t(r.soh.scope)}</p>)}
         </section>
-      )}
-      {show("life") && (
+      ))}
+      {t(show("life") && (
         <section>
-          <h3>Remaining Useful Life</h3>
+          <h3>{t("Remaining Useful Life")}</h3>
           <Values
             items={[
               ["Remaining reference cycles", format(v.rul)],
@@ -272,24 +264,18 @@ export default function LiveResults({
               ["Estimated years", "N/A"],
             ]}
           />
-          <p>{r.rul.reason || r.rul.operating_condition_caution}</p>
-          <p>{r.rul.validation_status}</p>
-          <div className="unavailable-chart">
-            Historical / Prediction Curve · Not Available
-            <br />
-            后端未返回曲线；未将本地示例曲线作为真实预测。
-          </div>
+          <p>{t(r.rul.reason || r.rul.operating_condition_caution)}</p>
+          <p>{t(r.rul.validation_status)}</p>
+          <div className="unavailable-chart">{t("Historical / Prediction Curve · Not Available")}<br />{t("后端未返回曲线；未将本地示例曲线作为真实预测。")}</div>
         </section>
-      )}
-      {(show("health") || module === "life") && (
+      ))}
+      {t((show("health") || module === "life") && (
         <section>
-          <h3>Why this prediction?</h3>
-          {r.explainability.status === "available" ? (
+          <h3>{t("Why this prediction?")}</h3>
+          {t(r.explainability.status === "available" ? (
             <>
               <p>
-                {r.explainability.method} · Top Contributing Factors · SOH
-                percentage points
-              </p>
+                {t(r.explainability.method)}{t(" · Top Contributing Factors · SOH percentage points")}</p>
               <Values
                 items={[
                   [
@@ -303,11 +289,11 @@ export default function LiveResults({
                 ]}
               />
               <div className="shap-list">
-                {v.contributions.map((c) => (
+                {t(v.contributions.map((c) => (
                   <div key={c.feature}>
                     <span>
-                      {c.feature}
-                      <small>Feature value: {format(c.feature_value, 6)}</small>
+                      {t(c.feature)}
+                      <small>{t("Feature value: ")}{t(format(c.feature_value, 6))}</small>
                     </span>
                     <div className="shap-track">
                       <i
@@ -321,27 +307,25 @@ export default function LiveResults({
                       />
                     </div>
                     <b>
-                      {c.shap_soh_pp > 0 ? "+" : ""}
-                      {format(c.shap_soh_pp, 4)} pp
-                    </b>
-                    <small>{c.direction}</small>
+                      {t(c.shap_soh_pp > 0 ? "+" : "")}
+                      {t(format(c.shap_soh_pp, 4))}{t(" pp")}</b>
+                    <small>{t(c.direction)}</small>
                   </div>
-                ))}
+                )))}
               </div>
-              <p>{r.explainability.interpretation}</p>
+              <p>{t(r.explainability.interpretation)}</p>
             </>
           ) : (
-            <p>
-              Explainability currently unavailable · {r.explainability.reason}
+            <p>{t("Explainability currently unavailable · ")}{t(r.explainability.reason)}
             </p>
-          )}
+          ))}
         </section>
-      )}
-      {show("carbon") && (
+      ))}
+      {t(show("carbon") && (
         <section>
-          <h3>Carbon Passport</h3>
-          <p className="dialog-model">C = Σ(Activity Data × Emission Factor)</p>
-          {r.carbon.status === "calculated" ? (
+          <h3>{t("Carbon Passport")}</h3>
+          <p className="dialog-model">{t("C = Σ(Activity Data × Emission Factor)")}</p>
+          {t(r.carbon.status === "calculated" ? (
             <>
               <Values
                 items={[
@@ -367,31 +351,23 @@ export default function LiveResults({
                   `${format(n)} kgCO₂e`,
                 ])}
               />
+              <p>{t("后端按四阶段核算；原材料计入制造，运输与维护合并，不额外拆分或重复计数。")}</p>
+              <p>{t(r.carbon.summary.interpretation)}</p>
+              <p>{t(r.carbon.summary.allocation)}</p>
+              <h4>{t("Data Provenance")}</h4>
               <p>
-                后端按四阶段核算；原材料计入制造，运输与维护合并，不额外拆分或重复计数。
-              </p>
-              <p>{r.carbon.summary.interpretation}</p>
-              <p>{r.carbon.summary.allocation}</p>
-              <h4>Data Provenance</h4>
-              <p>
-                {r.carbon.factor_provenance} · 来源由调用方声明，未经独立核验。
-              </p>
-              {r.carbon.details.map((d) => (
+                {t(r.carbon.factor_provenance)}{t(" · 来源由调用方声明，未经独立核验。")}</p>
+              {t(r.carbon.details.map((d) => (
                 <article className="factor-row" key={d.activity_id}>
-                  <strong>{d.description || d.activity_id}</strong>
+                  <strong>{t(d.description || d.activity_id)}</strong>
                   <p>
-                    {format(d.quantity)} {d.activity_unit} ×{" "}
-                    {format(d.factor_value, 4)} = {format(d.emissions_kgCO2e)}{" "}
-                    kgCO₂e
-                  </p>
-                  <p>{d.derivation}</p>
+                    {t(format(d.quantity))} {t(d.activity_unit)}{t(" ×")}{t(" ")}
+                    {t(format(d.factor_value, 4))}{t(" = ")}{t(format(d.emissions_kgCO2e))}{t(" ")}{t("kgCO₂e")}</p>
+                  <p>{t(d.derivation)}</p>
                   <p>
-                    {d.factor_id} · {d.factor_status} · year {d.factor_year} ·
-                    Region / Confidence: N/A
-                  </p>
-                  <p>
-                    Source:{" "}
-                    {/^https?:\/\//.test(d.factor_source) ? (
+                    {t(d.factor_id)}{t(" · ")}{t(d.factor_status)}{t(" · year ")}{t(d.factor_year)}{t(" · Region / Confidence: N/A")}</p>
+                  <p>{t("Source:")}{t(" ")}
+                    {t(/^https?:\/\//.test(d.factor_source) ? (
                       <a
                         href={d.factor_source}
                         target="_blank"
@@ -401,20 +377,20 @@ export default function LiveResults({
                       </a>
                     ) : (
                       "Not Available"
-                    )}
+                    ))}
                   </p>
                 </article>
-              ))}
+              )))}
             </>
           ) : (
-            <p>Not Available · {r.carbon.reason}</p>
-          )}
+            <p>{t("Not Available · ")}{t(r.carbon.reason)}</p>
+          ))}
         </section>
-      )}
-      {show("decision") && (
+      ))}
+      {t(show("decision") && (
         <section>
-          <h3>Green Decision · Safety Gate</h3>
-          <p>{r.safety.scope} · 下方是模拟路径门槛，不代表检测认证。</p>
+          <h3>{t("Green Decision · Safety Gate")}</h3>
+          <p>{t(r.safety.scope)}{t(" · 下方是模拟路径门槛，不代表检测认证。")}</p>
           <Values
             items={[
               "Thermal Risk",
@@ -425,58 +401,58 @@ export default function LiveResults({
           />
           <div className="table-scroll">
             <table>
-              <caption>Backend route eligibility</caption>
+              <caption>{t("Backend route eligibility")}</caption>
               <thead>
                 <tr>
-                  <th>Route</th>
-                  <th>Gate</th>
-                  <th>Reason codes</th>
+                  <th>{t("Route")}</th>
+                  <th>{t("Gate")}</th>
+                  <th>{t("Reason codes")}</th>
                 </tr>
               </thead>
               <tbody>
-                {r.safety.gates.map((g) => (
+                {t(r.safety.gates.map((g) => (
                   <tr key={g.route_id}>
-                    <td>{routeNames[g.route_id] || g.route_id}</td>
-                    <td>{g.eligible ? "PASS" : "FAIL / HOLD"}</td>
-                    <td>{g.reason_codes.join(", ") || "None"}</td>
+                    <td>{t(routeNames[g.route_id] || g.route_id)}</td>
+                    <td>{t(g.eligible ? "PASS" : "FAIL / HOLD")}</td>
+                    <td>{t(g.reason_codes.join(", ") || "None")}</td>
                   </tr>
-                ))}
+                )))}
               </tbody>
             </table>
           </div>
-          <h4>Candidate Paths</h4>
-          <p>加权分与分项效用由 0–1 转为 0–100；不可用分数保持 N/A。</p>
+          <h4>{t("Candidate Paths")}</h4>
+          <p>{t("加权分与分项效用由 0–1 转为 0–100；不可用分数保持 N/A。")}</p>
           <div className="table-scroll">
             <table>
               <thead>
                 <tr>
-                  <th>Route</th>
-                  <th>Score / 100</th>
-                  <th>Carbon kgCO₂e</th>
-                  <th>NPV CNY</th>
-                  <th>Recovered kg</th>
-                  <th>Eligible</th>
+                  <th>{t("Route")}</th>
+                  <th>{t("Score / 100")}</th>
+                  <th>{t("Carbon kgCO₂e")}</th>
+                  <th>{t("NPV CNY")}</th>
+                  <th>{t("Recovered kg")}</th>
+                  <th>{t("Eligible")}</th>
                 </tr>
               </thead>
               <tbody>
-                {r.candidate_paths.map((p) => (
+                {t(r.candidate_paths.map((p) => (
                   <tr key={p.route_id}>
-                    <td>{routeNames[p.route_id] || p.route_name}</td>
+                    <td>{t(routeNames[p.route_id] || p.route_name)}</td>
                     <td>
-                      {p.weighted_score === null
+                      {t(p.weighted_score === null
                         ? "N/A"
-                        : format(p.weighted_score * 100, 1)}
+                        : format(p.weighted_score * 100, 1))}
                     </td>
-                    <td>{format(p.carbon_kgco2e)}</td>
-                    <td>{format(p.npv_cny)}</td>
-                    <td>{format(p.recovered_kg)}</td>
-                    <td>{p.eligible ? "Yes" : "No"}</td>
+                    <td>{t(format(p.carbon_kgco2e))}</td>
+                    <td>{t(format(p.npv_cny))}</td>
+                    <td>{t(format(p.recovered_kg))}</td>
+                    <td>{t(p.eligible ? "Yes" : "No")}</td>
                   </tr>
-                ))}
+                )))}
               </tbody>
             </table>
           </div>
-          <h4>Final Recommendation · {v.decision}</h4>
+          <h4>{t("Final Recommendation · ")}{t(v.decision)}</h4>
           <Values
             items={[
               ["Score / 100", format(v.score, 1)],
@@ -485,15 +461,9 @@ export default function LiveResults({
               ["Application", "N/A"],
             ]}
           />
-          <h4>Why this decision?</h4>
-          <p>
-            NASA SOH: {format(v.soh)}% / RUL: {format(v.rul)} reference
-            cycles，仅为公开电芯结果，未自动移植到决策电池包。
-          </p>
-          <p>
-            决策场景的输入 SOH/RUL 未在 assessment
-            响应中回传；请以固定请求文件中的情景声明为准。
-          </p>
+          <h4>{t("Why this decision?")}</h4>
+          <p>{t("NASA SOH: ")}{t(format(v.soh))}{t("% / RUL: ")}{t(format(v.rul))}{t(" reference cycles，仅为公开电芯结果，未自动移植到决策电池包。")}</p>
+          <p>{t("决策场景的输入 SOH/RUL 未在 assessment 响应中回传；请以固定请求文件中的情景声明为准。")}</p>
           <Values
             items={
               v.selected
@@ -509,29 +479,27 @@ export default function LiveResults({
               n,
             ])}
           />
-          {r.decision_reason.map((reason, i) => (
-            <p key={i}>{reason}</p>
-          ))}
+          {t(r.decision_reason.map((reason, i) => (
+            <p key={i}>{t(reason)}</p>
+          )))}
         </section>
-      )}
-      {(report || module === 'decision') && <section><h3>Residual Value · Prototype Technical Estimation</h3><p>Not Available · 原 NASA 模式未返回剩余价值。仅在手动模式具备明确证据或显式 Demo 假设时显示，不将路径 NPV 当作电池估值。</p></section>}
+      ))}
+      {t((report || module === 'decision') && <section><h3>{t("Residual Value · Prototype Technical Estimation")}</h3><p>{t("Not Available · 原 NASA 模式未返回剩余价值。仅在手动模式具备明确证据或显式 Demo 假设时显示，不将路径 NPV 当作电池估值。")}</p></section>)}
       <section>
-        <h3>Model / Demo Boundary</h3>
-        {r.limitations.map((s, i) => (
-          <p key={i}>{s}</p>
-        ))}
-        {a.assessmentResult.warnings.map((s, i) => (
-          <p key={i}>Warning: {s}</p>
-        ))}
+        <h3>{t("Model / Demo Boundary")}</h3>
+        {t(r.limitations.map((s, i) => (
+          <p key={i}>{t(s)}</p>
+        )))}
+        {t(a.assessmentResult.warnings.map((s, i) => (
+          <p key={i}>{t("Warning: ")}{t(s)}</p>
+        )))}
       </section>
-      {report && (
+      {t(report && (
         <button
           className="primary-button compact print-button"
           onClick={() => window.print()}
-        >
-          Export PDF / 打印报告
-        </button>
-      )}
+        >{t("Export PDF / 打印报告")}</button>
+      ))}
     </div>
   );
 }
