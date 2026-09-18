@@ -11,7 +11,7 @@ import type {
   AssessmentResponse,
 } from "../types/api";
 export const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8013";
+  import.meta.env.VITE_API_BASE_URL || "";
 export class ApiError extends Error {
   constructor(
     public kind: "offline" | "timeout" | "invalid" | "failed" | "incomplete",
@@ -28,11 +28,14 @@ export async function request<T>(
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeout);
   try {
+    const encodedBody=body === undefined ? undefined : JSON.stringify(body);
+    if (encodedBody && new TextEncoder().encode(encodedBody).length>2*1024*1024)
+      throw new ApiError("invalid","请求超过 2 MiB，请拆分数据后重试。");
     const response = await fetch(`${API_BASE_URL}/api/v1/${path}`, {
       method: body === undefined ? "GET" : "POST",
       headers:
         body === undefined ? undefined : { "Content-Type": "application/json" },
-      body: body === undefined ? undefined : JSON.stringify(body),
+      body: encodedBody,
       signal: controller.signal,
     });
     let payload: Envelope<T>;
@@ -43,6 +46,11 @@ export async function request<T>(
     }
     if (!payload || typeof payload !== "object")
       throw new ApiError("incomplete", "后端返回不完整，未替换当前结果。");
+    if (!response.ok) {
+      if (response.status===413) throw new ApiError("invalid","请求超过 2 MiB，请拆分数据后重试。");
+      if (payload.error?.message?.includes('10000 rows')) throw new ApiError("invalid","CSV 超过 10,000 行，请按车辆和时间段拆分后重试。");
+      if (payload.error?.message?.includes('Duplicate CSV columns')) throw new ApiError("invalid","CSV 存在重复列名，请修改后重试。");
+    }
     if (!response.ok || !payload.success)
       throw new ApiError(
         response.status === 400 ? "invalid" : "failed",

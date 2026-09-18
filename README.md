@@ -12,7 +12,7 @@
 - Green Decision：安全筛选与多指标去向决策。
 - Assessment Report：统一评估结果和报告。
 
-**当前完成范围：Overview 前端 Demo。** 已实现双场景切换、数字护照、技术预览及示例评估交互。其余正式子页尚未实现。当前分支增加 V0.3 后端原型、公开电芯模型及碳核算模块，现有前端尚未接入这些 API。全部场景数据、曲线、因子及建议均为演示内容，不代表真实检测或验证结果。
+**当前完成范围：Overview 前端 Demo 与 BMS 质量检查入口。** 已实现双场景切换、数字护照、技术预览及示例评估交互。其余正式子页尚未实现。前端已连接后端评估及 BMS 校验 API，并提供手动录入和持久化中英文切换。全部场景数据、曲线、因子及建议均为演示内容，不代表真实检测或验证结果。详见 [BMS 质量入口说明](docs/bms-quality-fix.md)。
 
 ## 项目目录
 
@@ -126,7 +126,6 @@ py -3.12 scripts/start_backend.py
 
 服务启动后，在另一终端执行 `.venv\Scripts\python.exe scripts/smoke_test.py`。前端统一调用 `POST /api/v1/assessment`，见 [API 契约](docs/API_CONTRACT.md) 和 [联调说明](docs/integration_guide.md)。
 
-保留 frontend 全部代码、依赖及页面；前端仍使用原演示计算，实际接入由前端组员后续完成。NASA 电芯输出、BMS 质量检查和示例电池包方案必须分区展示。RUL 依赖历史实测容量，SHAP 非因果解释，权重和路径参数为 Demo，尚未完成真实车辆验证。
-# 前端与后端联调
+前端已连接后端评估、手动录入和 BMS 质量检查，支持中文/English 切换并保存选择。Vite 默认将同源 API 代理到 127.0.0.1:8013，生产需配置同源后端服务，或设置 VITE_API_BASE_URL 及后端 CORS。NASA 电芯输出、BMS 质量检查和示例电池包方案分别展示；尚未完成真实车辆验证。
 
-联调启动、固定样例操作、接口边界和验证命令见 [前端联调说明](docs/FRONTEND_INTEGRATION.md)。
+联调说明见 [前端联调说明](docs/FRONTEND_INTEGRATION.md)，本轮修复见 [BMS 质量说明](docs/bms-quality-fix.md)。

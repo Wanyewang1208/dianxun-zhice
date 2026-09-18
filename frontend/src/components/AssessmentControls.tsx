@@ -1,4 +1,5 @@
 import { t } from "../i18n";
+import { qualityLabel } from "../lib/bmsClient";
 import { ManualForm } from "./ManualAssessment";
 import { useEffect, useState } from "react";
 import { useAssessment } from "../context/AssessmentContext";
@@ -122,12 +123,18 @@ export default function AssessmentControls() {
       <ManualForm />
       {t(a.validation && (
         <p role="status">{t("Data Quality:")}{t(" ")}
-          {t(a.validation.summary.schema_ready
-            ? "格式检查通过（非安全认证）"
-            : "Invalid BMS Data")}{t(" ")}{t("· ")}{t(a.validation.summary.accepted_rows)}{t(" accepted /")}{t(" ")}
+          {t(qualityLabel(a.validation.summary))}{t(" ")}{t("· ")}{t(a.validation.summary.accepted_rows)}{t(" accepted /")}{t(" ")}
           {t(a.validation.summary.rejected_rows)}{t(" rejected /")}{t(" ")}
           {t(a.validation.summary.warning_count)}{t(" warnings")}</p>
       ))}
+      {a.validation && <div className="integration-actions">
+        <p>{t("校验仅涉及核心字段，不等于安全认证或实车 SOH/RUL 验证。")}</p>
+        <button onClick={()=>{
+          const url=URL.createObjectURL(new Blob([JSON.stringify(a.validation,null,2)],{type:'application/json'}));
+          const link=document.createElement('a');link.href=url;link.download='bms-quality-report.json';link.click();
+          setTimeout(()=>URL.revokeObjectURL(url),1000);
+        }}>{t("下载完整质量报告")}</button>
+      </div>}
       {t(a.validation?.issues.length ? (
         <details>
           <summary>{t("检查问题")}</summary>

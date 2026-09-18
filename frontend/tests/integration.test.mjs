@@ -78,6 +78,15 @@ check("malformed nested collections reject atomically", () => {
 });
 const realFetch = globalThis.fetch;
 try {
+  assert.equal(api.API_BASE_URL,'');
+  let sent=false;
+  globalThis.fetch=async()=>{sent=true;throw new Error('should not send');};
+  await assert.rejects(api.request('bms/validate',{telemetry_csv:'"'.repeat(1100000)}),/2 MiB/);
+  assert.equal(sent,false);checks++;
+  for (const [status,message,expected] of [[413,'Body exceeds 2 MiB',/2 MiB/],[400,'CSV exceeds 10000 rows',/10,000/],[400,'Duplicate CSV columns: SOC',/重复列名/]]) {
+    globalThis.fetch=async()=>new Response(JSON.stringify({success:false,error:{message}}),{status});
+    await assert.rejects(api.validateBMS({}),expected);checks++;
+  }
   for (const [name, status, payload, kind] of [
     ["invalid BMS", 400, { success: false }, "invalid"],
     ["server failure", 500, { success: false }, "failed"],

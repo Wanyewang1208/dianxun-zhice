@@ -28,6 +28,8 @@ export interface BMSValidationResponse {
     error_count: number;
     warning_count: number;
     schema_ready: boolean;
+    unvalidated_telemetry_columns?: string[];
+    unvalidated_metadata_columns?: string[];
     synthetic_fixture_present: boolean;
     interpretation: string;
     scope: string;

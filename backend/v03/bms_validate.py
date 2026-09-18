@@ -22,6 +22,12 @@ def validate(telemetry,metadata,max_gap_s=30):
     def issue(row,severity,code,field,detail):
         issues.append({'csv_row':row,'severity':severity,'code':code,'field':field,'detail':detail})
         if severity=='error' and row>=2:reject.add(row-2)
+    extra_t=[c for c in t if c not in REQUIRED+['mileage']]
+    extra_m=[c for c in m if c not in META]
+    for table,columns in [('telemetry',extra_t),('metadata',extra_m)]:
+        for column in columns:
+            issue(0,'warning','unvalidated_column',column,
+                  f'{table}: preserved but NOT validated or used for health/safety inference')
     missing_t=[c for c in REQUIRED if c not in t]
     missing_m=[c for c in META if c not in m]
     for field in missing_t:issue(0,'error','missing_telemetry_column',field,'Required column absent');fatal=True
@@ -53,6 +59,7 @@ def validate(telemetry,metadata,max_gap_s=30):
         t['_parsed_time']=pd.Series(pd.NaT,index=t.index,dtype='datetime64[ns, UTC]')
         t['pack_current_raw']=t['pack_current'].copy()
         for c in BOUNDS:t[c]=pd.to_numeric(t[c],errors='coerce').astype(float)
+        if 'mileage' in t:t['mileage']=pd.to_numeric(t['mileage'],errors='coerce').astype(float)
         for idx,row in t.iterrows():
             line=idx+2;b=row.battery_id
             if pd.isna(b) or b not in set(m.battery_id):
@@ -108,6 +115,9 @@ def validate(telemetry,metadata,max_gap_s=30):
     errors=int(issue_frame.severity.eq('error').sum());warnings=int(issue_frame.severity.eq('warning').sum())
     summary={'input_rows':len(telemetry),'accepted_rows':len(accepted),'rejected_rows':len(rejected),
         'error_count':errors,'warning_count':warnings,'warnings_need_review':warnings>0,'schema_ready':len(accepted)>0 and errors==0,
+        'all_supplied_fields_validated':len(accepted)>0 and errors==0 and warnings==0,
+        'unvalidated_telemetry_columns':extra_t,'unvalidated_metadata_columns':extra_m,
+        'schema_ready_scope':'Required core telemetry and metadata only; inspect warnings and unvalidated columns',
         'synthetic_fixture_present':bool(m.get('data_origin',pd.Series(dtype=str)).eq('synthetic_fixture').any()),
         'source_provenance':'Input data_origin declarations are not independent verification',
         'output_current_convention':'discharge_positive','output_time':'UTC with explicit Z',

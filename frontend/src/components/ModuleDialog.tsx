@@ -127,6 +127,7 @@ export default function ModuleDialog({
       {t(!assessmentResult && (
         <p className="demo-note">{t("DEMO DATA · 当前为本地情景模拟，开始评估后可查看后端结果。")}</p>
       ))}
+
     </dialog>
   );
 }

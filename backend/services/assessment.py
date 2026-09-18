@@ -1,4 +1,6 @@
 import io
+import csv
+from collections import Counter
 import json
 import pandas as pd
 from backend.config import MAX_CSV_ROWS
@@ -25,6 +27,10 @@ def bms(payload):
     frames=[]
     for field in ['telemetry_csv','metadata_csv']:
         if not isinstance(payload[field],str):raise ValueError(field+' must be UTF-8 CSV text')
+        reader=csv.reader(io.StringIO(payload[field].lstrip('\ufeff')))
+        header=next((row for row in reader if row and (len(row)>1 or row[0].strip())),[])
+        duplicates=[name for name,count in Counter(header).items() if count>1]
+        if duplicates:raise ValueError('Duplicate CSV columns: '+', '.join(duplicates))
         try:frame=pd.read_csv(io.StringIO(payload[field].lstrip('\ufeff')),dtype={'battery_id':str},nrows=MAX_CSV_ROWS+1)
         except (pd.errors.ParserError,pd.errors.EmptyDataError) as e:raise ValueError('Invalid CSV: '+field) from e
         if len(frame)>MAX_CSV_ROWS:raise ValueError('CSV exceeds 10000 rows')

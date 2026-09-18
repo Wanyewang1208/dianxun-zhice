@@ -1,6 +1,7 @@
 import { pairs, mixed, notices } from './catalog';
 import { evidence } from './evidence';
 import { bmsMessages } from './bms';
+import { qualityMessages } from './bmsQuality';
 export type Language = 'zh' | 'en';
 type StorageLike = Pick<Storage, 'getItem' | 'setItem'>;
 const key = 'dianxun.language';
@@ -15,6 +16,7 @@ for(const [source,zh,en] of mixed)dictionary.set(normalize(source),[zh,en]);
 for(const [zh,en] of notices)dictionary.set(normalize(zh),[zh,en]);
 for(const [source,zh,en] of evidence)dictionary.set(normalize(source),[zh,en]);
 for(const [en,zh] of bmsMessages)dictionary.set(normalize(en),[zh,en]);
+for(const [zh,en] of qualityMessages) { dictionary.set(normalize(zh),[zh,en]); dictionary.set(normalize(en),[zh,en]); }
 
 export function readLanguage(storage?: StorageLike): Language {
   try { return (storage ?? window.localStorage).getItem(key)==='en' ? 'en' : 'zh'; }
@@ -46,6 +48,8 @@ export function translate<T>(value: T, locale: Language): T {
   }
   const choose=(zh: string,en: string)=>(locale==='zh'?zh:en) as T;
   const gap=value.match(/^Gap exceeds ([\d.]+) seconds; do not integrate across gap$/);
+  const unchecked=value.match(/^(telemetry|metadata): preserved but NOT validated or used for health\/safety inference$/);
+  if(unchecked)return choose(`${unchecked[1]==='telemetry'?'时序表':'元数据表'}：该字段仅保留，未校验或用于健康、安全推断`,value);
   if(gap)return choose(`间隔超过 ${gap[1]} 秒；不可跨越该间隔积分`,value);
   const order=value.match(/^(.+) input not chronological; accepted output sorted$/);
   if(order)return choose(`${order[1]} 输入未按时间排序；通过的输出已排序`,value);

@@ -6,6 +6,9 @@ assert.ok(existsSync('src/i18n/index.ts'), 'The bilingual display module must ex
 const bundle = await build({entryPoints:['src/i18n/index.ts'],bundle:true,write:false,format:'esm',platform:'node'});
 const {translate, readLanguage, saveLanguage} = await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'));
 assert.equal(translate('Battery Health','zh'),'电池健康');
+assert.equal(translate('存在未校验字段','en'),'Some fields have not been validated');
+assert.equal(translate('下载完整质量报告','en'),'Download full quality report');
+assert.match(translate('telemetry: preserved but NOT validated or used for health/safety inference','zh'),/未校验/);
 assert.equal(translate('额定容量 (kWh)','en'),'Rated capacity (kWh)');
 assert.equal(translate('输入数据未通过检查，请核对手动字段、容量单位或 CSV 与元数据。','en'),'Input validation failed. Check the manual fields, capacity units, CSV and metadata.');
 assert.equal(translate(82.4,'en'),82.4);
