@@ -129,4 +129,3 @@ py -3.12 scripts/start_backend.py
 前端已连接后端评估、手动录入和 BMS 质量检查，支持中文/English 切换并保存选择。Vite 默认将同源 API 代理到 127.0.0.1:8013，生产需配置同源后端服务，或设置 VITE_API_BASE_URL 及后端 CORS。NASA 电芯输出、BMS 质量检查和示例电池包方案分别展示；尚未完成真实车辆验证。
 
 联调说明见 [前端联调说明](docs/FRONTEND_INTEGRATION.md)，本轮修复见 [BMS 质量说明](docs/bms-quality-fix.md)。
-
