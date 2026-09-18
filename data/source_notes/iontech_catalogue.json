@@ -1,0 +1,1153 @@
+{
+  "catalogue_url": "https://github.com/shiyunliu-battery/Iontech",
+  "retrieved_date": "2026-09-18",
+  "snapshot_sha256": "42589f4847164f23ff85776e49eec17fbeab7e509c4c1d7819877301cb6c20fd",
+  "entry_count": 66,
+  "catalogue_is_not_a_dataset": true,
+  "entries": [
+    {
+      "index": 1,
+      "title": "Multi-year field measurements of home storage systems and their use in capacity estimation",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/12091223"
+        },
+        {
+          "label": "Multi-year field measurements of home storage systems and their use in capacity estimation",
+          "url": "https://www.nature.com/articles/s41560-024-01620-9#data-availability"
+        },
+        {
+          "label": "Capacity estimation of home storage systems using field data",
+          "url": "https://www.nature.com/articles/s41560-024-01662-z"
+        },
+        {
+          "label": "Battery Charts",
+          "url": "https://battery-charts.rwth-aachen.de/main-page/"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 2,
+      "title": "Lithium-Ion Battery Field Data: 28 LFP battery systems with 8 cells in series, up to 5 years of operation",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/13715694"
+        },
+        {
+          "label": "Gaussian Process-based Online Health Monitoring and Fault Analysis of Lithium-Ion Battery Systems from Field Data Cell Report Physical Science",
+          "url": "https://www.cell.com/cell-reports-physical-science/fulltext/S2666-3864(24"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 3,
+      "title": "Battery Failure Databank",
+      "links": [
+        {
+          "label": "Battery Failure Databank",
+          "url": "https://www.nrel.gov/transportation/battery-failure.html"
+        },
+        {
+          "label": "Predicting the heat release variability of Li-ion cells under thermal runaway with few or no calorimetry data",
+          "url": "https://www.nature.com/articles/s41467-024-52653-3"
+        },
+        {
+          "label": "The battery failure databank: Insights from an open-access database of thermal runaway behaviors of Li-ion cells and a resource for benchmarking risks",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0378775324000570?via%3Dihub"
+        },
+        {
+          "label": "Decoupling of heat generated from ejected and non-ejected contents of 18650-format lithium-ion cells using statistical methods",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0378775318312205?via%3Dihub#sec5"
+        },
+        {
+          "label": "Modelling and experiments to identify high-risk failure scenarios for testing the safety of lithium-ion cells",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0378775319300874?via%3Dihub#abs0010"
+        },
+        {
+          "label": "Characterising thermal runaway within lithium-ion cells by inducing and monitoring internal short circuits",
+          "url": "https://pubs.rsc.org/en/content/articlelanding/2017/ee/c7ee00385d"
+        },
+        {
+          "label": "Identifying the Cause of Rupture of Li-Ion Batteries during Thermal Runaway",
+          "url": "https://onlinelibrary.wiley.com/doi/10.1002/advs.201700369"
+        },
+        {
+          "label": "Tracking Internal Temperature and Structural Dynamics during Nail Penetration of Lithium-Ion Cells",
+          "url": "https://iopscience.iop.org/article/10.1149/2.1501713jes"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 4,
+      "title": "Second-life lithium-ion battery aging dataset based on grid storage cycling",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://osf.io/8jnr5/"
+        },
+        {
+          "label": "Second-life lithium-ion battery aging dataset based on grid storage cycling",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352340924010084?via%3Dihub"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 5,
+      "title": "Dataset of lithium-ion battery formation and structured aging cycling data",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.matr.io/8/"
+        },
+        {
+          "label": "Data-driven analysis of battery formation reveals the role of electrode utilization in extending cycle life",
+          "url": "https://www.cell.com/joule/abstract/S2542-4351(24"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 6,
+      "title": "Full factorial design of experiments dataset for parallel-connected lithium-ion cells",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.mendeley.com/datasets/zh58byr53c/1"
+        },
+        {
+          "label": "Unveiling the performance impact of module level features on parallel-connected lithium-ion cells via explainable machine learning techniques on a full factorial design of experiments",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352152X24003670?via%3Dihub"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 7,
+      "title": "Lithium-ion battery aging dataset based on electric vehicle real-driving profiles",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://osf.io/qsabn/?view_only=2a03b6c78ef14922a3e244f3d549de78"
+        },
+        {
+          "label": "Lithium-ion battery aging dataset based on electric vehicle real-driving profiles",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352340922002062?via%3Dihub"
+        },
+        {
+          "label": "Domain knowledge-guided machine learning framework for state of health estimation in Lithium-ion batteries",
+          "url": "https://www.nature.com/articles/s44172-024-00304-2#Abs1"
+        }
+      ],
+      "status": "candidate_dynamic_lab_profiles",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 8,
+      "title": "Experimental data of lithium-ion batteries under galvanostatic discharge tests at different C-rates and temperatures",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.mendeley.com/datasets/kxsbr4x3j2/2"
+        },
+        {
+          "label": "Experimental data of lithium-ion batteries under galvanostatic discharge tests at different rates and temperatures of operation",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352340921001785?via%3Dihub"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 9,
+      "title": "Increasing generalization capability of battery health estimation using continual learning approach",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.mendeley.com/datasets/n3b54nsw8m/9"
+        },
+        {
+          "label": "Increasing generalization capability of battery health estimation using continual learning",
+          "url": "https://www.sciencedirect.com/science/article/pii/S266638642300588X#abs0020"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 10,
+      "title": "EV field datasets (Tsinghua)",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.mendeley.com/datasets/mcsh4hnb8b/1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 11,
+      "title": "Experimental degradation study of a commercial lithium-ion battery",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://mediatum.ub.tum.de/1713382"
+        },
+        {
+          "label": "Experimental degradation study of a commercial lithium-ion battery",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0378775322014756#d1e1359"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 12,
+      "title": "Attention towards chemistry agnostic and explainable battery lifetime prediction",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/10293072"
+        },
+        {
+          "label": "Attention towards chemistry agnostic and explainable battery lifetime prediction",
+          "url": "https://www.nature.com/articles/s41524-024-01286-7"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 13,
+      "title": "Underlying dataset for battery pack degradation",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/10207731"
+        },
+        {
+          "label": "Degradation in parallel-connected lithium-ion battery packs under thermal gradients",
+          "url": "https://www.nature.com/articles/s44172-023-00153-5#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 14,
+      "title": "NASA Battery Data Set",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://phm-datasets.s3.amazonaws.com/NASA/5.+Battery+Data+Set.zip"
+        },
+        {
+          "label": "A framework for Li-ion battery prognosis based on hybrid Bayesian physics-informed neural networks",
+          "url": "https://www.nature.com/articles/s41598-023-33018-0#data-availability"
+        }
+      ],
+      "status": "already_have_NASA_subset",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 15,
+      "title": "Randomized Battery Usage",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://phm-datasets.s3.amazonaws.com/NASA/11.+Randomized+Battery+Usage+Data+Set.zip"
+        },
+        {
+          "label": "Adaptation of an electrochemistry-based Li-ion battery model to account for deterioration observed under randomized use",
+          "url": "https://www.papers.phmsociety.org/index.php/phmconf/article/view/2490"
+        },
+        {
+          "label": "A framework for Li‑ion battery prognosis based on hybrid Bayesian physics‑informed neural networks",
+          "url": "https://www.nature.com/articles/s41598-023-33018-0"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 16,
+      "title": "HIRF Battery Data Set",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://phm-datasets.s3.amazonaws.com/NASA/15.+HIRF+Battery+Data+Set.zip"
+        },
+        {
+          "label": "Verification of a remaining flying time prediction system for small electric aircraft",
+          "url": "https://papers.phmsociety.org/index.php/phmconf/article/view/2571"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 17,
+      "title": "Small Satellite Power Simulation",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.nasa.gov/download/cpqc-ztjh/application%2Fzip"
+        },
+        {
+          "label": "A battery certification testbed for small satellite missions",
+          "url": "https://ieeexplore.ieee.org/abstract/document/7356483"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 18,
+      "title": "Accelerated Battery Life Testing",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.nasa.gov/download/xg3n-ngei/application%2Fzip"
+        },
+        {
+          "label": "Prognosis of Li-ion Batteries Under Large Load Variations Using Hybrid Physics-Informed Neural Networks",
+          "url": "https://papers.phmsociety.org/index.php/phmconf/article/view/3463"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 19,
+      "title": "A cross-scale framework for evaluating flexibility values of battery and fuel cell electric vehicles",
+      "links": [
+        {
+          "label": "Code Repository",
+          "url": "https://github.com/macroenergy/Dolphyn.jl"
+        },
+        {
+          "label": "A cross-scale framework for evaluating flexibility values of battery and fuel cell electric vehicles",
+          "url": "https://www.nature.com/articles/s41467-023-43884-x#code-availability"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 20,
+      "title": "Lithium Inventory Tracking as a Nondestructive Battery Evaluation and Monitoring Method",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://osf.io/2w4k3/"
+        },
+        {
+          "label": "Lithium inventory tracking as a non-destructive battery evaluation and monitoring method",
+          "url": "https://www.nature.com/articles/s41560-024-01476-z"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 21,
+      "title": "Probability Distributed Equivalent Circuit Model",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/10852930"
+        },
+        {
+          "label": "A physically motivated voltage hysteresis model for lithium-ion batteries using a probability distributed equivalent circuit",
+          "url": "https://www.nature.com/articles/s44172-024-00221-4"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 22,
+      "title": "GIC/NMC Solar Battery Synthetic Data",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.mendeley.com/datasets/rg8b2k2k28/1"
+        },
+        {
+          "label": "Data-driven direct diagnosis of Li-ion batteries connected to photovoltaics",
+          "url": "https://www.nature.com/articles/s41467-023-38895-7"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 23,
+      "title": "Data-driven Capacity Estimation of Commercial Lithium-Ion Batteries from Voltage Relaxation",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/6405084"
+        },
+        {
+          "label": "Data-driven capacity estimation of commercial lithium-ion batteries from voltage relaxation",
+          "url": "https://www.nature.com/articles/s41467-022-29837-w"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 24,
+      "title": "Impedance-Based Forecasting of Battery Performance Amid Uneven Usage",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/6645536"
+        },
+        {
+          "label": "Impedance-based forecasting of lithium-ion battery performance amid uneven usage",
+          "url": "https://www.nature.com/articles/s41467-022-32422-w"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 25,
+      "title": "Identifying Degradation Patterns of Lithium-Ion Batteries from Impedance Spectroscopy Using Machine Learning",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/3633835"
+        },
+        {
+          "label": "Identifying degradation patterns of lithium-ion batteries from impedance spectroscopy using machine learning",
+          "url": "https://www.nature.com/articles/s41467-020-15235-7"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 26,
+      "title": "Data-Driven Prediction of Battery Cycle Life Before Capacity Degradation",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.matr.io/1/"
+        },
+        {
+          "label": "Data-driven prediction of battery cycle life before capacity degradation",
+          "url": "https://www.nature.com/articles/s41560-019-0356-8"
+        }
+      ],
+      "status": "candidate_lifetime_benchmark",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 27,
+      "title": "Physics-Informed Neural Network for Lithium-Ion Battery Degradation Stable Modeling and Prognosis",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/10963339"
+        },
+        {
+          "label": "Physics-informed neural network for lithium-ion battery degradation stable modeling and prognosis",
+          "url": "https://www.nature.com/articles/s41467-024-48779-z"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 28,
+      "title": "Real-Time Personalized Health Status Prediction of Lithium-Ion Batteries Using Deep Transfer Learning",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.mendeley.com/datasets/nsc7hnsg4s/2"
+        },
+        {
+          "label": "Real-time personalized health status prediction of lithium-ion batteries using deep transfer learning",
+          "url": "https://pubs.rsc.org/en/content/articlehtml/2022/ee/d2ee01676a"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 29,
+      "title": "Prognosis of Multivariate Battery State of Performance and Health via Transformers",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://www.materialsdatafacility.org/detail/spacetimeformer_battery_v1.2"
+        },
+        {
+          "label": "Prognosis of Multivariate Battery State of Performance and Health via Transformers",
+          "url": "https://arxiv.org/abs/2309.10014"
+        },
+        {
+          "label": "Multivariate prognosis of battery advanced state of health via transformers",
+          "url": "https://www.cell.com/cell-reports-physical-science/fulltext/S2666-3864(24"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 30,
+      "title": "Battery Aging Modes Across NMC",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/7250553"
+        },
+        {
+          "label": "Battery aging mode identification across NMC compositions and designs using machine learning",
+          "url": "https://www.cell.com/joule/fulltext/S2542-4351(22"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 31,
+      "title": "Predicting Battery End of Life from Solar Off-Grid System Field Data Using Machine Learning",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://ora.ox.ac.uk/objects/uuid:e41d3d4c-f74e-4d76-81fd-0caa77ec6cec"
+        },
+        {
+          "label": "Predicting battery end of life from solar off-grid system field data using machine learning",
+          "url": "https://www.cell.com/joule/fulltext/S2542-4351(21"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 32,
+      "title": "ISU-ILCC Battery Aging Dataset",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://iastate.figshare.com/articles/dataset/_b_ISU-ILCC_Battery_Aging_Dataset_b_/22582234"
+        },
+        {
+          "label": "Predicting battery lifetime under varying usage conditions from early aging data",
+          "url": "https://www.cell.com/cell-reports-physical-science/fulltext/S2666-3864(24"
+        }
+      ],
+      "status": "candidate_larger_cell_population",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 33,
+      "title": "Dataset: Comprehensive battery aging dataset: capacity and impedance fade measurements of a lithium-ion NMC/C-SiO cell",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://radar.kit.edu/radar/en/dataset/kww7jv8ajuvchcah.Comprehensive%2Bbattery%2Baging%2Bdataset%253A%2Bcapacity%2Bimpedance%2Bfade%2Bmeasurements%2Blithium-ion%2BNMC%252FC-SiO%2Bcel#"
+        },
+        {
+          "label": "Comprehensive battery aging dataset: capacity and impedance fade measurements of a lithium-ion NMC/C-SiO cell",
+          "url": "https://www.nature.com/articles/s41597-024-03831-x"
+        },
+        {
+          "label": "Bidirectional Charging Systems and Battery Lifetime Modeling for Vehicle-to-Grid Applications",
+          "url": "https://publikationen.bibliothek.kit.edu/1000174456"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 34,
+      "title": "Source data: Revealing how internal sensors in a smart battery impact the local graphite lithiation mechanism",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://www.nature.com/articles/s41467-024-54656-6#Sec14"
+        },
+        {
+          "label": "Revealing how internal sensors in a smart battery impact the local graphite lithiation mechanism",
+          "url": "https://www.nature.com/articles/s41467-024-54656-6#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 35,
+      "title": "Source data: Generative learning assisted state-of-health estimation for sustainable battery recycling with random retirement conditions",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://www.nature.com/articles/s41467-024-54454-0#Sec19"
+        },
+        {
+          "label": "Generative learning assisted state-of-health estimation for sustainable battery recycling with random retirement conditions",
+          "url": "https://www.nature.com/articles/s41467-024-54454-0#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 36,
+      "title": "Source data: Reuse and recycling pathway of retired-batteries",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://github.com/RuifeiMa/Reuse-and-recycling-pathway-of-retired-batteries"
+        },
+        {
+          "label": "Pathway decisions for reuse and recycling of retired lithium-ion batteries considering economic and environmental functions",
+          "url": "https://www.nature.com/articles/s41467-024-52030-0#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 37,
+      "title": "Challenges and opportunities in truck electrification unveiled by big operational data",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://springernature.figshare.com/articles/dataset/Challenges_and_opportunities_in_truck_electrification_unveiled_by_big_operational_data/24421210?file=44809303"
+        },
+        {
+          "label": "Challenges and opportunities in truck electrification revealed by big operational data",
+          "url": "https://www.nature.com/articles/s41560-024-01602-x#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 38,
+      "title": "Dataset - Dynamic cycling enhances battery lifetime",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://purl.stanford.edu/td676xr4322"
+        },
+        {
+          "label": "Dynamic cycling enhances battery lifetime",
+          "url": "https://www.nature.com/articles/s41560-024-01675-8#data-availability"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 39,
+      "title": "Stanford Long Term Calendar Aging Dataset",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://osf.io/ju325/"
+        },
+        {
+          "label": "A decade of insights: Delving into calendar aging trends and implications",
+          "url": "https://www.cell.com/joule/fulltext/S2542-4351(24"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 40,
+      "title": "Battery Capacity Prognostics Dataset for On-Road Electric Vehicles",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://github.com/shiyunliu-battery/battery-charging-data-of-on-road-electric-vehicles"
+        },
+        {
+          "label": "Prognostics of battery capacity based on charging data and data-driven methods for on-road vehicles",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0306261923003185#ab005"
+        }
+      ],
+      "status": "downloaded_and_processed",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 41,
+      "title": "WMG-DIB Data",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://data.mendeley.com/datasets/mn9fb7xdx6/3"
+        },
+        {
+          "label": "Dataset for rapid state of health estimation of lithium batteries using EIS and machine learning: Training and validation",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352340923002767"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 42,
+      "title": "WMG Calendar Ageing Dataset - LGM50 Commercial Cells (39 Storage Conditions)",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/14577286"
+        },
+        {
+          "label": "Lithium-Ion Battery Degradation Modelling Using Universal Differential Equations: Development of a Cost-Effective Parameterisation Methodology",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0306261924026059#sec1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 43,
+      "title": "Cycle aging data of automotive-grade lithium ion battery cells under realistic and accelerated load conditions",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://mediatum.ub.tum.de/1748915"
+        },
+        {
+          "label": "Understanding lithium-ion battery degradation in vehicle applications: Insights from realistic and accelerated aging tests using Volkswagen ID.3 pouch cells",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352152X25000702#d1e2292"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 44,
+      "title": "Retired lithium-ion batteries dataset",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/14562266"
+        },
+        {
+          "label": "Capacity estimation of retired lithium-ion batteries using random charging segments from massive real-world data",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2666386425000438?dgcid=rss_sd_all#abs0020"
+        }
+      ],
+      "status": "candidate_retired_cells_version_needs_review",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 45,
+      "title": "Synthetic Duty Cycles from Real-World Autonomous Electric Vehicle Driving: Accompanying Data",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://purl.stanford.edu/ky011nj6376"
+        },
+        {
+          "label": "Synthetic duty cycles from real-world autonomous electric vehicle driving",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2666386423003314"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 46,
+      "title": "Model-Constrained Deep Learning for Online Fault Diagnosis in Li-ion Batteries over Stochastic Conditions",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/10656500"
+        },
+        {
+          "label": "Model-constrained deep learning for online  fault diagnosis in Li-ion batteries over stochastic conditions",
+          "url": "https://www.nature.com/articles/s41467-025-56832-8"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 47,
+      "title": "Data from: \"Lithium-ion battery degradation: comprehensive cycle ageing data and analysis for commercial 21700 cells\"",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/10637534"
+        },
+        {
+          "label": "Lithium-ion battery degradation: Comprehensive cycle ageing data and analysis for commercial 21700 cells",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0378775324001368#abs0015"
+        },
+        {
+          "label": "The importance of degradation mode analysis in parameterising lifetime prediction models of lithium-ion battery degradation",
+          "url": "https://www.nature.com/articles/s41467-025-57968-3#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 48,
+      "title": "Air-cooled lithium-ion battery pack (LIBP) extracted from a plug-in hybrid vehicle (PHEV)",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP3/THZTJC"
+        },
+        {
+          "label": "Thermal fault detection of lithium-ion battery packs through an integrated physics and deep neural network based model",
+          "url": "https://www.nature.com/articles/s44172-025-00409-2#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 49,
+      "title": "Long-Term Sweat Testing Data for Second-Life Batteries",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://repository.lboro.ac.uk/articles/online_resource/Long-Term_Sweat_Testing_Data_for_Second-Life_Batteries/28732490/2"
+        },
+        {
+          "label": "Long-Term Sweat Testing Dataset for Second-Life Batteries",
+          "url": "https://www.nature.com/articles/s41597-025-05360-7#Abs1"
+        }
+      ],
+      "status": "candidate_second_life_storage",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 50,
+      "title": "Aging dataset LCO battery with mechanical measurements",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/14914172"
+        },
+        {
+          "label": "Aging diagnostics in lithium-ion batteries with differential mechanical measurements",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0306261925002545#da1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 51,
+      "title": "Dataset of lithium-ion battery degradation based on a forklift mission profile for state-of-health estimation and lifetime prediction",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352340923009228#abs0001"
+        },
+        {
+          "label": "Dataset of lithium-ion battery degradation based on a forklift mission profile for state-of-health estimation and lifetime prediction",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2352340923009228#abs0001"
+        },
+        {
+          "label": "Sensitivity analysis for reliable state-of-health estimation based on battery partial charging",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2666386425002450?dgcid=rss_sd_all#appsec2"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 52,
+      "title": "A dataset of over one thousand computed tomography scans of battery cells",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://plus.figshare.com/articles/dataset/A_dataset_of_over_one_thousand_computed_tomography_scans_of_battery_cells/25330501"
+        },
+        {
+          "label": "A dataset of over one thousand computed tomography scans of battery cells",
+          "url": "https://www.sciencedirect.com/science/article/pii/S235234092400581X?via%3Dihub"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 53,
+      "title": "An ultrasonic and deep-learning dataset for real-time State of Charge estimation in large-format lithium-ion cells",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://github.com/hfarhaditolie/Ultrasonic-SoC"
+        },
+        {
+          "label": "Large format battery SoC estimation: An ultrasonic sensing and deep transfer learning predictions for heterogeneity",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2666546825001946#d1e652"
+        },
+        {
+          "label": "Ultrasonic guided waves as an indicator for the state-of-charge of Li-ion batteries",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0378775323005645"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 54,
+      "title": "Battery Imaging Library",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://www.batteryimaginglibrary.com/search"
+        },
+        {
+          "label": "Battery Imaging Library: Multi-length scale and multi-modal synchrotron and laboratory battery imaging data for all",
+          "url": "https://chemrxiv.org/engage/chemrxiv/article-details/68d3b52b3e708a7649ffd0a5"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 55,
+      "title": "Lithium-ion battery pack cycling dataset with CC-CV charging and WLTP/constant discharge profiles",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://dataverse.csuc.cat/dataset.xhtml?persistentId=doi:10.34810/data2395"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 56,
+      "title": "BEV energy dynamics dataset",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://rdr.kuleuven.be/dataset.xhtml?persistentId=doi:10.48804/8KPDTW"
+        },
+        {
+          "label": "Unveiling Energy Dynamics of Battery Electric Vehicle Using High-Resolution Data",
+          "url": "https://www.nature.com/articles/s41597-025-06148-5#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 57,
+      "title": "Multi-Stage Lithium Ion Battery Aging Study",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://figshare.com/articles/dataset/Multi-Stage_Lithium_Ion_Battery_Aging_Study/25975315"
+        },
+        {
+          "label": "A multi-stage lithium-ion battery aging dataset using various experimental design methodologies",
+          "url": "https://www.nature.com/articles/s41597-024-03859-z#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 58,
+      "title": "Improving Real-World Execution of Optimized Trading Schedules for Large-Scale Battery Storage Systems through Data-Driven Component Parametrization: Dataset",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://publications.rwth-aachen.de/record/1015732"
+        },
+        {
+          "label": "Improving Real-World Execution of Optimized Trading Schedules for Large-Scale Battery Storage Systems through Data-Driven Component Parametrization: Dataset",
+          "url": "https://publications.rwth-aachen.de/record/1015732/files/Supplementary_file.pdf"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 59,
+      "title": "Rate Capability Tests, OCV Measurements, Impedance and Half-Cell Measurements of Sodium-Ion and Lithium-Iron-Phosphate Batteries: Dataset",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://doi.org/10.14459/2024mp1762675"
+        },
+        {
+          "label": "Comparing the electrical performance of commercial sodium-ion and lithium-iron-phosphate batteries",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0378775325001260#d1e1398"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 60,
+      "title": "Battery failure detection and FPI estimation during cycling-to-failure",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/17651045"
+        },
+        {
+          "label": "Seeing the unseen: Real-time tracking of battery cycling-to-failure via surface strain",
+          "url": "https://www.cell.com/joule/fulltext/S2542-4351(25"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 61,
+      "title": "Electric Vehicle Usage Data Set for Battery Aging Studies",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://github.com/TUMFTM/electric-vehicle-uds-dataset/tree/main"
+        },
+        {
+          "label": "Lab-to-field gap in battery aging studies: Mismatch of operating conditions between laboratory environments and real-world automotive applications",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2590116825001250?via%3Dihub#d1e4342"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 62,
+      "title": "Mechanistically Guided Residual Learning Dataset for Battery State Monitoring",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/17591942"
+        },
+        {
+          "label": "Mechanistically guided residual learning for battery state monitoring throughout life",
+          "url": "https://www.nature.com/articles/s41467-025-67565-z#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 63,
+      "title": "UConn LCO/Gr Battery Fast Charging Dataset",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://digitalcommons.lib.uconn.edu/reil_datasets/4/"
+        },
+        {
+          "label": "Coulombic efficiency-driven optimization of health-aware charging protocols: an experimental investigation on LCO/graphite lithium-ion cells",
+          "url": "https://pubs.rsc.org/en/content/articlelanding/2026/ta/d5ta09520d"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 64,
+      "title": "Data repository for 'Electrochemical-thermal modelling of high power Li-ion pouch cells'",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://ora.ox.ac.uk/objects/uuid:fe9bad3e-8a72-4e3b-8f01-fec3324b6758"
+        },
+        {
+          "label": "Electrochemical–thermal modelling of high power Li-ion pouch cells",
+          "url": "https://www.sciencedirect.com/science/article/pii/S037877532502600X#d1e884"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 65,
+      "title": "Discovery Learning predicts battery cycle life from minimal experiments",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://zenodo.org/records/17654407"
+        },
+        {
+          "label": "Discovery Learning predicts battery cycle life from minimal experiments",
+          "url": "https://www.nature.com/articles/s41586-025-09951-7#Abs1"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    },
+    {
+      "index": 66,
+      "title": "Industry-Standard ECM Parameter Set and Validation Data for the Molicel INR21700-P45B Cylindrical Cell",
+      "links": [
+        {
+          "label": "Download Dataset",
+          "url": "https://doi.org/10.5281/zenodo.19052626"
+        },
+        {
+          "label": "An Industry-Standard Parameterisation of a Lithium-Ion Battery Equivalent Circuit Model for a High-Power Cylindrical Cell: Molicel P45B",
+          "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6861858"
+        },
+        {
+          "label": "Battery Archive",
+          "url": "https://batteryarchive.org/"
+        },
+        {
+          "label": "Data Dryad",
+          "url": "https://datadryad.org/stash"
+        },
+        {
+          "label": "Zenodo",
+          "url": "https://zenodo.org/"
+        },
+        {
+          "label": "Battery-charts",
+          "url": "https://battery-charts.de/"
+        },
+        {
+          "label": "Mendeley",
+          "url": "https://data.mendeley.com/"
+        },
+        {
+          "label": "USABC",
+          "url": "https://uscar.org/usabc/"
+        },
+        {
+          "label": "US.Data.GOV",
+          "url": "https://data.gov/"
+        },
+        {
+          "label": "EPA",
+          "url": "https://www.epa.gov/vehicle-and-fuel-emissions-testing/dynamometer-drive-schedules"
+        },
+        {
+          "label": "Sandia.gov",
+          "url": "https://www.sandia.gov/ess/tools-resources/rd-data-repository"
+        }
+      ],
+      "status": "catalogued_not_downloaded",
+      "license": "verify_original_publisher_before_use"
+    }
+  ]
+}
