@@ -1,0 +1,11 @@
+{
+  "metric_rows_independently_verified": 22,
+  "prediction_rows_verified": 97306,
+  "models_reload_verified": 3,
+  "folds_entity_isolation_verified": 5,
+  "input_and_training_source_hashes_verified": true,
+  "research_unit_tests_passed": 12,
+  "raw_archives_sha256_verified": 20,
+  "raw_extraction_rerun": false,
+  "frontend_or_online_deployment_tested": false
+}
