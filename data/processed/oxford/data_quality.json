@@ -1,0 +1,30 @@
+{
+  "battery_count": 8,
+  "cycle_rows": 519,
+  "timeseries_rows": 1610378,
+  "timeseries_rows_by_cell": {
+    "Cell1": 238992,
+    "Cell2": 221817,
+    "Cell3": 234674,
+    "Cell4": 147558,
+    "Cell5": 147140,
+    "Cell6": 146332,
+    "Cell7": 240855,
+    "Cell8": 233010
+  },
+  "raw_phase_record_counts": {
+    "C1ch": 519,
+    "C1dc": 519,
+    "OCVch": 519,
+    "OCVdc": 519
+  },
+  "feature_eligible_rows": 519,
+  "cleaning_issue_entries": 0,
+  "time_conversion": "Observed raw t is MATLAB serial days, despite README seconds: (t-t0)*86400; original values retained",
+  "current": "Not observed in characterisation file; not fabricated or used as feature",
+  "capacity": "-(q_last-q_first)/1000 Ah; C1dc q is signed accumulated mAh",
+  "soh_denominator_ah": 0.74,
+  "rul": "No exact EOL/RUL labels: diagnostic observations are sparse, retain crossing interval at illustrative 80% rated threshold",
+  "split": "Cell1..Cell6 training, Cell7/Cell8 untouched test; no random row splitting",
+  "trained_model_integrated_in_api": false
+}

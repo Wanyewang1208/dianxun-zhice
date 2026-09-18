@@ -1,0 +1,46 @@
+{
+  "updated": "2026-09-18",
+  "sources": [
+    {
+      "id": "ivst_300_ev",
+      "url": "https://ivstskl.changan.com.cn/?p=2697",
+      "status": "awaiting_user_application",
+      "acquired_vehicles": 0,
+      "publisher_advertised_vehicles": 300,
+      "sample_application_url": "https://ivstskl.changan.com.cn/?p=2799",
+      "full_application_url": "https://ivstskl.changan.com.cn/?p=3152",
+      "terms_url": "https://ivstskl.changan.com.cn/?p=2758",
+      "license_note": "Academic use; special terms prohibit unauthorized redistribution and external services. No application submitted and no personal information invented."
+    },
+    {
+      "id": "iontech",
+      "url": "https://github.com/shiyunliu-battery/Iontech",
+      "status": "catalogued",
+      "entries": 66,
+      "acquired_entities": null,
+      "note": "Do not count catalogue entries as acquired batteries; selected original source #40 separately recorded."
+    },
+    {
+      "id": "oxford_degradation_1",
+      "url": "https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac",
+      "status": "downloaded_processed_experimented",
+      "acquired_cells": 8,
+      "characterisation_discharge_records": 519,
+      "raw_path": "data/raw/oxford",
+      "processed_path": "data/processed/oxford",
+      "results_path": "data/demo/results/oxford",
+      "license": "ODbL-1.0 / DbCL-1.0; retain author notices"
+    },
+    {
+      "id": "road_ev_20",
+      "url": "https://github.com/BatICM/battery-charging-data-of-on-road-electric-vehicles",
+      "discovered_via": "Iontech entry 40",
+      "status": "downloaded_processed_capacity_proxy_experiment",
+      "acquired_vehicle_archives": 20,
+      "team_collected": false,
+      "raw_path": "data/raw/road_ev",
+      "processed_path": "data/processed/road_ev",
+      "license_note": "Original repository includes MIT LICENSE; retain original notice and required paper citation; capacity labels are algorithmic proxies, not independent reference tests."
+    }
+  ]
+}

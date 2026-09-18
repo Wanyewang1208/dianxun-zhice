@@ -1,0 +1,55 @@
+{
+  "dataset": "Oxford Battery Degradation Dataset 1",
+  "train_ids": [
+    "Cell1",
+    "Cell2",
+    "Cell3",
+    "Cell4",
+    "Cell5",
+    "Cell6"
+  ],
+  "test_ids": [
+    "Cell7",
+    "Cell8"
+  ],
+  "train_records": 366,
+  "test_records": 153,
+  "features": [
+    "cycle",
+    "voltage_60s_v",
+    "voltage_120s_v",
+    "voltage_300s_v",
+    "voltage_600s_v",
+    "voltage_mean_v",
+    "voltage_slope_v_per_s",
+    "temperature_mean_c",
+    "temperature_rise_c"
+  ],
+  "seed": 42,
+  "tuning": "none; fixed baselines; no test-set selection loop",
+  "macro_soh_metrics": [
+    {
+      "model": "cycle_only_linear",
+      "mae_pp": 1.8310734442344496,
+      "rmse_pp": 2.1727865839467104
+    },
+    {
+      "model": "random_forest",
+      "mae_pp": 0.7169106126339793,
+      "rmse_pp": 0.8975475416214083
+    },
+    {
+      "model": "ridge",
+      "mae_pp": 1.0171642038815547,
+      "rmse_pp": 1.192439145961877
+    },
+    {
+      "model": "train_mean",
+      "mae_pp": 5.358761214178077,
+      "rmse_pp": 6.16769456541622
+    }
+  ],
+  "rul": "Reuse model.core.estimate_rul with five observed diagnostic records, threshold .592Ah; evaluate distance to observed crossing interval, not exact life ground truth",
+  "scope": "Within-Oxford held-out-cell baseline; neither NASA-to-Oxford transfer nor real-vehicle validation; full-discharge capacity is label only",
+  "api_changed": false
+}
