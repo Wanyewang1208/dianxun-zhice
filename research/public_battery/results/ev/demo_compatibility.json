@@ -1,0 +1,47 @@
+{
+  "source_timezone": "undocumented; must confirm with provider",
+  "raw_naive_timestamps": {
+    "input_rows": 100,
+    "accepted_rows": 0,
+    "rejected_rows": 100,
+    "error_count": 100,
+    "warning_count": 1,
+    "warnings_need_review": true,
+    "schema_ready": false,
+    "all_supplied_fields_validated": false,
+    "unvalidated_telemetry_columns": [],
+    "unvalidated_metadata_columns": [],
+    "schema_ready_scope": "Required core telemetry and metadata only; inspect warnings and unvalidated columns",
+    "synthetic_fixture_present": false,
+    "source_provenance": "Input data_origin declarations are not independent verification",
+    "output_current_convention": "discharge_positive",
+    "output_time": "UTC with explicit Z",
+    "model_inference_performed": false,
+    "scope": "Core telemetry + metadata only; full cell/probe/events tables not validated in V0.2",
+    "interpretation": "Data quality screening only; not a battery safety pass or vehicle SOH/RUL validation"
+  },
+  "raw_issue_codes": {
+    "timestamp_timezone_missing": 100,
+    "mileage_column_absent": 1
+  },
+  "conditional_assumption_only_UTC_plus_8": {
+    "input_rows": 100,
+    "accepted_rows": 100,
+    "rejected_rows": 0,
+    "error_count": 0,
+    "warning_count": 1,
+    "warnings_need_review": true,
+    "schema_ready": true,
+    "all_supplied_fields_validated": false,
+    "unvalidated_telemetry_columns": [],
+    "unvalidated_metadata_columns": [],
+    "schema_ready_scope": "Required core telemetry and metadata only; inspect warnings and unvalidated columns",
+    "synthetic_fixture_present": false,
+    "source_provenance": "Input data_origin declarations are not independent verification",
+    "output_current_convention": "discharge_positive",
+    "output_time": "UTC with explicit Z",
+    "model_inference_performed": false,
+    "scope": "Core telemetry + metadata only; full cell/probe/events tables not validated in V0.2",
+    "interpretation": "Data quality screening only; not a battery safety pass or vehicle SOH/RUL validation"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "checked_at_utc": "2026-09-18T03:43:57.751291+00:00",
+  "title": "Oxford Battery Degradation Dataset 1",
+  "doi": "10.5287/bodleian:KO2kdmYGg",
+  "record_url": "https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac",
+  "source_status": "Official record verified in normal browser; original data files NOT obtained",
+  "authors": [
+    "D. Howey",
+    "C. Birkl"
+  ],
+  "year": 2017,
+  "description": "Long term battery ageing tests of 8 Kokam (SLPB533459H4) 740 mAh lithium-ion pouch cells",
+  "license_name": "ODC Open Database License (ODC-ODbL)",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1.0/index.html",
+  "license_status": "Record license label/link verified; full license text not retrieved",
+  "files": [
+    {
+      "filename": "ExampleDC_C1.mat",
+      "url": "https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac/files/me9fc40a60ac98708f1b73f3a836548e9",
+      "indexed_size": "70.9KB",
+      "http_result": "403 Forbidden"
+    },
+    {
+      "filename": "Oxford_Battery_Degradation_Dataset_1.mat",
+      "url": "https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac/files/m5ac36a1e2073852e4f1f7dee647909a7",
+      "indexed_size": "253.8MB",
+      "http_result": "403 Forbidden"
+    },
+    {
+      "filename": "Readme.txt",
+      "url": "https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac/files/m43cc05e7c5f1245f4895d9dbd495e52f",
+      "indexed_size": "5.5KB",
+      "http_result": "403 Forbidden"
+    }
+  ],
+  "browser_attempts": [
+    "Normal official record page opened successfully; AX tree exposed all 3 download links and license",
+    "Readme.txt downloadMedia and link click returned without usable local download",
+    "Direct browser navigation to observed Readme file URL returned net::ERR_BLOCKED_BY_CLIENT",
+    "Additional tab creation returned IAB visibility is not supported in a subagent thread"
+  ],
+  "downloaded_files": [],
+  "user_action_if_root_download_tools_also_fail": "Open official record in your regular browser, download original MAT and Readme.txt into this folder; handle any browser verification yourself.",
+  "analysis_status": "Not started: no original MAT or README obtained; no result metrics or parsed-format claims."
+}
