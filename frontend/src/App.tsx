@@ -1,78 +1,64 @@
-import { useEffect, useRef, useState } from "react";
+import { t } from "./i18n";
+import { useLanguage } from "./i18n/useLanguage";
+import { useState } from "react";
 import { Database, Info } from "lucide-react";
+import { useAssessment } from "./context/AssessmentContext";
+import AssessmentControls from "./components/AssessmentControls";
 import Sidebar from "./components/layout/Sidebar";
 import Overview from "./pages/Overview";
 import ModuleDialog from "./components/ModuleDialog";
 import { scenarios } from "./data/demoBattery";
-import type { ModuleId, ScenarioId } from "./types/battery";
+import type { ModuleId } from "./types/battery";
 export default function App() {
-  const [scenario, setScenario] = useState<ScenarioId>("used");
+  const { language, setLanguage } = useLanguage();
+  const a = useAssessment();
   const [module, setModule] = useState<ModuleId | "assessment" | null>(null);
-  const [progress, setProgress] = useState(5);
-  const timer = useRef<ReturnType<typeof setInterval> | null>(null);
-  const data = scenarios[scenario];
-  const close = () => {
-    if (timer.current) clearInterval(timer.current);
-    setProgress(5);
-    setModule(null);
-  };
-  useEffect(
-    () => () => {
-      if (timer.current) clearInterval(timer.current);
-    },
-    [],
-  );
+  const data = scenarios[a.currentScenario];
+  const close = () => setModule(null);
   const assess = () => {
-    setProgress(0);
-    setModule("assessment");
-    let step = 0;
-    timer.current = setInterval(() => {
-      step++;
-      setProgress(step);
-      if (step === 5 && timer.current) clearInterval(timer.current);
-    }, 180);
+    void a.runAssessment();
   };
   return (
     <>
-      <a className="skip-link" href="#workspace">
-        跳到主要内容
-      </a>
+      <a className="skip-link" href="#workspace">{t("跳到主要内容")}</a>
       <Sidebar onModule={setModule} />
       <div className="app-shell" id="overview">
         <header className="header">
           <div>
-            <span>Overview</span>
+            <span>{t("Overview")}</span>
             <i />
-            <span className="header-subtitle">Lifecycle Intelligence</span>
+            <span className="header-subtitle">{t("Lifecycle Intelligence")}</span>
+          </div>
+          <div className="header-actions">
+          <div className="language-switch" role="group" aria-label={language === 'zh' ? '界面语言' : 'Interface language'}>
+            <button type="button" lang="zh-CN" aria-pressed={language === 'zh'} onClick={() => setLanguage('zh')}>中文</button>
+            <button type="button" lang="en" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>English</button>
           </div>
           <div className="dataset-badge">
             <Database size={13} />
-            示例数据 <span>/ Demo Dataset</span>
+            {t(a.dataSource === "live"
+              ? "LIVE ANALYSIS / Live Backend"
+              : "DEMO DATA / Local Demo")}
+          </div>
           </div>
         </header>
         <main id="workspace">
           <div className="workspace-context">
-            <span>BATTERY LIFECYCLE INTELLIGENCE & GREEN DECISION</span>
+            <span>{t("BATTERY LIFECYCLE INTELLIGENCE & GREEN DECISION")}</span>
             <span>
-              <Info size={12} />
-              情景模拟 · 数据可追溯
-            </span>
+              <Info size={12} />{t("公开电芯模型 · 情景决策 · 数据可追溯")}</span>
           </div>
+          <AssessmentControls />
           <Overview
             data={data}
-            onScenario={setScenario}
+            onScenario={a.setScenario}
             onAssess={assess}
             onModule={setModule}
-            busy={progress < 5}
+            busy={a.assessmentStatus === "loading" || a.validating}
           />
         </main>
       </div>
-      <ModuleDialog
-        module={module}
-        data={data}
-        onClose={close}
-        progress={progress}
-      />
+      <ModuleDialog module={module} data={data} onClose={close} progress={5} />
     </>
   );
 }

@@ -1,30 +1,30 @@
-# BMS 质量入口修复（2026-09-17）
+# BMS 质量修复与双语前端整合
 
-基线：dev / 8de5c08。新增入口位于 Overview 底部、页脚之前。
+复测日期：2026-09-18。整合基线：dev / 7af12fb（含持久化中英文切换、手动评估与后端联调）。
 
-## 行为
+## 最终行为
 
-- 上传 UTF-8 时序 CSV 与元数据 CSV，调用 `/api/v1/bms/validate`；结果显示接收/拒绝行数、错误、警告、原始行号，支持下载完整 JSON 质量报告。
-- 内置样例来自 `data/sample/bms/synthetic_fixtures`，明确标为合成数据。
-- 额外字段不会再静默通过：逐列返回 `unvalidated_column` 警告和未校验字段列表。保留这些列不意味着它们已用于健康、安全判断。
-- 重复 CSV 表头直接拒绝；可选里程转换为数值。
-- `schema_ready` 保留原有核心字段合格语义。新增 `schema_ready_scope`、`unvalidated_telemetry_columns`、`unvalidated_metadata_columns`、`all_supplied_fields_validated`。后者仅在有接收数据且无错误/警告时为 true，仍然只是约定字段的数据检查，不是安全认证。
-- 文件变更清空上次报告；失败显示原因，不返回模拟成功。检查 JSON 编码后的实际请求大小，超时 60 秒。保留 2 MiB / 每表 10,000 行限制。
+- 使用既有 AssessmentControls 上传入口，不另建重复面板；原有手动输入、团队样例、评估结果与中英文切换全部保留。
+- BMS 额外字段逐列返回 unvalidated_column 警告，列出未校验范围。schema_ready 仅表示核心必需字段检查；页面分别显示核心字段失败、未校验字段、需复核警告和核心字段通过。旧后端缺少范围信息时不会显示无条件通过。
+- 拒绝重复 CSV 表头（含开头空白行），里程数值规范化。新增后端 summary 字段：unvalidated_telemetry_columns、unvalidated_metadata_columns、all_supplied_fields_validated、schema_ready_scope。
+- 质量报告可下载 JSON；新增结果标题、报告按钮和请求错误支持中文/English。
+- 保留既有每文件 900 KB 上传限制及 UTF-8 校验，API 上限每表 10,000 行、请求 2 MiB。前端按 JSON 编码后字节数检查请求体，大小、行数和重复列名错误分别提示。共享请求超时仍为 120 秒。
+- 数据质量检查不等于实车 SOH/RUL 验证或电池安全认证；单体数组、探针数组与故障事件专用分析尚未接入。
 
-## 本地连接
+## 运行与连接
 
-前端使用同源相对路径 `/api/v1/bms/validate`。Vite 开发服务器将 `/api/v1` 代理至 `http://127.0.0.1:8013`；按项目原有方式启动 Python 后端和 Vite 即可。
+按仓库 README 启动 Python 后端（8013）与 Vite。VITE_API_BASE_URL 默认空，使用同源 /api/v1，开发时由 Vite 代理到 http://127.0.0.1:8013。生产必须配置同源后端路由，或显式设置 VITE_API_BASE_URL 并配置后端 CORS；纯静态站点本身不能运行 Python。
 
-生产部署必须由托管方配置同源 `/api/v1` 后端路由；纯静态站点不具备 Python 服务。此次没有修改或发布线上站点，也未扩大服务器监听范围。
+## 复测
 
-## 数据准备
+- 后端 unittest：105 项全部通过。
+- 前端 TypeScript/Vite 构建通过。
+- BMS 标题与范围 5 项、站点 4 项全部通过。
+- 接口适配 13 项检查及两个手动模式案例通过。
+- 双语翻译、语言偏好保存、原有模型算术检查通过。
+- 浏览器：团队合成样例 12/12 接收；中文/English 切换后结果数值不变，刷新保留 English；手动 Demo 返回容量 SOH 82.4%、假设等效循环 1374，保持原型标记；带单体数组和故障字段的样例明确显示 2 条警告。
+- 独立代码审查：与 7af12fb 比较未发现新的 P1/P2 问题。
 
-下载页面中的两个 CSV 样例核对字段。真实数据需用可追溯 ID、真实额定容量、化学体系、单位和电流方向替换样例元数据，`data_origin` 应声明真实来源。不要将合成参数移植成实车事实。
+命令：python -m unittest discover -s tests -v；frontend 下 npm run build、npm run test:models、npm run test:sites、npm run test:bms、npm run test:integration、npm run test:i18n。
 
-长安原始列名仍需适配，当前不推断单位、状态枚举、时区或身份。单体/探针数组和故障事件仍是未校验扩展字段。上方示例 SOH/RUL、风险和退役建议不使用上传文件，页面明确说明这一点。
-
-## 验证
-
-在仓库根目录运行 `python -m unittest discover -s tests -v`；在 frontend 运行 `npm run build`、`npm run test:models`、`npm run test:sites`、`npm run test:bms`。
-
-浏览器完成合成样例校验及异常 CSV 实际文件选择上传：正常 12/12 接收；异常 13 行中 7 行接收、6 行拒绝、6 个错误和 3 个警告。
+本轮没有取得或验证真实车辆数据；GitHub 代码同步不等同网站部署。

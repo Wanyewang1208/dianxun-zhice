@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "test:sites": "node --test tests/sites-worker.test.mjs",
     "test:models": "node tests/model-check.mjs",
-    "test:bms": "node --test tests/bms-client.test.mjs"
+    "test:bms": "node --test tests/bms-client.test.mjs",
+    "test:integration": "node tests/integration.test.mjs",
+    "test:i18n": "node tests/i18n.test.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "5.0.4",
