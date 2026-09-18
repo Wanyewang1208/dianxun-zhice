@@ -79,6 +79,7 @@ export default function Overview({
       />
       <TechnologyPreview data={data} onModule={onModule} />
       <InnovationStory />
+      <BmsQualityPanel />
       <footer className="page-footer">
         <span>
           电循智策 <span className="muted">/ DianXun ZhiCe</span>
@@ -89,3 +90,4 @@ export default function Overview({
     </>
   );
 }
+import BmsQualityPanel from "../components/BmsQualityPanel";

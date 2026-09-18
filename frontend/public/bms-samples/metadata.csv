@@ -1,0 +1,2 @@
+﻿battery_id,battery_chemistry,rated_capacity_ah,current_sign_convention,voltage_unit,current_unit,temperature_unit,soc_unit,data_origin
+SYNTHETIC_PACK_001,LFP,100,discharge_positive,V,A,degC,%,synthetic_fixture

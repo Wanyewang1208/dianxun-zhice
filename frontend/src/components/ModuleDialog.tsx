@@ -134,7 +134,7 @@ export default function ModuleDialog({
           </button>
         </>
       )}
-      <p className="demo-note">情景模拟 · 不接入真实 BMS 或外部 AI 服务</p>
+      <p className="demo-note">本弹窗为情景模拟；上传文件请使用首页 BMS 数据接入检查，结果不会用于此示例评估。</p>
     </dialog>
   );
 }

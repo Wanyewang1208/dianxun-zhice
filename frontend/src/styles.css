@@ -1,4 +1,25 @@
 @import "tailwindcss";
+.bms-panel { margin: 24px 0 48px; padding: 30px; border: 1px solid var(--border); border-radius: 24px; background: var(--surface); }
+.bms-heading, .bms-actions { display:flex; align-items:center; flex-wrap:wrap; gap:16px; justify-content:space-between; }
+.bms-panel h2 { font-size:24px; margin:8px 0 16px; }
+.bms-panel p { color:var(--muted); line-height:1.7; margin:12px 0; overflow-wrap:anywhere; }
+.bms-files { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:24px 0 12px; }
+.bms-files label { display:grid; gap:10px; min-width:0; }
+.bms-files input { width:100%; border:1px solid var(--border); padding:12px; border-radius:10px; }
+.bms-files input:focus-visible { outline:2px solid var(--cyan); outline-offset:3px; }
+.bms-help { font-size:13px; }
+.bms-actions { justify-content:flex-start; }
+.bms-actions a { text-decoration:underline; font-size:13px; }
+.bms-secondary { background:transparent; border:1px solid var(--border); border-radius:10px; padding:10px 16px; }
+.bms-panel .bms-error { color:#ffb4ab; }
+.bms-panel .bms-warning { color:#e4bc7d; }
+.bms-result { margin-top:24px; border-top:1px solid var(--border); padding-top:20px; }
+.bms-counts { display:flex; flex-wrap:wrap; gap:32px; margin:20px 0; }
+.bms-counts dt { color:var(--muted); font-size:13px; }.bms-counts dd { margin:5px 0; font-size:24px; }
+.bms-table { overflow:auto; max-height:360px; margin:16px 0; }
+.bms-table table { border-collapse:collapse; width:100%; font-size:13px; text-align:left; }
+.bms-table th,.bms-table td { padding:12px; border-bottom:1px solid var(--border); vertical-align:top; }
+@media(max-width:650px) { .bms-files { grid-template-columns:1fr; }.bms-panel { padding:20px; }.bms-heading .dataset-badge { white-space:normal; } }
 :root {
   font-family: Inter, "Segoe UI", "Microsoft YaHei", sans-serif;
   color: #f4f7f6;
