@@ -14,3 +14,6 @@ research/public_battery/data/v3/** whitespace=cr-at-eol
 research/public_battery/results/v3/** whitespace=cr-at-eol
 outputs/challenge_cup_v3/06_figures_svg/*.svg -whitespace
 research/public_battery/*v3.py whitespace=cr-at-eol
+research/public_battery/requirements-v3.lock -text whitespace=cr-at-eol
+research/public_battery/report_v3/** -text whitespace=cr-at-eol
+research/public_battery/download_ev_source.py -text whitespace=cr-at-eol
