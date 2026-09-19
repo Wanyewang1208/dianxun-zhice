@@ -1,3 +1,16 @@
 # Keep historical data byte-identical to the supplied SHA256 version manifest.
 data/** -text -whitespace
 *.joblib binary
+outputs/challenge_cup_v3/04_models/*.joblib filter=lfs diff=lfs merge=lfs -text
+outputs/电循智策_挑战杯最终复核证据包_V3.zip filter=lfs diff=lfs merge=lfs -text
+# Preserve machine-generated V3 hashes across platforms.
+outputs/challenge_cup_v3/** -text
+research/public_battery/data/v3/** -text
+research/public_battery/results/v3/** -text
+research/public_battery/*v3.py -text
+outputs/challenge_cup_v3/06_figures_svg/*.svg -whitespace
+outputs/challenge_cup_v3/** whitespace=cr-at-eol
+research/public_battery/data/v3/** whitespace=cr-at-eol
+research/public_battery/results/v3/** whitespace=cr-at-eol
+outputs/challenge_cup_v3/06_figures_svg/*.svg -whitespace
+research/public_battery/*v3.py whitespace=cr-at-eol

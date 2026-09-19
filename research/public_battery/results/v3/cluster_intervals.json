@@ -1,0 +1,29 @@
+[
+  {
+    "model": "train_mean",
+    "vehicle_macro_mae_ah": 5.124903431103961,
+    "exploratory_95pct_low": 4.718223963529713,
+    "exploratory_95pct_high": 5.5976378484838225,
+    "paired_macro_improvement_ah": 0.0,
+    "paired_improvement_low": 0.0,
+    "paired_improvement_high": 0.0
+  },
+  {
+    "model": "ridge",
+    "vehicle_macro_mae_ah": 4.436301772486729,
+    "exploratory_95pct_low": 4.111859405909087,
+    "exploratory_95pct_high": 4.845803478778025,
+    "paired_macro_improvement_ah": 0.6886016586172323,
+    "paired_improvement_low": 0.5636471917714965,
+    "paired_improvement_high": 0.7680159906759556
+  },
+  {
+    "model": "random_forest",
+    "vehicle_macro_mae_ah": 3.563614230531943,
+    "exploratory_95pct_low": 3.055420995394596,
+    "exploratory_95pct_high": 4.07180746566929,
+    "paired_macro_improvement_ah": 1.561289200572018,
+    "paired_improvement_low": 1.3684083260068458,
+    "paired_improvement_high": 1.6988987910929716
+  }
+]

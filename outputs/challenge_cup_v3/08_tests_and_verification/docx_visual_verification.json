@@ -1,0 +1,64 @@
+{
+  "completed_at_utc": "2026-09-19T12:22:14.264546+00:00",
+  "renderer": "Microsoft Word COM ExportAsFixedFormat followed by pypdfium2 1.5x page rasterization",
+  "standard_renderer_limitation": "Packaged render_docx.py could not import pdf2image; used Word COM fallback.",
+  "visual_checks": [
+    "All 13 pages individually opened and visually inspected",
+    "No blank pages, clipped text, overlaps, broken Chinese glyphs, or split figure captions",
+    "Title and headings black; inherited Title border removed",
+    "Figure captions below; native table captions above; sequential page numbers",
+    "Tables fit page, readable labels and scientific units",
+    "Final method describes full raw CSV re-extraction; no workstation paths or placeholders"
+  ],
+  "documents": [
+    {
+      "file": "03_电循智策_挑战杯研究证据报告_最终复核版.docx",
+      "docx_sha256": "b6bcc693ab084f8c06e775c3f52ce7c674eb1b6bcf679dfb75f72a9ae6f4b4d4",
+      "pages": 6,
+      "visually_reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "pdf_sha256": "d57db625ab293c8ef24dff028d40fd3b13faaf3c9feb15f6453b02f69498da1c",
+      "page_png_sha256": {
+        "page-01.png": "e4062ecb5fe7efd7625a796150a894a7e65c2b3d305e2b57cf7f49d0eec67e5d",
+        "page-02.png": "ae0f66f115d4f118cb3e33c44ccac1f3adcb843448ea97d3b303e4ead2189061",
+        "page-03.png": "e7aa1b8bd3eee191797a6f977d887b30b50def62808454f9d8740a2f06b26dca",
+        "page-04.png": "85726ae906e1f14cc7cf465f42fa73e74525454b8edb8035dbe25ff549c574d6",
+        "page-05.png": "4bfdca6614d962fa277f069cf492f1fb817859da2583defb7215bfb61718c9af",
+        "page-06.png": "eb6468848e611261be5595563d18ef231561be0f0e0632d48ea50780aa794681"
+      },
+      "passed": true
+    },
+    {
+      "file": "04_电循智策_模型实验结果及图表_最终复核版.docx",
+      "docx_sha256": "0d3e4bb2ca673eb94bb7e3f9bef9f3ca1726fe4339f53a95177002ac10ed592f",
+      "pages": 7,
+      "visually_reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "pdf_sha256": "c451dcfaff914cf7c1fbcd74ce598ffb21a4492cc83ca18e684cedde36697b94",
+      "page_png_sha256": {
+        "page-01.png": "2e2ee8f4c40f9efc260fae6711b8e2c54992510ae03ae4ba136172ebd7094ca2",
+        "page-02.png": "4d4aad448761bf8346799e59a2743b9f9c586e296014b593d3f2c5c0ec1e7062",
+        "page-03.png": "c7cb4cd9616e937584e4771d865e0aaf44ecbe71e6ef1f1773e9354e1f84dacc",
+        "page-04.png": "930dafe8ca60adb664892da4af774ca45c3f23dd292686f3e4a349050e0641fa",
+        "page-05.png": "bd59d31a9de6be33e1a6a61e512e15154dc6db6000a315cbdf19109615673690",
+        "page-06.png": "fa4c34547b5c593a4800a8c89c4d2cb5568c7c83505a7cb66d0d40084399cb27",
+        "page-07.png": "5ebb39bf0db48761e633bc423044c91c27c6c140b8b6502a9419fa3646442bdd"
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,38 @@
+{
+  "expected_rows": 29697,
+  "fresh_rows": 29697,
+  "v2_rows": 29697,
+  "vehicle_count": 20,
+  "features": [
+    "soc_start",
+    "voltage_start",
+    "voltage_60",
+    "voltage_300",
+    "voltage_600",
+    "current_mean",
+    "tmax_mean",
+    "temperature_rise",
+    "cell_gap_mean",
+    "cell_gap_max"
+  ],
+  "absolute_tolerance": 1e-09,
+  "relative_tolerance": 1e-10,
+  "all_keys_match": true,
+  "all_splits_match": true,
+  "numeric_max_abs_difference": {
+    "proxy_capacity_ah": 2.842170943040401e-14,
+    "soc_start": 0.0,
+    "voltage_start": 0.0,
+    "voltage_60": 5.684341886080802e-14,
+    "voltage_300": 5.684341886080802e-14,
+    "voltage_600": 0.0,
+    "current_mean": 1.4210854715202004e-14,
+    "tmax_mean": 7.105427357601002e-15,
+    "temperature_rise": 0.0,
+    "cell_gap_mean": 9.8879238130678e-17,
+    "cell_gap_max": 9.71445146547012e-17
+  },
+  "numeric_allclose": true,
+  "v2_cache_sha256": "ebb1f63ca48fe5ac078d0e572c1569693b7352d1c3eec340d37a5a1976b5261e",
+  "v2_cache_unchanged": true
+}

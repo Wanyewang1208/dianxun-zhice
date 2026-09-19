@@ -1,0 +1,125 @@
+{
+  "format": "CSV UTF-8",
+  "raw_column_mapping": {
+    "unused": "row index",
+    "record_time": "YYYYmmddHHMMSS timezone unspecified",
+    "soc": "SOC %",
+    "voltage": "pack voltage V",
+    "current": "charging current A (negative)",
+    "vmax": "maximum cell V",
+    "vmin": "minimum cell V",
+    "tmax": "maximum temperature degC",
+    "tmin": "minimum temperature degC",
+    "energy": "available energy source header kw; dimensional meaning unverified",
+    "available_capacity": "available capacity Ah source field; not ground-truth full capacity"
+  },
+  "features": [
+    {
+      "name": "soc_start",
+      "unit": "%",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    },
+    {
+      "name": "voltage_start",
+      "unit": "V",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    },
+    {
+      "name": "voltage_60",
+      "unit": "V",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    },
+    {
+      "name": "voltage_300",
+      "unit": "V",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    },
+    {
+      "name": "voltage_600",
+      "unit": "V",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    },
+    {
+      "name": "current_mean",
+      "unit": "A",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    },
+    {
+      "name": "tmax_mean",
+      "unit": "degC",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    },
+    {
+      "name": "temperature_rise",
+      "unit": "degC",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    },
+    {
+      "name": "cell_gap_mean",
+      "unit": "V",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    },
+    {
+      "name": "cell_gap_max",
+      "unit": "V",
+      "window": "first 600 seconds of retained session; interpolation never uses later rows"
+    }
+  ],
+  "target": {
+    "name": "proxy_capacity_ah",
+    "unit": "Ah",
+    "formula": "-trapezoid(current,time_seconds)/3600*100/(SOC_end-SOC_start)",
+    "interpretation": "full retained charging-session proxy; unavailable as independent measured SOH ground truth"
+  },
+  "metadata": {
+    "segment_id": "vehicle_###_session_#####; deterministic ordinal under unchanged CSV hashes and extractor",
+    "vehicle": "anonymous vehicle ID, not an input feature",
+    "session_index": "1-based retained-session order per vehicle; not an input feature",
+    "split": "fixed vehicle-held-out train/validation/test; not an input feature"
+  },
+  "excluded": [
+    "raw timestamps",
+    "unused",
+    "energy",
+    "available_capacity",
+    "vehicle/session identifiers as predictors",
+    "full-session duration or integrated charge as predictors"
+  ],
+  "availability": {
+    "real_vehicle_charging": true,
+    "measured_SOH": false,
+    "RUL_or_failure_labels": false,
+    "EIS": false,
+    "discharge_telemetry": false,
+    "thermal_runaway_labels": false,
+    "source_timezone": "undocumented"
+  },
+  "split": {
+    "train": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "validation": [
+      "vehicle_015",
+      "vehicle_016"
+    ],
+    "test": [
+      "vehicle_017",
+      "vehicle_018",
+      "vehicle_019",
+      "vehicle_020"
+    ]
+  }
+}

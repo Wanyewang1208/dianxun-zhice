@@ -1,0 +1,109 @@
+{
+  "project": "电循智策——基于BMS多维运行数据的动力电池健康评估与循环利用决策研究",
+  "version": "Challenge Cup Evidence V3",
+  "vehicles": 20,
+  "sessions": 29697,
+  "split_sessions": {
+    "test": 5982,
+    "train": 20851,
+    "validation": 2864
+  },
+  "model_comparison": [
+    {
+      "experiment": "train_mean",
+      "split": "test",
+      "seed": 42,
+      "n": 5982,
+      "vehicles": 4,
+      "mae_ah": 5.138063672001076,
+      "rmse_ah": 6.434652880042389,
+      "r2": -0.0284917999174967,
+      "vehicle_macro_mae_ah": 5.124903431103961
+    },
+    {
+      "experiment": "ridge",
+      "split": "test",
+      "seed": 42,
+      "n": 5982,
+      "vehicles": 4,
+      "mae_ah": 4.444871966257659,
+      "rmse_ah": 5.709695593609979,
+      "r2": 0.1902023802400264,
+      "vehicle_macro_mae_ah": 4.436301772486729
+    },
+    {
+      "experiment": "random_forest",
+      "split": "test",
+      "seed": 42,
+      "n": 5982,
+      "vehicles": 4,
+      "mae_ah": 3.5795806257725262,
+      "rmse_ah": 4.848949514363771,
+      "r2": 0.4159555370986826,
+      "vehicle_macro_mae_ah": 3.563614230531943
+    }
+  ],
+  "rf_relative_mae_improvement_pct": 30.332108469601373,
+  "seed_summary_sample_sd": {
+    "mae_ah": {
+      "mean": 3.58132932384675,
+      "std": 0.001518951191474746
+    },
+    "rmse_ah": {
+      "mean": 4.8489954935544155,
+      "std": 0.005364180892409699
+    },
+    "r2": {
+      "mean": 0.4159439843737835,
+      "std": 0.0012922272276574493
+    }
+  },
+  "group_cv_summary_sample_sd": {
+    "train_mean": {
+      "mae_ah": {
+        "mean": 4.902084449763159,
+        "std": 0.7416198135111256
+      },
+      "rmse_ah": {
+        "mean": 5.947832595181533,
+        "std": 0.7728122764938886
+      },
+      "r2": {
+        "mean": -0.014705023476016179,
+        "std": 0.015206417619965471
+      }
+    },
+    "ridge": {
+      "mae_ah": {
+        "mean": 4.344614060158686,
+        "std": 0.628804770773528
+      },
+      "rmse_ah": {
+        "mean": 5.325807508017593,
+        "std": 0.6401142406026491
+      },
+      "r2": {
+        "mean": 0.18288620960335863,
+        "std": 0.07554739764253032
+      }
+    },
+    "random_forest": {
+      "mae_ah": {
+        "mean": 3.4937846061259092,
+        "std": 0.6902604143874177
+      },
+      "rmse_ah": {
+        "mean": 4.629470942978134,
+        "std": 0.8124420727336359
+      },
+      "r2": {
+        "mean": 0.3876015028200332,
+        "std": 0.08512668944484937
+      }
+    }
+  },
+  "v2_within_tolerance": true,
+  "label": "容量代理（Ah），不是独立实测 SOH",
+  "research_tests_passed": 12,
+  "all_tests_passed": 121
+}

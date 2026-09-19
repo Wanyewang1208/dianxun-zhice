@@ -1,0 +1,40 @@
+{
+  "features": [
+    "soc_start",
+    "voltage_start",
+    "voltage_60",
+    "voltage_300",
+    "voltage_600",
+    "current_mean",
+    "tmax_mean",
+    "temperature_rise",
+    "cell_gap_mean",
+    "cell_gap_max"
+  ],
+  "random_forest": {
+    "n_estimators": 200,
+    "min_samples_leaf": 5,
+    "n_jobs": 2,
+    "random_state": 42
+  },
+  "ridge": {
+    "alpha": 10,
+    "preprocessor": "StandardScaler fitted only on train"
+  },
+  "baseline": "DummyRegressor train mean",
+  "seeds": [
+    17,
+    42,
+    2026
+  ],
+  "noise_scale": "training population feature std * level",
+  "noise_levels": [
+    0.01,
+    0.05
+  ],
+  "missing_fraction": 0.1,
+  "stress_seed": 2026,
+  "sd_definition": "sample standard deviation ddof=1",
+  "not_production_model": true,
+  "base_commit": "2f496146ba589b94cfba02610a1b54d693b23caa"
+}

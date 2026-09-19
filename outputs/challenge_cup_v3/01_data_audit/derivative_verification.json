@@ -1,0 +1,15 @@
+{
+  "rows": 29697,
+  "segment_ids_unique": true,
+  "no_raw_timestamp_columns": true,
+  "metadata_order_preserved": true,
+  "private_v2_source_row_order_same": true,
+  "public_numeric_allclose_private": true,
+  "all_shards_match_combined_file": true,
+  "split_counts": {
+    "train": 20851,
+    "test": 5982,
+    "validation": 2864
+  },
+  "license_snapshot_included": true
+}

@@ -1,0 +1,5 @@
+﻿experiment,seed,split,vehicle,mae_ah,sessions
+random_forest,42,test,17,2.950243460081283,1392
+random_forest,42,test,18,3.9334086951110665,1559
+random_forest,42,test,19,3.16059853070791,1512
+random_forest,42,test,20,4.210206236227514,1519

@@ -1,0 +1,2112 @@
+{
+  "scope": "All 20 CSV files, all parsed rows; raw ordering retained for time checks",
+  "raw_rows_total": 16100728,
+  "retained_sessions": 29697,
+  "broad_ranges": {
+    "soc": [
+      0,
+      100
+    ],
+    "voltage": [
+      0,
+      1000
+    ],
+    "current": [
+      -1000,
+      1000
+    ],
+    "vmax": [
+      0,
+      6
+    ],
+    "vmin": [
+      0,
+      6
+    ],
+    "tmax": [
+      -50,
+      100
+    ],
+    "tmin": [
+      -50,
+      100
+    ],
+    "energy": [
+      0,
+      1000
+    ],
+    "available_capacity": [
+      0,
+      1000
+    ]
+  },
+  "range_warning": "Engineering screening bounds only; not safety thresholds or verified anomaly labels. Gap counts can reflect separate charging sessions.",
+  "vehicles": [
+    {
+      "rows": 854591,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 854590.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 1.2,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 314.7,
+          "max": 386.2,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -93.20001,
+          "max": 0.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 3.502,
+          "max": 4.264,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 3.488,
+          "max": 4.241,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 49.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.58,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 1.76,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 48,
+        "backward_steps": 0,
+        "zero_intervals": 24,
+        "gaps_gt_10s": 4222,
+        "gaps_gt_1h": 1572,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 1327575.0,
+        "observed_span_days": 842.8639467592593
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_001"
+    },
+    {
+      "rows": 841810,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 841809.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.4,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 316.0,
+          "max": 381.8,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -92.70001,
+          "max": 11.29999,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.227,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 46.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.09999999,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.32,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 3561,
+        "backward_steps": 0,
+        "zero_intervals": 2290,
+        "gaps_gt_10s": 4508,
+        "gaps_gt_1h": 1602,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 624115.0,
+        "observed_span_days": 843.9572916666667
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_002"
+    },
+    {
+      "rows": 802918,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 802917.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.8,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 313.9,
+          "max": 381.8,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -89.5,
+          "max": 7.699982,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.236,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 46.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.35,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 1.06,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 11101,
+        "backward_steps": 0,
+        "zero_intervals": 8467,
+        "gaps_gt_10s": 4240,
+        "gaps_gt_1h": 1505,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 3509518.0,
+        "observed_span_days": 843.1337384259259
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_003"
+    },
+    {
+      "rows": 844537,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 844536.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 315.2,
+          "max": 386.1,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -95.10001,
+          "max": 12.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 3.51,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 3.488,
+          "max": 4.228,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 14.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 11.0,
+          "max": 46.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.05,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.15,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 4381,
+        "backward_steps": 0,
+        "zero_intervals": 2538,
+        "gaps_gt_10s": 4290,
+        "gaps_gt_1h": 1557,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 461483.0,
+        "observed_span_days": 844.0827893518518
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_004"
+    },
+    {
+      "rows": 832189,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 832188.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 314.2,
+          "max": 383.9,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -94.70001,
+          "max": 10.29999,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.254,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.237,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.04,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.13,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 5303,
+        "backward_steps": 0,
+        "zero_intervals": 4610,
+        "gaps_gt_10s": 4705,
+        "gaps_gt_1h": 1548,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 2277165.0,
+        "observed_span_days": 843.7230671296296
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_005"
+    },
+    {
+      "rows": 815202,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 815201.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.8,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 315.8,
+          "max": 382.2,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -400.02,
+          "max": 0.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.25,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.23,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 49.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.35999998,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 1.09,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 6504,
+        "backward_steps": 0,
+        "zero_intervals": 6032,
+        "gaps_gt_10s": 4257,
+        "gaps_gt_1h": 1523,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 3094882.0,
+        "observed_span_days": 843.891875
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_006"
+    },
+    {
+      "rows": 808770,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 808769.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 1.2,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 315.3,
+          "max": 384.2,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -94.70001,
+          "max": 0.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 3.504,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 3.482,
+          "max": 4.234,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 45.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.61,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 1.84,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 3723,
+        "backward_steps": 0,
+        "zero_intervals": 2286,
+        "gaps_gt_10s": 4441,
+        "gaps_gt_1h": 1532,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 10.0,
+        "positive_interval_max_seconds": 594918.0,
+        "observed_span_days": 843.2880324074074
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_007"
+    },
+    {
+      "rows": 798496,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 798495.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.8,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 315.2,
+          "max": 385.9,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -93.60001,
+          "max": 12.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.237,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 46.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.3,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.93,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 826,
+        "backward_steps": 0,
+        "zero_intervals": 413,
+        "gaps_gt_10s": 4729,
+        "gaps_gt_1h": 1528,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 2519146.0,
+        "observed_span_days": 843.4405208333334
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_008"
+    },
+    {
+      "rows": 792060,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 792059.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 314.6,
+          "max": 381.8,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -91.60001,
+          "max": 0.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.236,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 49.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.03,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 47,
+        "backward_steps": 0,
+        "zero_intervals": 24,
+        "gaps_gt_10s": 4350,
+        "gaps_gt_1h": 1468,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 10.0,
+        "positive_interval_max_seconds": 2587932.0,
+        "observed_span_days": 845.910625
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_009"
+    },
+    {
+      "rows": 728849,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 728848.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 314.9,
+          "max": 381.9,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -81.5,
+          "max": 11.59998,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.227,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 46.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.02,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.06,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 26,
+        "backward_steps": 0,
+        "zero_intervals": 13,
+        "gaps_gt_10s": 3682,
+        "gaps_gt_1h": 1349,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 6053814.0,
+        "observed_span_days": 844.6301967592592
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_010"
+    },
+    {
+      "rows": 809470,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 809469.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 2.0,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 315.0,
+          "max": 385.9,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -94.60001,
+          "max": 0.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.252,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.239,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 46.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.79,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 2.37,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 355,
+        "backward_steps": 0,
+        "zero_intervals": 212,
+        "gaps_gt_10s": 4569,
+        "gaps_gt_1h": 1506,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 10.0,
+        "positive_interval_max_seconds": 3997094.0,
+        "observed_span_days": 843.6884375
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_011"
+    },
+    {
+      "rows": 825533,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 825532.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.4,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 312.8,
+          "max": 381.9,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -93.39999,
+          "max": 6.699982,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.237,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 49.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.13,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.41,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 2583,
+        "backward_steps": 0,
+        "zero_intervals": 1339,
+        "gaps_gt_10s": 4279,
+        "gaps_gt_1h": 1531,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 594362.0,
+        "observed_span_days": 847.3544560185185
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_012"
+    },
+    {
+      "rows": 818352,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 818351.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.4,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 314.4,
+          "max": 382.2,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -92.5,
+          "max": 11.5,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.25,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.227,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 46.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.09999999,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.32,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 729,
+        "backward_steps": 0,
+        "zero_intervals": 442,
+        "gaps_gt_10s": 4485,
+        "gaps_gt_1h": 1472,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 4140846.0,
+        "observed_span_days": 843.2704976851852
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_013"
+    },
+    {
+      "rows": 793132,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 793131.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.8,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 315.5,
+          "max": 381.3,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -90.70001,
+          "max": 12.09998,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.231,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 46.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.29,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.89,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 4746,
+        "backward_steps": 0,
+        "zero_intervals": 3174,
+        "gaps_gt_10s": 4311,
+        "gaps_gt_1h": 1491,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 3890213.0,
+        "observed_span_days": 843.7440625
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_014"
+    },
+    {
+      "rows": 704958,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 704957.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 2.8,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 316.1,
+          "max": 381.9,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -75.60001,
+          "max": 0.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.234,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 49.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 1.24,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 3.74,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 3619,
+        "backward_steps": 0,
+        "zero_intervals": 2825,
+        "gaps_gt_10s": 3433,
+        "gaps_gt_1h": 1285,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 12694902.0,
+        "observed_span_days": 844.3817824074074
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_015"
+    },
+    {
+      "rows": 819567,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 819566.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 1.6,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 314.7,
+          "max": 383.8,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -92.30002,
+          "max": 0.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.236,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.67,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 2.01,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 123,
+        "backward_steps": 0,
+        "zero_intervals": 62,
+        "gaps_gt_10s": 4561,
+        "gaps_gt_1h": 1560,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 558808.0,
+        "observed_span_days": 846.5265393518519
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_016"
+    },
+    {
+      "rows": 767868,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 767867.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 315.0,
+          "max": 383.7,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -400.02,
+          "max": 0.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.229,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 46.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.04,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.12,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 3412,
+        "backward_steps": 0,
+        "zero_intervals": 1706,
+        "gaps_gt_10s": 4048,
+        "gaps_gt_1h": 1413,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 5525537.0,
+        "observed_span_days": 843.9239004629629
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_017"
+    },
+    {
+      "rows": 856192,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 856191.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.4,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 316.1,
+          "max": 385.8,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -80.10001,
+          "max": 7.399994,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.224,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.24,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.73,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 723,
+        "backward_steps": 0,
+        "zero_intervals": 366,
+        "gaps_gt_10s": 4844,
+        "gaps_gt_1h": 1577,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 10.0,
+        "positive_interval_max_seconds": 829234.0,
+        "observed_span_days": 843.6308217592592
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_018"
+    },
+    {
+      "rows": 778745,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 778744.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 313.1,
+          "max": 382.1,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -100.7,
+          "max": 6.799988,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.232,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 48.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 45.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.02,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 53,
+        "backward_steps": 0,
+        "zero_intervals": 27,
+        "gaps_gt_10s": 4402,
+        "gaps_gt_1h": 1485,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 10.0,
+        "positive_interval_max_seconds": 2820996.0,
+        "observed_span_days": 845.3857638888888
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_019"
+    },
+    {
+      "rows": 807489,
+      "columns": {
+        "unused": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 807488.0,
+          "outside_broad_range": 0
+        },
+        "soc": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 100.0,
+          "outside_broad_range": 0
+        },
+        "voltage": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 313.1,
+          "max": 381.8,
+          "outside_broad_range": 0
+        },
+        "current": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": -92.60001,
+          "max": 7.0,
+          "outside_broad_range": 0
+        },
+        "vmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.251,
+          "outside_broad_range": 0
+        },
+        "vmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 4.234,
+          "outside_broad_range": 0
+        },
+        "tmax": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 49.0,
+          "outside_broad_range": 0
+        },
+        "tmin": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 47.0,
+          "outside_broad_range": 0
+        },
+        "energy": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 45.29,
+          "outside_broad_range": 0
+        },
+        "available_capacity": {
+          "missing_or_non_numeric": 0,
+          "missing_rate": 0.0,
+          "infinite": 0,
+          "min": 0.0,
+          "max": 136.16,
+          "outside_broad_range": 0
+        }
+      },
+      "time": {
+        "invalid_rows": 0,
+        "missing_rate": 0.0,
+        "duplicate_rows": 131,
+        "backward_steps": 0,
+        "zero_intervals": 73,
+        "gaps_gt_10s": 4249,
+        "gaps_gt_1h": 1509,
+        "positive_interval_min_seconds": 1.0,
+        "positive_interval_median_seconds": 8.0,
+        "positive_interval_max_seconds": 2815352.0,
+        "observed_span_days": 842.9704166666667
+      },
+      "order_violations": {
+        "vmax_lt_vmin": 0,
+        "tmax_lt_tmin": 0
+      },
+      "vehicle": "vehicle_020"
+    }
+  ],
+  "infrastructure": {
+    "method": "rg source/dependency inspection",
+    "matches": [],
+    "scope": "*.py, *requirements*, package.json; excludes audit_v3.py",
+    "conclusion": "Dataset and file-based processing pipeline; no SQL/database evidence in inspected scope"
+  }
+}

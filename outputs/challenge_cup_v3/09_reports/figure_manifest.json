@@ -1,0 +1,82 @@
+[
+  {
+    "figure": "01_dataset_split",
+    "source_rows": 3,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "5421d548c9e4cef22968598df38c6d21b65817372c6e0378fe3f74b9bcf81930"
+  },
+  {
+    "figure": "02_model_mae",
+    "source_rows": 3,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "feaa9d8b4575a77014c50938a563a546e777e74454fd0fdadd919bb4dc763b80"
+  },
+  {
+    "figure": "03_rf_predictions",
+    "source_rows": 5982,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "ce773a4138e46df173078db0b8c773ab050a64326e37a6b5edac799ad7ce0dde"
+  },
+  {
+    "figure": "04_vehicle_mae",
+    "source_rows": 4,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "14ee2094572c08eb085ca732af072e44f5738baa22d6fb98c9d8fbb0995ad3d4"
+  },
+  {
+    "figure": "05_random_seeds",
+    "source_rows": 3,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "ed479c26cbf3eb3094c2f9c9ec99acda103b24971e88fb5749623e2fb50ee90c"
+  },
+  {
+    "figure": "06_group_cv",
+    "source_rows": 15,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "020da0aef05c8e7b2cf680ff14c03878d41a3b87162632a23e986d5fd580a611"
+  },
+  {
+    "figure": "07_feature_ablation",
+    "source_rows": 4,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "5d9ddfa5685f4aa031a7907a5a9691d937469c3d0bc68fd42ee7e6c3c808ac04"
+  },
+  {
+    "figure": "08_input_stress",
+    "source_rows": 4,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "846dfeb380ba1e69181212f10d1fc85a070a9787af3b8c1e9ffd03f9420aeedd"
+  },
+  {
+    "figure": "09_absolute_errors",
+    "source_rows": 17946,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "a5452039d5b8a99ffb6b12d96709eef9c13b6c965e14cf2ff8cba9ce340128f6"
+  },
+  {
+    "figure": "10_quality_control",
+    "source_rows": 10,
+    "width_px": 1920,
+    "height_px": 1080,
+    "dpi": 300,
+    "source_sha256": "0333d05221c034c1de79703ec02bd4bdb4fa05272e7d8a8a042db0770547e23d"
+  }
+]

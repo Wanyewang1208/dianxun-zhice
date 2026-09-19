@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": [
+    "01: three split vehicle/session counts independently counted from features",
+    "02: every MAE/RMSE/R2 independently recalculated from matching predictions",
+    "05: every MAE/RMSE/R2 independently recalculated from matching predictions",
+    "07: every MAE/RMSE/R2 independently recalculated from matching predictions",
+    "08: every MAE/RMSE/R2 independently recalculated from matching predictions",
+    "03: complete RF test scatter data equals prediction records",
+    "04: per-vehicle MAE and session counts recalculated from predictions",
+    "05: three-seed mean and sample SD independently recalculated",
+    "06: all 15 CV fold MAEs and model mean/sample SD recalculated",
+    "09: all absolute errors and distribution observations recalculated, no subsampling",
+    "10: all quality statuses match current external verification records",
+    "all 10 PNG dimensions/dpi and 10 SVG files checked"
+  ],
+  "figures": 10,
+  "numeric_tolerance": 1e-10
+}

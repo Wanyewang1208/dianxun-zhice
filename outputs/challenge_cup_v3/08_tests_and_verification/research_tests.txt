@@ -1,0 +1,17 @@
+test_cluster_interval_preserves_vehicle_unit (tests.test_research_v2.ValidationV2Tests.test_cluster_interval_preserves_vehicle_unit) ... ok
+test_perturbation_uses_train_statistics_without_mutation (tests.test_research_v2.ValidationV2Tests.test_perturbation_uses_train_statistics_without_mutation) ... ok
+test_reject_duplicate_sessions_and_infinity (tests.test_research_v2.ValidationV2Tests.test_reject_duplicate_sessions_and_infinity) ... ok
+test_reject_wrong_vehicle_split (tests.test_research_v2.ValidationV2Tests.test_reject_wrong_vehicle_split) ... ok
+test_train_folds_exclude_external_holdouts (tests.test_research_v2.ValidationV2Tests.test_train_folds_exclude_external_holdouts) ... ok
+test_vehicle_equal_weight_not_row_weight (tests.test_research_v2.ValidationV2Tests.test_vehicle_equal_weight_not_row_weight) ... ok
+test_entity_split (tests.test_public_ev.PublicEVTests.test_entity_split) ... ok
+test_gap_and_duplicate_split (tests.test_public_ev.PublicEVTests.test_gap_and_duplicate_split) ... ok
+test_invalid_row_prevents_bridging (tests.test_public_ev.PublicEVTests.test_invalid_row_prevents_bridging) ... ok
+test_invalid_timestamp_prevents_bridging (tests.test_public_ev.PublicEVTests.test_invalid_timestamp_prevents_bridging) ... ok
+test_known_capacity (tests.test_public_ev.PublicEVTests.test_known_capacity) ... ok
+test_prefix_ignores_future (tests.test_public_ev.PublicEVTests.test_prefix_ignores_future) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.028s
+
+OK

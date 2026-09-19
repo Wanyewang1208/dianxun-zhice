@@ -1,0 +1,44 @@
+{
+  "base_commit": "2f496146ba589b94cfba02610a1b54d693b23caa",
+  "label": "derived capacity proxy in Ah; not independently measured SOH",
+  "input_file": "re-extracted session features; public anonymous equivalents in data/v3/session_features.csv",
+  "input_sha256": "3581cc460f530daa707284eefa4d654efc9a567707c10f1c8bef37afe3c6d58d",
+  "code_sha256": {
+    "validation_v3.py": "c934b02b15e1097c8ef25912a1fe5b411c8ee1a5c3111ab7fde6ca3da5f38c5f",
+    "ev_experiment.py": "9dc8d45b8b73fd3aa1ad6abf1325a1fb3696b26438c84e2f7c73deb2a3e18c4f",
+    "V3_PROTOCOL.md": "9020bc1904694c67e89107fe270388fa119e64ad3a393e783dff5897f7bb4cdc"
+  },
+  "models_sha256": {
+    "feature_processor.joblib": "28ed20a57a34cf37795c1c95e95992dcfe2cd9533f92a4f503eecb6b5adbc2e4",
+    "random_forest.joblib": "cbe521e8a22afaec362a4e177ece062e0730865289f824d20b93810d68edba22",
+    "ridge.joblib": "66c564f6a458902f973495e4d3bc06de653e76f219006513ac13bf555e0eeffa",
+    "train_mean.joblib": "5165bb4b43538b5e27d58ab6beea51126e1ea1165fa6676a13571babb4faaf3f"
+  },
+  "raw_extraction_rerun": true,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.3",
+    "pandas": "2.3.2",
+    "scipy": "1.16.2",
+    "scikit_learn": "1.7.2",
+    "joblib": "1.5.2"
+  },
+  "random_seeds": [
+    17,
+    42,
+    2026
+  ],
+  "bootstrap_seed": 2026,
+  "split_sessions": {
+    "test": 5982,
+    "train": 20851,
+    "validation": 2864
+  },
+  "limitations": [
+    "4 test vehicles only",
+    "single source/vehicle model",
+    "retrospective supplementary analysis",
+    "feature-level synthetic perturbations",
+    "proxy label shares electrical signals with inputs"
+  ]
+}

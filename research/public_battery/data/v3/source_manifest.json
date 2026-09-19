@@ -1,0 +1,277 @@
+{
+  "source_url": "https://github.com/shiyunliu-battery/battery-charging-data-of-on-road-electric-vehicles",
+  "source_commit": "904a336bc4a8de05acdec2598708fd787bbdb8e3",
+  "primary_author_url": "https://github.com/BatICM/battery-charging-data-of-on-road-electric-vehicles",
+  "license": "MIT; snapshot in research/public_battery/EV_SOURCE_LICENSE.txt",
+  "citation": "Deng Z et al. Prognostics of battery capacity based on charging data and data-driven methods for on-road vehicles. Applied Energy 339 (2023), 120954.",
+  "origin": "Real on-road vehicle charging telemetry; target is a derived capacity proxy, not independently measured SOH.",
+  "raw_files_committed": false,
+  "public_vehicle_ids": "vehicle_001..vehicle_020; source already uses numbered vehicles; no VIN/location available",
+  "timestamp_privacy": "Raw timestamps are excluded from all V3 derivatives. Per-vehicle retained-session ordinal only. No guaranteed irreversible anonymization claimed.",
+  "raw_hashes": [
+    {
+      "vehicle": "vehicle_001",
+      "csv_sha256": "47c556762d6213846312166cc1952224a2e384c832583b9316496dd0abe12127",
+      "archive_sha256": "2e77a7836f441f5f45ae0b2e2116044fa3c4191d67377e89a126562743afc443",
+      "csv_bytes": 62298147,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_002",
+      "csv_sha256": "3fb121c8c704dcd39c0e7695dd254008684eef2c5d9620866bb54a23f59201db",
+      "archive_sha256": "52e008eb067e6072016ac98f580e3230480236d67c211404f0d62f44ce3a9421",
+      "csv_bytes": 61313889,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_003",
+      "csv_sha256": "0b348db320817558b6674ed797756e2d59dc423d437128c08d3f532e8a357c3f",
+      "archive_sha256": "1cb5d824602929662e09cb0a028a43258fa85055865391e906049df28e9a0ea5",
+      "csv_bytes": 58479773,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_004",
+      "csv_sha256": "5733b4440c9b1ddb0a126dbc87222e73a3301e115f3df602aae3fa7ecb12a3dd",
+      "archive_sha256": "df2aa25c7bd471a97d3f997cc8e17f171940138dc161a4e49dc370aaf1257d7c",
+      "csv_bytes": 61552494,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_005",
+      "csv_sha256": "344a4af07d048cc6be62ae4295f1596c00e0a953f8274ca94ed3302a53a0f68e",
+      "archive_sha256": "16b67a98bbdcb8df7f1727ccdf36e68b9eabb209d9bf2707ae921db489bad1ac",
+      "csv_bytes": 60670622,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_006",
+      "csv_sha256": "9173494f5f5417d637375eca67053e9feeda95edda2f3c9c4a787ad0ce883d21",
+      "archive_sha256": "847b207bea6d5a60fdd92c208b32c8aff7575257e316de663ea7f9bf63642477",
+      "csv_bytes": 59508918,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_007",
+      "csv_sha256": "ada5b85c92637a3112b59d5f6bb7f6cde320e61e836774da4d4657b293afff61",
+      "archive_sha256": "3ac79b584d43d54af1d9583c269fd35d1a5a86bb2ef0af64b61dabdb1528baf6",
+      "csv_bytes": 58930009,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_008",
+      "csv_sha256": "3032d520276312eadd0f31a1abfe9f8317bcee09097dcdb15e8bab681841e965",
+      "archive_sha256": "4603f6ca0405bb6356401060215ac39bda06eb70b35f0dfe1a88cafe4c7a9b52",
+      "csv_bytes": 58185300,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_009",
+      "csv_sha256": "c3ba059632285286ea2391ead14541185db4fd2975ba136f0594fb2d8ef2f9c7",
+      "archive_sha256": "a3392323136fe7e0ff5e8db9f5a874d19b68693fa7865dc0082f522290a8a70f",
+      "csv_bytes": 57570351,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_010",
+      "csv_sha256": "62cda7346a7289fba0446c3db9a4e22626f04135dc6a49705289be2bd3f164af",
+      "archive_sha256": "cc89ed52f23db5322fccd978cb489826796312c8fa999a6f733d9ebd719f919d",
+      "csv_bytes": 53141693,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_011",
+      "csv_sha256": "cfabdbdf1cab1eed8e8ee2b621c1f4aaf2a8ab9a99122dd6029739d941157c15",
+      "archive_sha256": "658dff42f3ee690dbe55379887cceffb5be667ecc08136ebba80020f4ef66f0a",
+      "csv_bytes": 58874856,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_012",
+      "csv_sha256": "847c39feedaef37a887220f89fdd0498274438cc0771a8b9de03fd0307e105bb",
+      "archive_sha256": "f6c8bc2ba4bdc8893cbe2e1a58a6f215ff26aff3f5659bbeb13d9f9e8db1bab4",
+      "csv_bytes": 60174702,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_013",
+      "csv_sha256": "d589f989bef3906502d756579ddff9cbe39f92a2ede9120bbaaa6c8121ac3d22",
+      "archive_sha256": "3ae4e287f051dc718b8c9049b51b5d9ab0debfbe1d8951f02c8aac8795413408",
+      "csv_bytes": 59594499,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_014",
+      "csv_sha256": "cf2e52c7207a73e88a84c55cf91b41f2641105be875f3e57d83cace37639c16d",
+      "archive_sha256": "0964797a9574c75f0d93c1c05192a2a406a57330cccbfc88ec0258c1ab70109b",
+      "csv_bytes": 57780036,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_015",
+      "csv_sha256": "9228ba87e915524afc758cfcab5f41420cbb08dd6528267fe7cbdc74182b983b",
+      "archive_sha256": "d8b4468bd9199a6d281513d2fedb699456a8ef62a77530c30f3632ae5fbd6aa3",
+      "csv_bytes": 51240436,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_016",
+      "csv_sha256": "997c4e0e3a2a9d4e79ff39c554929a310ea1f1fd37ffafecd3dd53b6ff7b2d42",
+      "archive_sha256": "156a3650976c60283e5ad83f9bb6f9c3492c4248ade1a8d172097dff03ab9df2",
+      "csv_bytes": 59680173,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_017",
+      "csv_sha256": "ac0849a1d329670f95325ab64eb02ab439a608388e780d1aacb5234c74fbcf86",
+      "archive_sha256": "70da9fc2225519cd26025aeb26a58d603ba310165475a8b054847a6afed57ccb",
+      "csv_bytes": 55863366,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_018",
+      "csv_sha256": "bbd38fa73f8d611619990459eb8e4ed40aee5ed883c41096cc065eb821b11a14",
+      "archive_sha256": "da97555e3e3f0dbb1adb72b2f846a9bb7c99d52bcfcfa2eb7c87645106fba85d",
+      "csv_bytes": 62171396,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_019",
+      "csv_sha256": "4888502516d09fac94da2cf4c350d6138fd047c3544dec79727e099855eb8d53",
+      "archive_sha256": "0527ebd3eb2721bc16a30fbd0731336edd48c49e6ae886ed80289af62f41bd12",
+      "csv_bytes": 56798469,
+      "v2_manifest_match": true
+    },
+    {
+      "vehicle": "vehicle_020",
+      "csv_sha256": "0377fe80cce72d094743eca6c0cdd84167e2e4488671fc9d067e93cb7b337d34",
+      "archive_sha256": "37b48debf7b89151bd7a01a96e4c870df0c8aafa7ff48d08fcaf42914c239e31",
+      "csv_bytes": 58695033,
+      "v2_manifest_match": true
+    }
+  ],
+  "derived_shards": [
+    {
+      "vehicle": "vehicle_001",
+      "file": "shards/vehicle_001.csv",
+      "rows": 1518,
+      "sha256": "336b98707b80f6b4260c0c51af1e8b05e5777919cb59715528ba27c82f2df41c"
+    },
+    {
+      "vehicle": "vehicle_002",
+      "file": "shards/vehicle_002.csv",
+      "rows": 1548,
+      "sha256": "6e0eb3bfa48fdf025efb583446f64f879adcc9a5174fbc509cdf61f466552c77"
+    },
+    {
+      "vehicle": "vehicle_003",
+      "file": "shards/vehicle_003.csv",
+      "rows": 1464,
+      "sha256": "d3674cf192e0e52026b643490d85549322dd3b3dc55a3d10bee978701ec7af25"
+    },
+    {
+      "vehicle": "vehicle_004",
+      "file": "shards/vehicle_004.csv",
+      "rows": 1550,
+      "sha256": "3673d0977f38f7e1e2a5b00ce1401e3df00e28ab6a4b9fe70a6c6018bbf2a84d"
+    },
+    {
+      "vehicle": "vehicle_005",
+      "file": "shards/vehicle_005.csv",
+      "rows": 1531,
+      "sha256": "a1b52cb907409a7c2e8de71852bf9578ee11c0bae45e45b5ffc263a0a19ff1fe"
+    },
+    {
+      "vehicle": "vehicle_006",
+      "file": "shards/vehicle_006.csv",
+      "rows": 1476,
+      "sha256": "4325e35f5a75d14d71e7dec2c95e1a595abf7cde58e9183b697eabf25419f041"
+    },
+    {
+      "vehicle": "vehicle_007",
+      "file": "shards/vehicle_007.csv",
+      "rows": 1487,
+      "sha256": "b282329360a7ca6d318009e76e251d6b56a47ea03e8d37d392a5349e87751d5d"
+    },
+    {
+      "vehicle": "vehicle_008",
+      "file": "shards/vehicle_008.csv",
+      "rows": 1503,
+      "sha256": "c210464abd1cf28292bec343f71e6c512d664fe4568b12fcce1a5a2ce9482b13"
+    },
+    {
+      "vehicle": "vehicle_009",
+      "file": "shards/vehicle_009.csv",
+      "rows": 1548,
+      "sha256": "6850d28b0cb276ad538ce755e8a2df131bff1ecfd1fe6c85b9d9649211b5b030"
+    },
+    {
+      "vehicle": "vehicle_010",
+      "file": "shards/vehicle_010.csv",
+      "rows": 1251,
+      "sha256": "4f44b38247d9240a1162d001fe93a68ac061920cebe73fff1e1a6aa456aea6da"
+    },
+    {
+      "vehicle": "vehicle_011",
+      "file": "shards/vehicle_011.csv",
+      "rows": 1494,
+      "sha256": "b72f7ac11f2000f6f3299899aa1e8f98b32b4dfe40c5b8e1bf223157069efb3e"
+    },
+    {
+      "vehicle": "vehicle_012",
+      "file": "shards/vehicle_012.csv",
+      "rows": 1495,
+      "sha256": "c4541d96bf0d4c1f800efbf523a70f77aefdced831f04017adb01db6001c5dc4"
+    },
+    {
+      "vehicle": "vehicle_013",
+      "file": "shards/vehicle_013.csv",
+      "rows": 1428,
+      "sha256": "3110ef2204803e0defe03a2dc1e299f63510327f0200dcc644d6d680adbbcd72"
+    },
+    {
+      "vehicle": "vehicle_014",
+      "file": "shards/vehicle_014.csv",
+      "rows": 1558,
+      "sha256": "9178e21ba7c184dba2e51e0619dbbf4d52571f59274a14fecb125015960bb9b2"
+    },
+    {
+      "vehicle": "vehicle_015",
+      "file": "shards/vehicle_015.csv",
+      "rows": 1269,
+      "sha256": "a6841d6fb1c4b3e2dc1b1ac192339097fceb80822e5198040e9b49e3db9c40a4"
+    },
+    {
+      "vehicle": "vehicle_016",
+      "file": "shards/vehicle_016.csv",
+      "rows": 1595,
+      "sha256": "9077d688949b33dc0a44ba04b0fb332b7f687d4db66956b50a438c63a9355f7e"
+    },
+    {
+      "vehicle": "vehicle_017",
+      "file": "shards/vehicle_017.csv",
+      "rows": 1392,
+      "sha256": "dfb98ca13cef3feb4f15dee54be4fcb3d449f378be06f035cf2866103ed72302"
+    },
+    {
+      "vehicle": "vehicle_018",
+      "file": "shards/vehicle_018.csv",
+      "rows": 1559,
+      "sha256": "67c20e158a0a55273fb59b3f8cf53a1f8acbb33b6f0dfe1c03534689b9b64c0b"
+    },
+    {
+      "vehicle": "vehicle_019",
+      "file": "shards/vehicle_019.csv",
+      "rows": 1512,
+      "sha256": "c4c4dc7b2a6c971b5fc09042e64c508751f475db14195ed2d5243b6806f02d70"
+    },
+    {
+      "vehicle": "vehicle_020",
+      "file": "shards/vehicle_020.csv",
+      "rows": 1519,
+      "sha256": "e0e6b700328dbda21c533daf8c42e1dcaefec89926115301ce5319f639bce0c4"
+    }
+  ],
+  "session_features_sha256": "3581cc460f530daa707284eefa4d654efc9a567707c10f1c8bef37afe3c6d58d",
+  "extractor_sha256": "9dc8d45b8b73fd3aa1ad6abf1325a1fb3696b26438c84e2f7c73deb2a3e18c4f"
+}

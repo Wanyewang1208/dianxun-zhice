@@ -1,0 +1,16 @@
+name,role,unit,definition,availability,used_as_predictor
+soc_start,feature,%,SOC at first observation,observations at elapsed time <= 600 s,True
+voltage_start,feature,V,Pack voltage at first observation,observations at elapsed time <= 600 s,True
+voltage_60,feature,V,Pack voltage at 60 s by numpy.interp using prefix observations,observations at elapsed time <= 600 s,True
+voltage_300,feature,V,Pack voltage at 300 s by numpy.interp using prefix observations,observations at elapsed time <= 600 s,True
+voltage_600,feature,V,Pack voltage at 600 s by numpy.interp; last prefix value held if 600 s not observed,observations at elapsed time <= 600 s,True
+current_mean,feature,A,Arithmetic sample mean of current in prefix; charging negative,observations at elapsed time <= 600 s,True
+tmax_mean,feature,degC,Arithmetic sample mean of maximum sensor temperature in prefix,observations at elapsed time <= 600 s,True
+temperature_rise,feature,degC,Last minus first maximum sensor temperature in prefix,observations at elapsed time <= 600 s,True
+cell_gap_mean,feature,V,Arithmetic sample mean of max minus min cell voltage in prefix,observations at elapsed time <= 600 s,True
+cell_gap_max,feature,V,Maximum observed max minus min cell voltage in prefix,observations at elapsed time <= 600 s,True
+proxy_capacity_ah,target,Ah,"-trapezoid(current,time_seconds)/3600*100/(SOC_end-SOC_start)",after full retained session,False
+segment_id,metadata,,vehicle_###_session_#####; deterministic ordinal under unchanged CSV hashes and extractor,dataset organization,False
+vehicle,metadata,,"anonymous vehicle ID, not an input feature",dataset organization,False
+session_index,metadata,,1-based retained-session order per vehicle; not an input feature,dataset organization,False
+split,metadata,,fixed vehicle-held-out train/validation/test; not an input feature,dataset organization,False

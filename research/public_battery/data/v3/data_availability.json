@@ -1,0 +1,9 @@
+{
+  "real_vehicle_charging": true,
+  "measured_SOH": false,
+  "RUL_or_failure_labels": false,
+  "EIS": false,
+  "discharge_telemetry": false,
+  "thermal_runaway_labels": false,
+  "source_timezone": "undocumented"
+}

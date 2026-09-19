@@ -1,0 +1,10 @@
+{
+  "research_tests": 12,
+  "v3_evidence_regression_tests": 4,
+  "backend_and_research_tests": 121,
+  "frontend": {
+    "passed": true,
+    "evidence": "08_tests_and_verification/frontend_validation.json"
+  },
+  "legacy_backend_model_version_warnings": "Existing 1.9.1 serialized business estimators loaded in 1.7.2 research test environment; tests passed, production models untouched."
+}

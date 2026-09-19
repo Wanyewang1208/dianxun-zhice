@@ -1,0 +1,9 @@
+{
+  "scanned_new_files": 140,
+  "secret_findings": [],
+  "new_machine_path_or_private_file_findings": [],
+  "new_consistency_findings": [],
+  "historical_wording_findings": [],
+  "raw_vehicle_data_uploaded": false,
+  "privacy": "New data use source-anonymous vehicle IDs and session ordinal; no VIN/GPS/person fields, raw timestamps excluded."
+}

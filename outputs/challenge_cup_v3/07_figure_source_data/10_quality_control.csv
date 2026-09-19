@@ -1,0 +1,11 @@
+﻿check,label,passed,status,detail
+split,车辆划分,True,通过,1—14/15—16/17—20 互斥
+fields,输入字段,True,通过,特征和标签非空、有限，唯一会话
+recompute,指标复算,True,通过,22 个实验指标行和 15 个分组验证指标行逐一核验
+reload,模型重载,True,通过,3 个主模型和标准化器一致
+predictions,逐条预测,True,通过,97306 个固定划分预测、62553 个CV预测
+figures,图表与源数据,True,通过,独立从逐条预测复算图源 MAE/RMSE/R²、逐车误差、三种子与五折均值/样本SD；核对划分计数、完整散点/ECDF及10组PNG/SVG/CSV
+seeds,随机种子,True,通过,17、42、2026 完整报告
+group_cv,分组交叉验证,True,通过,5折，仅训练车辆
+noise,模拟噪声,True,通过,1%与5%特征层噪声，冻结目标
+missing,模拟缺失,True,通过,10%特征元素缺失，训练中位数填补

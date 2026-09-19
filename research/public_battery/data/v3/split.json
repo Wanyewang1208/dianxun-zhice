@@ -1,0 +1,28 @@
+{
+  "train": [
+    "vehicle_001",
+    "vehicle_002",
+    "vehicle_003",
+    "vehicle_004",
+    "vehicle_005",
+    "vehicle_006",
+    "vehicle_007",
+    "vehicle_008",
+    "vehicle_009",
+    "vehicle_010",
+    "vehicle_011",
+    "vehicle_012",
+    "vehicle_013",
+    "vehicle_014"
+  ],
+  "validation": [
+    "vehicle_015",
+    "vehicle_016"
+  ],
+  "test": [
+    "vehicle_017",
+    "vehicle_018",
+    "vehicle_019",
+    "vehicle_020"
+  ]
+}

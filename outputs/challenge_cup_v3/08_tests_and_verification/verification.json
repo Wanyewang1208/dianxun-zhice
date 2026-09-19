@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "id": "split",
+      "label": "车辆划分",
+      "passed": true,
+      "detail": "1—14/15—16/17—20 互斥"
+    },
+    {
+      "id": "fields",
+      "label": "字段完整性",
+      "passed": true,
+      "detail": "特征和标签非空、有限，唯一会话"
+    },
+    {
+      "id": "recompute",
+      "label": "指标独立复算",
+      "passed": true,
+      "detail": "22 个实验指标行和 15 个分组验证指标行逐一核验"
+    },
+    {
+      "id": "reload",
+      "label": "模型重载",
+      "passed": true,
+      "detail": "3 个主模型和标准化器一致"
+    },
+    {
+      "id": "predictions",
+      "label": "预测文件一致性",
+      "passed": true,
+      "detail": "97306 个固定划分预测、62553 个CV预测"
+    },
+    {
+      "id": "seeds",
+      "label": "随机种子",
+      "passed": true,
+      "detail": "17、42、2026 完整报告"
+    },
+    {
+      "id": "group_cv",
+      "label": "分组验证",
+      "passed": true,
+      "detail": "5折，仅训练车辆"
+    },
+    {
+      "id": "noise",
+      "label": "噪声测试",
+      "passed": true,
+      "detail": "1%与5%特征层噪声，冻结目标"
+    },
+    {
+      "id": "missing",
+      "label": "缺失测试",
+      "passed": true,
+      "detail": "10%特征元素缺失，训练中位数填补"
+    },
+    {
+      "id": "figures",
+      "label": "图表与源数据",
+      "passed": true,
+      "detail": "独立从逐条预测复算图源 MAE/RMSE/R²、逐车误差、三种子与五折均值/样本SD；核对划分计数、完整散点/ECDF及10组PNG/SVG/CSV"
+    }
+  ],
+  "research_unit_tests_passed": 12,
+  "all_unit_tests_passed": 121,
+  "metrics_independently_verified": 22,
+  "cv_metric_rows_verified": 15,
+  "model_reload_verified": 3,
+  "processor_reload_verified": true,
+  "v2_within_tolerance": true,
+  "figures_pending": false,
+  "documents_pending": false,
+  "frontend_deployment_tested": false,
+  "documents_visually_verified": 2,
+  "document_pages_visually_verified": 13
+}

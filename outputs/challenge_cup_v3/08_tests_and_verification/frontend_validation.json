@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "commands": [
+    {
+      "command": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/vite/bin/vite.js",
+        "build"
+      ],
+      "exit_code": 0,
+      "output": "vite v6.4.2 building for production...\ntransforming...\n✓ 2198 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/client/index.html                             0.66 kB │ gzip:   0.48 kB\ndist/client/assets/index-B1k8FKMG.css             34.90 kB │ gzip:   8.62 kB\ndist/client/assets/index-CJLak6Pj.js             327.71 kB │ gzip: 103.35 kB\ndist/client/assets/DegradationChart-EEl4l_Xo.js  359.10 kB │ gzip: 105.94 kB\n✓ built in 3.42s\n"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/prepare-sites-build.mjs"
+      ],
+      "exit_code": 0,
+      "output": "Prepared Sites build: dist/server/index.js and dist/.openai/hosting.json\n"
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/bms-client.test.mjs",
+        "tests/sites-worker.test.mjs"
+      ],
+      "exit_code": 0,
+      "output": "✔ core failure under HTTP 200 is not passed (0.5356ms)\n✔ unchecked fields cannot appear as clean pass (0.0856ms)\n✔ warnings require review (0.0663ms)\n✔ old backend without explicit scope cannot appear as clean pass (0.0681ms)\n✔ normal core fields pass (0.0832ms)\n✔ serves existing static assets without a fallback (18.114ms)\n✔ falls back to index.html for an unknown app route (0.8707ms)\n✔ does not turn missing API or write requests into the app shell (0.3962ms)\n✔ emits the files required by Sites packaging (3.0981ms)\nℹ tests 9\nℹ suites 0\nℹ pass 9\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 183.2675\n"
+    },
+    {
+      "command": [
+        "node",
+        "tests/i18n.test.mjs"
+      ],
+      "exit_code": 0,
+      "output": "PASS: bilingual labels/errors, units and unknown evidence unchanged, preference persistence and blocked storage\n"
+    },
+    {
+      "command": [
+        "node",
+        "tests/model-check.mjs"
+      ],
+      "exit_code": 0,
+      "output": "PASS: SOH capacity ratios, invalid inputs, both RUL baselines, chart endpoints, carbon arithmetic and scenario isolation.\n"
+    },
+    {
+      "command": [
+        "node",
+        "tests/integration.test.mjs"
+      ],
+      "exit_code": 0,
+      "output": "PASS contract fixture maps units and exact recommendation\nPASS unavailable RUL/carbon/SHAP and HOLD never use Demo fallback\nPASS zero remains zero\nPASS malformed nested collections reject atomically\nPASS invalid BMS\nPASS server failure\nPASS incomplete envelope\n13 integration checks passed\nPASS manual variant / blocked bounds manual\nPASS manual variant / blocked bounds manual_demo\n"
+    }
+  ]
+}
