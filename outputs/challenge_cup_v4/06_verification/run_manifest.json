@@ -1,0 +1,43 @@
+{
+  "source_sha256": "a19b3f8c56d39b983007539f04f4ce43d8424e96cd757cd35d703311f2e42274",
+  "python": "3.12.14",
+  "sklearn": "1.7.2",
+  "base_commit": "90fbdb651c31c2e030cc2a94583ff68fe4b183bd",
+  "protocol_sha256": "e5c367a49a8de6ea81c767a3fe26e44ccd20b7dd6801e0520830b331e71f38ae",
+  "code_sha256": "19601048f852041d5594d9ee51a654aab3bee779ac01a0601f83b64fbb3d5e0e",
+  "methods": [
+    "train_mean",
+    "train_median",
+    "ridge",
+    "random_forest",
+    "hist_gradient_boosting"
+  ],
+  "windows": [
+    120,
+    300,
+    600
+  ],
+  "models": {
+    "hist_gradient_boosting_120s.joblib": "7b65b4d56f377e66421b3400dce3ba46337753bb04a9b6009e1d7a461accc526",
+    "hist_gradient_boosting_300s.joblib": "4ebe673ad36adf96c6b9b0c363063097fd042d4828d84d2201895aa519a2b930",
+    "hist_gradient_boosting_600s.joblib": "6e212008bb8a5a71e863138c51bcde4e9a499c4562516d7e818342707d655222",
+    "random_forest_120s.joblib": "964b6a2b6bc1667a964282bb8309ce1d9373e52c8948cfc5681d743c59d5df85",
+    "random_forest_300s.joblib": "d9a8954df759ae14d79c1fe421b4830b706181fc108e1c75984a7b61f981252f",
+    "random_forest_600s.joblib": "284708441747508b05a6c3f8de9c8b77541c3d393efbf679a44e125e96817b40",
+    "ridge_120s.joblib": "771bebbe67fce903ec5299aa04db7f124d67c07a76abd5f81415eb6842232135",
+    "ridge_300s.joblib": "4ba755aa2d46cd82e03f99e72c2ea8dd877c72265248d56753a4661d27771447",
+    "ridge_600s.joblib": "6f53efb414862f98166b594d3ac96c44904d0b9efcfa8f881834c2b63be6182b",
+    "train_mean_120s.joblib": "8167d5ac68757af3a99d4f3c4e35bab03bb834c33444402db283c2b0aa7fe5da",
+    "train_mean_300s.joblib": "55506458f04c5a58953850af89803fe9bed38f594e597eb94d8d36060e815936",
+    "train_mean_600s.joblib": "49bf99a99dc70e4c711358bf9bd2d31097cf14d79b478227dab474be0b2e8937",
+    "train_median_120s.joblib": "12dfb63e3c7bef2e4ae1335f23c2055b2ac9d24cc85517dd696f52ee0ec924b9",
+    "train_median_300s.joblib": "afc36d39098a7b35cd70fbac2f3bbaaf1f8e5112c3fc0f7c62b53e447056605e",
+    "train_median_600s.joblib": "ebe945c1bc1c814ee9353fd3af8e04761f4658520b8f863ee0684b642709d99a"
+  },
+  "new_raw_window_extraction": true,
+  "all_primary_models_retrained": true,
+  "test_used_for_selection": false,
+  "historical_test_previously_seen": true,
+  "not_external_validation": true,
+  "target_is_independent_measured_soh": false
+}

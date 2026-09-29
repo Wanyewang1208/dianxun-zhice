@@ -1,0 +1,332 @@
+[
+  {
+    "window_s": 120,
+    "fold": 1,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_012"
+    ],
+    "holdout_vehicles": [
+      "vehicle_007",
+      "vehicle_013",
+      "vehicle_014"
+    ]
+  },
+  {
+    "window_s": 120,
+    "fold": 2,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_011"
+    ]
+  },
+  {
+    "window_s": 120,
+    "fold": 3,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_002",
+      "vehicle_008"
+    ]
+  },
+  {
+    "window_s": 120,
+    "fold": 4,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_006",
+      "vehicle_009",
+      "vehicle_012"
+    ]
+  },
+  {
+    "window_s": 120,
+    "fold": 5,
+    "fit_vehicles": [
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_011",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_001",
+      "vehicle_005",
+      "vehicle_010"
+    ]
+  },
+  {
+    "window_s": 300,
+    "fold": 1,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_012"
+    ],
+    "holdout_vehicles": [
+      "vehicle_007",
+      "vehicle_013",
+      "vehicle_014"
+    ]
+  },
+  {
+    "window_s": 300,
+    "fold": 2,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_011"
+    ]
+  },
+  {
+    "window_s": 300,
+    "fold": 3,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_002",
+      "vehicle_008"
+    ]
+  },
+  {
+    "window_s": 300,
+    "fold": 4,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_006",
+      "vehicle_009",
+      "vehicle_012"
+    ]
+  },
+  {
+    "window_s": 300,
+    "fold": 5,
+    "fit_vehicles": [
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_011",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_001",
+      "vehicle_005",
+      "vehicle_010"
+    ]
+  },
+  {
+    "window_s": 600,
+    "fold": 1,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_012"
+    ],
+    "holdout_vehicles": [
+      "vehicle_007",
+      "vehicle_013",
+      "vehicle_014"
+    ]
+  },
+  {
+    "window_s": 600,
+    "fold": 2,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_011"
+    ]
+  },
+  {
+    "window_s": 600,
+    "fold": 3,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_009",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_002",
+      "vehicle_008"
+    ]
+  },
+  {
+    "window_s": 600,
+    "fold": 4,
+    "fit_vehicles": [
+      "vehicle_001",
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_005",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_010",
+      "vehicle_011",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_006",
+      "vehicle_009",
+      "vehicle_012"
+    ]
+  },
+  {
+    "window_s": 600,
+    "fold": 5,
+    "fit_vehicles": [
+      "vehicle_002",
+      "vehicle_003",
+      "vehicle_004",
+      "vehicle_006",
+      "vehicle_007",
+      "vehicle_008",
+      "vehicle_009",
+      "vehicle_011",
+      "vehicle_012",
+      "vehicle_013",
+      "vehicle_014"
+    ],
+    "holdout_vehicles": [
+      "vehicle_001",
+      "vehicle_005",
+      "vehicle_010"
+    ]
+  }
+]

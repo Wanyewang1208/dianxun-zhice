@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "pdf_pages": {
+    "电循智策_V4研究进展与实验结果.pdf": 12,
+    "电循智策_V4组员理解与答辩手册.pdf": 7,
+    "电循智策_挑战杯研究升级版_V4.pdf": 20
+  },
+  "scientific_figures_png_svg_csv": 12,
+  "png_dpi": 300,
+  "forbidden_claim_scan": [],
+  "docx_pptx_zip_integrity": true,
+  "final_python_tests": 135,
+  "formal_application_original_not_modified": true
+}

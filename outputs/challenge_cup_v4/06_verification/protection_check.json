@@ -1,0 +1,15 @@
+{
+  "raw_csv_rehash_checks": 20,
+  "all_raw_unchanged": true,
+  "protected_remote_refs": {
+    "refs/heads/dev": "3ac5e8095fea6b569fa34624d3d66a0c316546c9",
+    "refs/heads/experiment/challenge-cup-evidence-v3": "90fbdb651c31c2e030cc2a94583ff68fe4b183bd",
+    "refs/heads/experiment/design-data-v2": "2f496146ba589b94cfba02610a1b54d693b23caa",
+    "refs/heads/main": "eb190cf6f65dc3cb1d609c4f732c619a20b7f3b9"
+  },
+  "protected_refs_unchanged": true,
+  "v4_base_commit": "90fbdb651c31c2e030cc2a94583ff68fe4b183bd",
+  "new_branch": "experiment/challenge-cup-evidence-v4",
+  "no_pr_created": true,
+  "no_merge_performed": true
+}

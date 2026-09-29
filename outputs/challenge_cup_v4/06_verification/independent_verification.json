@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "method": "Independent NumPy calculations from saved per-sample predictions; no experiment scoring helper imports.",
+  "window_rows": 89091,
+  "independent_sessions": 29697,
+  "metric_rows_by_table": {
+    "all_metrics": 84,
+    "group_cv": 75,
+    "learning_curve": 18,
+    "matched_formula_comparison": 180,
+    "formula_coverage": 36,
+    "quality_coverage": 12,
+    "quality_selected_per_vehicle": 12,
+    "condition_strata": 360,
+    "condition_strata_per_vehicle": 1080,
+    "per_vehicle": 90,
+    "v3_reproduction": 9
+  },
+  "independently_recomputed_metric_rows": 1911,
+  "models_reloaded": 15,
+  "full_split_reload_checks": 30,
+  "all_prediction_ids_unique_and_complete": true,
+  "cv_training_vehicles_only": true,
+  "learning_sets_nested_training_only": true,
+  "same_14_vehicle_endpoint_reused": true,
+  "strata_edges_fit_on_train_only": true,
+  "quality_selection_split": "validation",
+  "selected_soc_gain_threshold": 3,
+  "threshold_comparison_tolerance": 1e-09,
+  "same_subset_formula_comparison_verified": true,
+  "training_manifest_code_matches_current": true,
+  "training_manifest_protocol_matches_current": true,
+  "floating_boundary_changes_with_1e_9_tolerance": [
+    {
+      "window_s": 120,
+      "split": "train",
+      "threshold": 2,
+      "changed_samples": 191
+    },
+    {
+      "window_s": 120,
+      "split": "validation",
+      "threshold": 2,
+      "changed_samples": 17
+    },
+    {
+      "window_s": 120,
+      "split": "test",
+      "threshold": 2,
+      "changed_samples": 55
+    },
+    {
+      "window_s": 300,
+      "split": "train",
+      "threshold": 2,
+      "changed_samples": 2
+    },
+    {
+      "window_s": 300,
+      "split": "test",
+      "threshold": 2,
+      "changed_samples": 1
+    },
+    {
+      "window_s": 600,
+      "split": "train",
+      "threshold": 10,
+      "changed_samples": 214
+    },
+    {
+      "window_s": 600,
+      "split": "validation",
+      "threshold": 10,
+      "changed_samples": 22
+    },
+    {
+      "window_s": 600,
+      "split": "test",
+      "threshold": 10,
+      "changed_samples": 59
+    }
+  ],
+  "warnings": [],
+  "verifier_sha256": "4ac3b0dba913d82c2c358f23bd169dea82960cc59e8f292fa6ae1fa017f182d0",
+  "run_manifest_sha256": "b1d5951344837a93362cd5a9520d92325e6bbf234b9b21c5b865e7fce91e47d2",
+  "analysis_refresh_sha256": "9b231fe176dcf97f67992b4d4b9f3c9652fab21212781bbe2c9464ac4258c5de",
+  "analysis_refresh_provenance_verified": true,
+  "independent_metrics_sha256": "98607aa1b92cfb960f86b3997e83a9f439a38a2314dcf8198bc33e4eafb17b3b",
+  "limits": [
+    "Historical test results were previously inspected; retrospective supplementary analysis.",
+    "Same-source capacity proxy, not independent measured SOH.",
+    "Coverage is conditional on frozen long-charging-session eligibility, not online population coverage."
+  ],
+  "verified_inputs_sha256": {
+    "01_data/window_features.csv.gz": "a19b3f8c56d39b983007539f04f4ce43d8424e96cd757cd35d703311f2e42274",
+    "02_metrics/all_metrics.csv": "8c8e135c2a2151e718e9fffe39e010716dc6fbe81d438913dd084aac54cc9ad1",
+    "02_metrics/group_cv.csv": "2b6e2f7faf815732b28f62486fdcf121a1a26718c8d459877321a32794162113",
+    "02_metrics/learning_curve.csv": "b577012a2a92edbffac2780bb1ca0236b6331d4cfa30004bd17ff0f4581e5cc6",
+    "02_metrics/matched_formula_comparison.csv": "7a035078099d1f6e92f48d43a62e3c94319dbf260943e794163311fd0aa7827e",
+    "02_metrics/formula_coverage.csv": "2f5c3d90490c6e36eca853ee6ab0930b3c3081420cd066d49b71e0a09389f13b",
+    "02_metrics/quality_coverage.csv": "24c46468899472507be66b2de7cb3a83dda1dbf92adf9c7af2920a251a6b783c",
+    "02_metrics/quality_selected_per_vehicle.csv": "3bbf72d7c762a17227b7b2205f3f27fa51518cd0bb06308e53f0076077b22b24",
+    "02_metrics/condition_strata.csv": "4601aaacc37a91fd0223ee535461ca33fde47c8e241c165b1278d73f09bf978e",
+    "02_metrics/condition_strata_per_vehicle.csv": "9483cc805e7fe33f5fb063fe63ba4710678eb83daaa4abb259d178c813ce07db",
+    "02_metrics/per_vehicle.csv": "6f920da3e886edef19eb2973e5b93cd8c182d546a01896aca65a9961f2d4d98a",
+    "03_predictions/all_predictions.csv.gz": "f44054914053340177785b08af6f31e90ba4947f8af86047b66eeae180b28eb1",
+    "03_predictions/group_cv.csv.gz": "7b095d0fb6337e22bc7a588c24de9c16e749a07f77b808917b244fb288a4447a",
+    "03_predictions/learning_curve.csv.gz": "dd3ce83be5ed4465c43c1f3276bdd4098c9036a288d65d13e74cf2faa5091bba",
+    "06_verification/run_manifest.json": "b1d5951344837a93362cd5a9520d92325e6bbf234b9b21c5b865e7fce91e47d2",
+    "06_verification/analysis_refresh.json": "9b231fe176dcf97f67992b4d4b9f3c9652fab21212781bbe2c9464ac4258c5de",
+    "06_verification/folds.json": "568fb0d3acfa319c1737f708353b625e190d4ed5285ec7199c2cd5760202cdb1",
+    "06_verification/learning_vehicle_sets.json": "da2c7cac67f9958d36d4ba1480bf88471a158cf035f8a1308decc0ae0e6097d9",
+    "06_verification/quality_rule.json": "f5c8e347fd0bb9c069d38b97dc0ae73cc017f8d9396da5cbd197d139b1a10b90",
+    "06_verification/condition_bin_edges.json": "8aa49c6576449868e9d7cb8f350f6502e68b7a19d0ff7bc6d70b3b66e511d71c",
+    "06_verification/v3_reproduction.csv": "4612a212d4ca50915491df4fdae34fa95d25702286e8b070d8b8d85ff9b22b0d",
+    "06_verification/before_threshold_tolerance_formula_coverage.csv": "746a2e469bfee5cb597ee30930f8f293f07919af17957a542e64e36aa84b5ca7",
+    "06_verification/before_threshold_tolerance_matched_formula_comparison.csv": "f86ca17b83d8e36f0b2b9d5a881e70b71a39c3119741eb5c96a3b7deeae1929b",
+    "06_verification/before_threshold_tolerance_quality_coverage.csv": "445da50480c08f77000de4ead8189262c23a5d4a3883fe813c9a2256e0472d3e"
+  },
+  "legacy_production_compatibility": {
+    "legacy_production_models_verified": false,
+    "website_deployment_verified": false,
+    "v4_training_and_reload_sklearn": "1.7.2",
+    "statement": "The V4 reload checks certify only the 15 newly trained research artifacts in their recorded environment. Passing repository tests does not certify compatibility of older production models or the running website.",
+    "repository_test_log_sha256": "a7027dd8d4085c917c05db53a0e2d40eac4f48d228ba6bd6245ed43ce6f1c651",
+    "repository_test_count": 135,
+    "repository_tests_reported_ok": true,
+    "observed_version_warning_count": 38,
+    "warning_estimator_types": [
+      "DecisionTreeRegressor",
+      "Pipeline",
+      "RandomForestRegressor",
+      "SimpleImputer"
+    ],
+    "warning_version_pairs": [
+      {
+        "artifact_version": "1.9.1",
+        "runtime_version": "1.7.2"
+      }
+    ]
+  },
+  "metadata_enrichment_sha256": "ab50bacfdb9022ce5c614b7f2e00bc7660ee99833d2b7fca928b87fb1537c4cf",
+  "metadata_enrichment_only": true,
+  "metadata_enrichment_note": "Numeric verification above was completed before a metadata-only addition of checked-input hashes and the separately observed legacy compatibility warning; no metric calculation or source data was changed."
+}

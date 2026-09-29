@@ -1,0 +1,17 @@
+{
+  "reason": "SOC floating point boundary tolerance only; fixed thresholds unchanged; all alternatives retained",
+  "tolerance": 1e-09,
+  "training_rerun": false,
+  "code_sha256": "f07052bca5873529056e6f49de61290adf37d8c5480037aff5c45e3c52bc34b5",
+  "source_sha256": "a19b3f8c56d39b983007539f04f4ce43d8424e96cd757cd35d703311f2e42274",
+  "before_analysis_sha256": {
+    "formula_coverage.csv": "746a2e469bfee5cb597ee30930f8f293f07919af17957a542e64e36aa84b5ca7",
+    "matched_formula_comparison.csv": "f86ca17b83d8e36f0b2b9d5a881e70b71a39c3119741eb5c96a3b7deeae1929b",
+    "quality_coverage.csv": "445da50480c08f77000de4ead8189262c23a5d4a3883fe813c9a2256e0472d3e"
+  },
+  "after_analysis_sha256": {
+    "formula_coverage.csv": "2f5c3d90490c6e36eca853ee6ab0930b3c3081420cd066d49b71e0a09389f13b",
+    "matched_formula_comparison.csv": "7a035078099d1f6e92f48d43a62e3c94319dbf260943e794163311fd0aa7827e",
+    "quality_coverage.csv": "24c46468899472507be66b2de7cb3a83dda1dbf92adf9c7af2920a251a6b783c"
+  }
+}

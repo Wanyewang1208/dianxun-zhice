@@ -1,0 +1,63 @@
+{
+  "pptx_sha256": "fbbe8aee4f1d43ec694eca7fc7f351f6877b22ba474df6deabc175b5a578cdde",
+  "pdf_sha256": "f19b8de8b0e8262b71eb313c0a07425a29360d7704cc132eb60aa1d6e6e21db6",
+  "slide_count": 20,
+  "notes_count": 20,
+  "pdf_pages": 20,
+  "every_slide_visual_review_complete": true,
+  "visual_review": "All 20 PowerPoint-rendered PNG slides reviewed individually at 1600x900; no clipping, overlap, missing Chinese glyphs or chart crop found.",
+  "main_slides": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "backup_slides": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "embedded_figure_sha256_matches": {
+    "fig_01_model_comparison.png": true,
+    "fig_02_window_mae.png": true,
+    "fig_03_formula_comparison.png": true,
+    "fig_04_coverage_risk.png": true,
+    "fig_05_ablation.png": true,
+    "fig_06_condition_strata.png": true,
+    "fig_07_learning_curve.png": true,
+    "fig_08_error_distribution.png": true,
+    "fig_09_group_cv.png": true,
+    "fig_10_stress.png": true,
+    "fig_11_vehicle_errors.png": true,
+    "fig_12_predictions.png": true
+  },
+  "all_twelve_figures_match": true,
+  "metric_source_hashes": {
+    "outputs\\challenge_cup_v4\\02_metrics\\all_metrics.csv": "8c8e135c2a2151e718e9fffe39e010716dc6fbe81d438913dd084aac54cc9ad1",
+    "outputs\\challenge_cup_v4\\02_metrics\\matched_formula_comparison.csv": "7a035078099d1f6e92f48d43a62e3c94319dbf260943e794163311fd0aa7827e",
+    "outputs\\challenge_cup_v4\\02_metrics\\quality_coverage.csv": "24c46468899472507be66b2de7cb3a83dda1dbf92adf9c7af2920a251a6b783c",
+    "outputs\\challenge_cup_v4\\02_metrics\\group_cv.csv": "2b6e2f7faf815732b28f62486fdcf121a1a26718c8d459877321a32794162113",
+    "outputs\\challenge_cup_v4\\02_metrics\\learning_curve.csv": "b577012a2a92edbffac2780bb1ca0236b6331d4cfa30004bd17ff0f4581e5cc6"
+  },
+  "verification_record_sha256": "6c02a24f0ad94097a72cb1717ddc04bc5ced668ec252779eb432e5a988f738b8",
+  "native_tables_slides": [
+    3,
+    4,
+    19
+  ],
+  "all_slide_text_editable": true,
+  "source_deck_modified": false
+}

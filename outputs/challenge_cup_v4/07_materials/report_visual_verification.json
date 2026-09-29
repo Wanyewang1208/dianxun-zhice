@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "report_pages": 12,
+  "figure_captions_sequential": true,
+  "figures_embedded": 12,
+  "title_black_no_border": true,
+  "visual_review": "All 12 scientific figures and all 12 report pages visually inspected. Figure 4 crowded annotations removed. Title border removed. No clipping, orphan captions or blank spill pages.",
+  "word_export": "Word COM ExportAsFixedFormat",
+  "renderer_fallback_reason": "Packaged render_docx.py failed: pdf2image unavailable; native Word export and pypdfium2 PNG rendering used.",
+  "independent_png_regeneration": [
+    {
+      "figure": "fig_01_model_comparison",
+      "source_rows": 5,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_02_window_mae",
+      "source_rows": 15,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_03_formula_comparison",
+      "source_rows": 6,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_04_coverage_risk",
+      "source_rows": 12,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_05_ablation",
+      "source_rows": 21,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_06_condition_strata",
+      "source_rows": 12,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_07_learning_curve",
+      "source_rows": 18,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_08_error_distribution",
+      "source_rows": 29910,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_09_group_cv",
+      "source_rows": 25,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_10_stress",
+      "source_rows": 4,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_11_vehicle_errors",
+      "source_rows": 20,
+      "regenerated_pixels_identical": true
+    },
+    {
+      "figure": "fig_12_predictions",
+      "source_rows": 5982,
+      "regenerated_pixels_identical": true
+    }
+  ],
+  "docx_sha256": "52130b974e5f2d7029b9257b1ef15b266d11d41898e0257033bf5041fa569fc0",
+  "pdf_sha256": "2909d973eba8d791d4de57b4ec39a123f9d9094c0e23c9e1831b5e7bdaf4d37e"
+}

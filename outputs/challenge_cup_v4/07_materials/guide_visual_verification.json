@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "pages": 7,
+  "all_pages_visually_reviewed": true,
+  "method": "Microsoft Word export plus pypdfium2 rendering",
+  "no_title_border": true,
+  "no_clipping_or_orphan_heading": true,
+  "docx_sha256": "00df465a9e027a3466059d0ea050b80f24c56acf1aae072dc531ecd0b036f7ac",
+  "pdf_sha256": "d95bea75a9d0206e269a6fbe40b65e519ada20a69490e25b32a1f9c35932e2d1"
+}

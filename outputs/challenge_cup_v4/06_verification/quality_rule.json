@@ -1,0 +1,8 @@
+{
+  "selection_split": "validation",
+  "threshold_soc_gain_pct": 3,
+  "coverage_constraint": 0.8,
+  "minimum_vehicle_coverage_constraint": 0.6,
+  "comparison_tolerance": 1e-09,
+  "statement": "empirical screen in retrospectively selected long-charging cohort; no deployment, safety or coverage guarantee"
+}

@@ -18,3 +18,14 @@ research/public_battery/requirements-v3.lock -text whitespace=cr-at-eol
 research/public_battery/report_v3/** -text whitespace=cr-at-eol
 research/public_battery/download_ev_source.py -text whitespace=cr-at-eol
 research/public_battery/V3_PROTOCOL.md -text whitespace=cr-at-eol
+# Preserve V4 evidence hashes and keep serialized research models in LFS.
+outputs/challenge_cup_v4/** -text
+outputs/challenge_cup_v4/** whitespace=cr-at-eol
+outputs/challenge_cup_v4/04_models/*.joblib filter=lfs diff=lfs merge=lfs -text
+outputs/电循智策_挑战杯研究升级证据包_V4.zip filter=lfs diff=lfs merge=lfs -text
+research/public_battery/*v4.py -text
+research/public_battery/*v4.py whitespace=cr-at-eol
+research/public_battery/V4_PROTOCOL.md -text
+tests/test_research_v4.py -text
+tests/test_windows_v4.py -text
+outputs/challenge_cup_v4/05_figures/svg/*.svg -whitespace

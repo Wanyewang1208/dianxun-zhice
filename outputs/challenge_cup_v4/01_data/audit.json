@@ -1,0 +1,281 @@
+{
+  "raw_csv_re_read": true,
+  "raw_rows": 16100728,
+  "vehicles": 20,
+  "sessions_each_window": 29697,
+  "window_records": 89091,
+  "windows_seconds": [
+    120,
+    300,
+    600
+  ],
+  "source_reference_sha256": "3581cc460f530daa707284eefa4d654efc9a567707c10f1c8bef37afe3c6d58d",
+  "reference_unchanged": true,
+  "raw_hashes": [
+    {
+      "vehicle": "vehicle_001",
+      "csv_sha256": "47c556762d6213846312166cc1952224a2e384c832583b9316496dd0abe12127",
+      "csv_bytes": 62298147,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_002",
+      "csv_sha256": "3fb121c8c704dcd39c0e7695dd254008684eef2c5d9620866bb54a23f59201db",
+      "csv_bytes": 61313889,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_003",
+      "csv_sha256": "0b348db320817558b6674ed797756e2d59dc423d437128c08d3f532e8a357c3f",
+      "csv_bytes": 58479773,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_004",
+      "csv_sha256": "5733b4440c9b1ddb0a126dbc87222e73a3301e115f3df602aae3fa7ecb12a3dd",
+      "csv_bytes": 61552494,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_005",
+      "csv_sha256": "344a4af07d048cc6be62ae4295f1596c00e0a953f8274ca94ed3302a53a0f68e",
+      "csv_bytes": 60670622,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_006",
+      "csv_sha256": "9173494f5f5417d637375eca67053e9feeda95edda2f3c9c4a787ad0ce883d21",
+      "csv_bytes": 59508918,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_007",
+      "csv_sha256": "ada5b85c92637a3112b59d5f6bb7f6cde320e61e836774da4d4657b293afff61",
+      "csv_bytes": 58930009,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_008",
+      "csv_sha256": "3032d520276312eadd0f31a1abfe9f8317bcee09097dcdb15e8bab681841e965",
+      "csv_bytes": 58185300,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_009",
+      "csv_sha256": "c3ba059632285286ea2391ead14541185db4fd2975ba136f0594fb2d8ef2f9c7",
+      "csv_bytes": 57570351,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_010",
+      "csv_sha256": "62cda7346a7289fba0446c3db9a4e22626f04135dc6a49705289be2bd3f164af",
+      "csv_bytes": 53141693,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_011",
+      "csv_sha256": "cfabdbdf1cab1eed8e8ee2b621c1f4aaf2a8ab9a99122dd6029739d941157c15",
+      "csv_bytes": 58874856,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_012",
+      "csv_sha256": "847c39feedaef37a887220f89fdd0498274438cc0771a8b9de03fd0307e105bb",
+      "csv_bytes": 60174702,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_013",
+      "csv_sha256": "d589f989bef3906502d756579ddff9cbe39f92a2ede9120bbaaa6c8121ac3d22",
+      "csv_bytes": 59594499,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_014",
+      "csv_sha256": "cf2e52c7207a73e88a84c55cf91b41f2641105be875f3e57d83cace37639c16d",
+      "csv_bytes": 57780036,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_015",
+      "csv_sha256": "9228ba87e915524afc758cfcab5f41420cbb08dd6528267fe7cbdc74182b983b",
+      "csv_bytes": 51240436,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_016",
+      "csv_sha256": "997c4e0e3a2a9d4e79ff39c554929a310ea1f1fd37ffafecd3dd53b6ff7b2d42",
+      "csv_bytes": 59680173,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_017",
+      "csv_sha256": "ac0849a1d329670f95325ab64eb02ab439a608388e780d1aacb5234c74fbcf86",
+      "csv_bytes": 55863366,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_018",
+      "csv_sha256": "bbd38fa73f8d611619990459eb8e4ed40aee5ed883c41096cc065eb821b11a14",
+      "csv_bytes": 62171396,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_019",
+      "csv_sha256": "4888502516d09fac94da2cf4c350d6138fd047c3544dec79727e099855eb8d53",
+      "csv_bytes": 56798469,
+      "matches_v3": true
+    },
+    {
+      "vehicle": "vehicle_020",
+      "csv_sha256": "0377fe80cce72d094743eca6c0cdd84167e2e4488671fc9d067e93cb7b337d34",
+      "csv_bytes": 58695033,
+      "matches_v3": true
+    }
+  ],
+  "per_vehicle": [
+    {
+      "vehicle": "vehicle_001",
+      "raw_rows": 854591,
+      "retained_sessions": 1518
+    },
+    {
+      "vehicle": "vehicle_002",
+      "raw_rows": 841810,
+      "retained_sessions": 1548
+    },
+    {
+      "vehicle": "vehicle_003",
+      "raw_rows": 802918,
+      "retained_sessions": 1464
+    },
+    {
+      "vehicle": "vehicle_004",
+      "raw_rows": 844537,
+      "retained_sessions": 1550
+    },
+    {
+      "vehicle": "vehicle_005",
+      "raw_rows": 832189,
+      "retained_sessions": 1531
+    },
+    {
+      "vehicle": "vehicle_006",
+      "raw_rows": 815202,
+      "retained_sessions": 1476
+    },
+    {
+      "vehicle": "vehicle_007",
+      "raw_rows": 808770,
+      "retained_sessions": 1487
+    },
+    {
+      "vehicle": "vehicle_008",
+      "raw_rows": 798496,
+      "retained_sessions": 1503
+    },
+    {
+      "vehicle": "vehicle_009",
+      "raw_rows": 792060,
+      "retained_sessions": 1548
+    },
+    {
+      "vehicle": "vehicle_010",
+      "raw_rows": 728849,
+      "retained_sessions": 1251
+    },
+    {
+      "vehicle": "vehicle_011",
+      "raw_rows": 809470,
+      "retained_sessions": 1494
+    },
+    {
+      "vehicle": "vehicle_012",
+      "raw_rows": 825533,
+      "retained_sessions": 1495
+    },
+    {
+      "vehicle": "vehicle_013",
+      "raw_rows": 818352,
+      "retained_sessions": 1428
+    },
+    {
+      "vehicle": "vehicle_014",
+      "raw_rows": 793132,
+      "retained_sessions": 1558
+    },
+    {
+      "vehicle": "vehicle_015",
+      "raw_rows": 704958,
+      "retained_sessions": 1269
+    },
+    {
+      "vehicle": "vehicle_016",
+      "raw_rows": 819567,
+      "retained_sessions": 1595
+    },
+    {
+      "vehicle": "vehicle_017",
+      "raw_rows": 767868,
+      "retained_sessions": 1392
+    },
+    {
+      "vehicle": "vehicle_018",
+      "raw_rows": 856192,
+      "retained_sessions": 1559
+    },
+    {
+      "vehicle": "vehicle_019",
+      "raw_rows": 778745,
+      "retained_sessions": 1512
+    },
+    {
+      "vehicle": "vehicle_020",
+      "raw_rows": 807489,
+      "retained_sessions": 1519
+    }
+  ],
+  "all_session_ids_and_splits_match_v3": true,
+  "all_window_targets_match_v3": true,
+  "all_600_second_features_match_v3": true,
+  "numeric_atol": 1e-09,
+  "numeric_rtol": 1e-10,
+  "model_feature_columns": [
+    "soc_start",
+    "voltage_start",
+    "voltage_60",
+    "voltage_300",
+    "voltage_600",
+    "current_mean",
+    "tmax_mean",
+    "temperature_rise",
+    "cell_gap_mean",
+    "cell_gap_max"
+  ],
+  "extra_columns_not_model_features": [
+    "prefix_soc_gain_pct",
+    "prefix_ah",
+    "prefix_duration_s",
+    "prefix_n",
+    "max_gap_s",
+    "formula_capacity_ah"
+  ],
+  "output_sha256": "a19b3f8c56d39b983007539f04f4ce43d8424e96cd757cd35d703311f2e42274",
+  "formula_missing_counts": {
+    "120": 4,
+    "300": 0,
+    "600": 0
+  },
+  "voltage_aliases": {
+    "voltage_60": "0.1 * window_s",
+    "voltage_300": "0.5 * window_s",
+    "voltage_600": "window_s"
+  },
+  "limitations": [
+    "Retrospective analysis of the frozen V3 eligible long-charge cohort; not online coverage.",
+    "Cohort eligibility and label require full-session observations.",
+    "Model inputs and prefix quality/formula variables only use available prefix observations.",
+    "The direct formula uses prefix end SOC as well as current; it is not present in the 10 model features.",
+    "Derived target shares electrical signals with predictors and formula; not independent measured SOH."
+  ]
+}

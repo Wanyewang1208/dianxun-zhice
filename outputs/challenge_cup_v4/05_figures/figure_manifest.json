@@ -1,0 +1,134 @@
+[
+  {
+    "figure": "fig_01_model_comparison",
+    "caption": "固定测试集十分钟输入的五方法比较",
+    "rows": 5,
+    "source_sha256": "f09d1eab9d0f8e5fb8938d92dfeeccc3138929a5d4197731bfc3023b522bc356",
+    "png_sha256": "a5c8b498b82e3353153e2e59b105b7e91e96cf320129d84a94410390b0fecbbd",
+    "svg_sha256": "91645819da143827aef5ebf1d95f4877ad8f07cfe82550cdcd806e06b28c184e",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_02_window_mae",
+    "caption": "相同长充电队列的观测窗口比较",
+    "rows": 15,
+    "source_sha256": "e04c0fdc6ef1d1ea9f209bc3d29d542fae702c1d04d9e2647a383ccb92549f05",
+    "png_sha256": "ed661551f77c6d38ddd1e156c80275e8fc4175eac99700612efdce067f526231",
+    "svg_sha256": "6613f06c25a920bfa0862c2c9fea0b3a715be72a73526378c9dcc225c8376b0b",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_03_formula_comparison",
+    "caption": "各窗口公式可计算子集内的公平比较",
+    "rows": 6,
+    "source_sha256": "164559f781cb87eddc64b41aab9205427049ddd3c16dae51efe037381a5ebc9a",
+    "png_sha256": "508d8b1a426b9787ffbe5211eb0a83a72a16a308f1f77ab84e4eba4154e7154e",
+    "svg_sha256": "5e8edefc74d46273550b435d6a82b9f537ce86e9c2b4a6be9fafaa40668ba168",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_04_coverage_risk",
+    "caption": "验证集选择质量阈值后的覆盖与误差",
+    "rows": 12,
+    "source_sha256": "fe544798f07efcca4f77537639cc84a69e6a03e65932309aa2aff4bdf18d5b6b",
+    "png_sha256": "10082f1f204e4360ecc3a689c48714c193fe8dce904e66732f4cbef313d0d098",
+    "svg_sha256": "a9e4af8e8f1fd1d2952d77655560a7136b30d72764d14eba75fbca6f19580809",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_05_ablation",
+    "caption": "十分钟随机森林三随机种子的特征消融",
+    "rows": 21,
+    "source_sha256": "efadfecd247186eb2cbb97649245d7bb9b456d5ace4379a673eba625bd4d2a73",
+    "png_sha256": "f9ef7147c7ea862c2470e9c208b5d7c883cb9389c1a5054de858113fb1024dcc",
+    "svg_sha256": "00a8ce243732f8156c37c7046d6b368cdde21f01f3db126f0ecdd3f8c23d8f8a",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_06_condition_strata",
+    "caption": "训练集确定边界的工况分层误差",
+    "rows": 12,
+    "source_sha256": "95d2bc802225107b193c44102dc4b81cbe844d07a69c33f6f4c018a3f4536901",
+    "png_sha256": "476aec3343a882a7da2684b0a8d20d01ef1b36962e14d673e1e4dbf125df9271",
+    "svg_sha256": "9bf484e5a338a9edf4132295f62b11cdf4bf4cb8f2e3fbeee6b6af06e38af574",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_07_learning_curve",
+    "caption": "不同训练车辆数量下的验证集学习曲线",
+    "rows": 18,
+    "source_sha256": "bc0b8a863ffc239a782b297ef6e92d63c2c42abcd56a9a652ff00d657ff506bb",
+    "png_sha256": "4e987b02b929e96fa1a6fc972a2a1c30cd1dd0b4e1d7eecf8998f165fae91087",
+    "svg_sha256": "a294e040b1c924959439b517565a66d6f0b1080d0ae770593ce8e053452f1c47",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_08_error_distribution",
+    "caption": "固定测试集五方法绝对误差分布",
+    "rows": 29910,
+    "source_sha256": "8d895a697da916f3e158160d1d85fad49cb40ea836cb0de92f919f356be1c094",
+    "png_sha256": "3cf6365365ecc7c7f0308bcf3cb787774f8b1499788ebbb9f43f5e16252e827a",
+    "svg_sha256": "f7181a37c877c511fabda19b31264cb006d0aa91408f24c52d40a5c90cf3d428",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_09_group_cv",
+    "caption": "训练车辆内五折分组验证",
+    "rows": 25,
+    "source_sha256": "d901c555ffde03bd63e41790dc9f7a58f49c112f0d569f1492cb597af639cc30",
+    "png_sha256": "471313265ceede8be2d4e85a9950d02eb3acf3a56316ad9f3a9f118805d382ef",
+    "svg_sha256": "f3009ab8071227760c162d96771bc99bf2e223cef28ccda3e2b0e038bbf7328c",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_10_stress",
+    "caption": "十分钟随机森林的模拟输入压力测试",
+    "rows": 4,
+    "source_sha256": "10a78304d2d0b186ae659e3bd12ba853a10ae45745194ca43719fd5b0d33eb8a",
+    "png_sha256": "08bfa63751dc4dfa39d5c9c3b1fd74e8277ec5456b67644f403002c60faff37c",
+    "svg_sha256": "c9b7a9114c6716c537cae90854c5146acbfba24951d7779160a19d00af22d348",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_11_vehicle_errors",
+    "caption": "固定测试车辆的五方法逐车误差",
+    "rows": 20,
+    "source_sha256": "9be4a8492a2ff3d051218a9ea987dbb9aba2c1fc9f4991de1911bcea8bf2fa33",
+    "png_sha256": "7ebc91829ab316c578d6f24e79da69814d3ba780caa5f6409c95a58b0831618b",
+    "svg_sha256": "f05742bac6eee149b9838f0d0c7915c73a5d4bf3d3c51e5f568192e80f132256",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  },
+  {
+    "figure": "fig_12_predictions",
+    "caption": "十分钟随机森林预测与容量代理标签",
+    "rows": 5982,
+    "source_sha256": "5c859f8ac600bd2e5c9995e01c174b6e4fae7d6254efe27b2712715e1a00072b",
+    "png_sha256": "aa93007b73981ffa4375ac7cc7aaedeebc1d8478f2bcd0fac01534bd76b808f5",
+    "svg_sha256": "74afa809645e18b8d7a416918e4b10940e27265fba2be22ee22aaa17217da728",
+    "width_px": 2400,
+    "height_px": 1350,
+    "dpi": 300
+  }
+]

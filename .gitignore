@@ -50,3 +50,9 @@ id_ed25519
 # Local BMS uploads and raw dataset downloads
 data/raw/
 data/uploads/
+
+# Local V4 render inspection files and original personal-document inventory.
+.v4_presentation_build/
+outputs/challenge_cup_v4/qa_*/
+outputs/challenge_cup_v4/**/qa_*/
+outputs/challenge_cup_v4/07_materials/升级前材料审计.md

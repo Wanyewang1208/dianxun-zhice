@@ -1,0 +1,13 @@
+{
+  "command": "python -m unittest discover -s tests -p test_*.py",
+  "test_count": 135,
+  "passed": true,
+  "scope": "Python repository tests, including 14 new V4 tests. No frontend or deployment verification.",
+  "legacy_warnings": {
+    "type": "InconsistentVersionWarning",
+    "count": 38,
+    "artifact_sklearn": "1.9.1",
+    "runtime_sklearn": "1.7.2",
+    "effect": "Legacy persisted production estimators only; compatibility is not established by this run. All 15 V4 estimators were trained and reloaded with sklearn 1.7.2."
+  }
+}

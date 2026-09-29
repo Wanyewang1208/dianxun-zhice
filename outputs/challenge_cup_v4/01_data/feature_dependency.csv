@@ -1,0 +1,19 @@
+﻿field,role,availability,uses_after_window,used_as_model_feature,definition
+soc_start,model_feature,prefix only,False,True,same V3 definition restricted to observations <= window_s
+voltage_start,model_feature,prefix only,False,True,same V3 definition restricted to observations <= window_s
+voltage_60,model_feature,prefix only,False,True,"pack voltage at 0.1 * window_s, prefix-only interpolation"
+voltage_300,model_feature,prefix only,False,True,"pack voltage at 0.5 * window_s, prefix-only interpolation"
+voltage_600,model_feature,prefix only,False,True,"pack voltage at window_s, last observed value if endpoint absent"
+current_mean,model_feature,prefix only,False,True,same V3 definition restricted to observations <= window_s
+tmax_mean,model_feature,prefix only,False,True,same V3 definition restricted to observations <= window_s
+temperature_rise,model_feature,prefix only,False,True,same V3 definition restricted to observations <= window_s
+cell_gap_mean,model_feature,prefix only,False,True,same V3 definition restricted to observations <= window_s
+cell_gap_max,model_feature,prefix only,False,True,same V3 definition restricted to observations <= window_s
+prefix_soc_gain_pct,quality_or_formula_baseline,prefix only,False,False,"last prefix SOC minus first prefix SOC, percentage points"
+prefix_ah,quality_or_formula_baseline,prefix only,False,False,negative trapezoidal current integral through last prefix observation / 3600
+prefix_duration_s,quality_or_formula_baseline,prefix only,False,False,last observed elapsed time within requested window
+prefix_n,quality_or_formula_baseline,prefix only,False,False,number of observed prefix rows
+max_gap_s,quality_or_formula_baseline,prefix only,False,False,maximum gap between consecutive prefix observations
+formula_capacity_ah,quality_or_formula_baseline,prefix only,False,False,100 * prefix_ah / prefix_soc_gain_pct; missing when gain <= 0; no clipping
+proxy_capacity_ah,target,full retained session,True,False,"frozen V3 full-session integral/SOC proxy, not measured SOH"
+cohort_eligibility,retrospective_selection,full retained session,True,False,frozen V3 filtering including full duration >= 1200 s and SOC gain >= 20 pp

@@ -1,0 +1,19 @@
+{
+  "report": "电循智策_V4研究进展与实验结果.docx",
+  "pages_planned": 12,
+  "figures": 12,
+  "source_csv": {
+    "all_metrics.csv": "8c8e135c2a2151e718e9fffe39e010716dc6fbe81d438913dd084aac54cc9ad1",
+    "condition_strata.csv": "4601aaacc37a91fd0223ee535461ca33fde47c8e241c165b1278d73f09bf978e",
+    "condition_strata_per_vehicle.csv": "9483cc805e7fe33f5fb063fe63ba4710678eb83daaa4abb259d178c813ce07db",
+    "formula_coverage.csv": "2f5c3d90490c6e36eca853ee6ab0930b3c3081420cd066d49b71e0a09389f13b",
+    "group_cv.csv": "2b6e2f7faf815732b28f62486fdcf121a1a26718c8d459877321a32794162113",
+    "learning_curve.csv": "b577012a2a92edbffac2780bb1ca0236b6331d4cfa30004bd17ff0f4581e5cc6",
+    "matched_formula_comparison.csv": "7a035078099d1f6e92f48d43a62e3c94319dbf260943e794163311fd0aa7827e",
+    "per_vehicle.csv": "6f920da3e886edef19eb2973e5b93cd8c182d546a01896aca65a9961f2d4d98a",
+    "quality_coverage.csv": "24c46468899472507be66b2de7cb3a83dda1dbf92adf9c7af2920a251a6b783c",
+    "quality_selected_per_vehicle.csv": "3bbf72d7c762a17227b7b2205f3f27fa51518cd0bb06308e53f0076077b22b24"
+  },
+  "title": "电循智策 短时充电信息与容量代理预测的补充研究",
+  "not_authored_paper": true
+}
